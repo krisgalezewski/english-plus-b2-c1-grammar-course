@@ -351,6 +351,10 @@ body.theme-discourse{
 .trait-pill:hover{background:var(--accent-soft)}
 .compare-box{display:inline-block;padding:4px 10px;border-radius:6px;background:var(--surface-alt);cursor:default;transition:background .15s}
 .compare-box:hover{background:var(--accent-soft)}
+.compare-row{display:grid;grid-template-columns:170px 1fr;gap:6px 10px;align-items:baseline}
+@media (max-width:520px){
+  .compare-row{grid-template-columns:1fr}
+}
 #compare-tooltip{
   position:absolute;z-index:80;max-width:280px;background:var(--accent-soft);color:var(--text-secondary);
   border:1px solid var(--accent);font-size:13px;line-height:1.5;padding:10px 12px;border-radius:8px;

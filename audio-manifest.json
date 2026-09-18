@@ -1,0 +1,1734 @@
+{
+  "voices": {
+    "anna": "en-GB-Neural2-A",
+    "tomasz": "en-GB-Neural2-B",
+    "narrator": "en-GB-Neural2-F"
+  },
+  "pauseMsBetweenTurns": 450,
+  "vocab": [
+    {
+      "slug": "accountability",
+      "word": "accountability",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/accountability.mp3"
+    },
+    {
+      "slug": "acknowledge",
+      "word": "acknowledge",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/acknowledge.mp3"
+    },
+    {
+      "slug": "adopt",
+      "word": "adopt",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/adopt.mp3"
+    },
+    {
+      "slug": "ambiguity",
+      "word": "ambiguity",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/ambiguity.mp3"
+    },
+    {
+      "slug": "ambiguous",
+      "word": "ambiguous",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/ambiguous.mp3"
+    },
+    {
+      "slug": "anecdotal",
+      "word": "anecdotal",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/anecdotal.mp3"
+    },
+    {
+      "slug": "apathy",
+      "word": "apathy",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/apathy.mp3"
+    },
+    {
+      "slug": "articulated",
+      "word": "articulated",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/articulated.mp3"
+    },
+    {
+      "slug": "assemble",
+      "word": "assemble",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/assemble.mp3"
+    },
+    {
+      "slug": "asymmetry",
+      "word": "asymmetry",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/asymmetry.mp3"
+    },
+    {
+      "slug": "attachment",
+      "word": "attachment",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/attachment.mp3"
+    },
+    {
+      "slug": "attribute",
+      "word": "attribute",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/attribute.mp3"
+    },
+    {
+      "slug": "audit",
+      "word": "audit",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/audit.mp3"
+    },
+    {
+      "slug": "aversion",
+      "word": "aversion",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/aversion.mp3"
+    },
+    {
+      "slug": "backfired",
+      "word": "backfired",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/backfired.mp3"
+    },
+    {
+      "slug": "benchmark",
+      "word": "benchmark",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/benchmark.mp3"
+    },
+    {
+      "slug": "bias",
+      "word": "bias",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/bias.mp3"
+    },
+    {
+      "slug": "bluntness",
+      "word": "bluntness",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/bluntness.mp3"
+    },
+    {
+      "slug": "brushed",
+      "word": "brushed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/brushed.mp3"
+    },
+    {
+      "slug": "buzzword",
+      "word": "buzzword",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/buzzword.mp3"
+    },
+    {
+      "slug": "calibration",
+      "word": "calibration",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/calibration.mp3"
+    },
+    {
+      "slug": "candidate",
+      "word": "candidate",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/candidate.mp3"
+    },
+    {
+      "slug": "candour",
+      "word": "candour",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/candour.mp3"
+    },
+    {
+      "slug": "capped",
+      "word": "capped",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/capped.mp3"
+    },
+    {
+      "slug": "chronic",
+      "word": "chronic",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/chronic.mp3"
+    },
+    {
+      "slug": "coasting",
+      "word": "coasting",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/coasting.mp3"
+    },
+    {
+      "slug": "cognitive",
+      "word": "cognitive",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/cognitive.mp3"
+    },
+    {
+      "slug": "competence",
+      "word": "competence",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/competence.mp3"
+    },
+    {
+      "slug": "compounding",
+      "word": "compounding",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/compounding.mp3"
+    },
+    {
+      "slug": "concluded",
+      "word": "concluded",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/concluded.mp3"
+    },
+    {
+      "slug": "confided",
+      "word": "confided",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/confided.mp3"
+    },
+    {
+      "slug": "confirming",
+      "word": "confirming",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/confirming.mp3"
+    },
+    {
+      "slug": "consequential",
+      "word": "consequential",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/consequential.mp3"
+    },
+    {
+      "slug": "consumed",
+      "word": "consumed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/consumed.mp3"
+    },
+    {
+      "slug": "contradictory",
+      "word": "contradictory",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/contradictory.mp3"
+    },
+    {
+      "slug": "counteroffer",
+      "word": "counteroffer",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/counteroffer.mp3"
+    },
+    {
+      "slug": "counterpart",
+      "word": "counterpart",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/counterpart.mp3"
+    },
+    {
+      "slug": "credentials",
+      "word": "credentials",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/credentials.mp3"
+    },
+    {
+      "slug": "credited",
+      "word": "credited",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/credited.mp3"
+    },
+    {
+      "slug": "culprit",
+      "word": "culprit",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/culprit.mp3"
+    },
+    {
+      "slug": "dazzling",
+      "word": "dazzling",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/dazzling.mp3"
+    },
+    {
+      "slug": "deference",
+      "word": "deference",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/deference.mp3"
+    },
+    {
+      "slug": "deliberation",
+      "word": "deliberation",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/deliberation.mp3"
+    },
+    {
+      "slug": "demotion",
+      "word": "demotion",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/demotion.mp3"
+    },
+    {
+      "slug": "depleted",
+      "word": "depleted",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/depleted.mp3"
+    },
+    {
+      "slug": "deteriorates",
+      "word": "deteriorates",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/deteriorates.mp3"
+    },
+    {
+      "slug": "diffuse",
+      "word": "diffuse",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/diffuse.mp3"
+    },
+    {
+      "slug": "diffused",
+      "word": "diffused",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/diffused.mp3"
+    },
+    {
+      "slug": "discarding",
+      "word": "discarding",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/discarding.mp3"
+    },
+    {
+      "slug": "discomfort",
+      "word": "discomfort",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/discomfort.mp3"
+    },
+    {
+      "slug": "dismiss",
+      "word": "dismiss",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/dismiss.mp3"
+    },
+    {
+      "slug": "disproportionately",
+      "word": "disproportionately",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/disproportionately.mp3"
+    },
+    {
+      "slug": "dissonance",
+      "word": "dissonance",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/dissonance.mp3"
+    },
+    {
+      "slug": "distorted",
+      "word": "distorted",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/distorted.mp3"
+    },
+    {
+      "slug": "downside",
+      "word": "downside",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/downside.mp3"
+    },
+    {
+      "slug": "drift",
+      "word": "drift",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/drift.mp3"
+    },
+    {
+      "slug": "due-diligence",
+      "word": "due diligence",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/due-diligence.mp3"
+    },
+    {
+      "slug": "effort-justification",
+      "word": "effort justification",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/effort-justification.mp3"
+    },
+    {
+      "slug": "endorsed",
+      "word": "endorsed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/endorsed.mp3"
+    },
+    {
+      "slug": "entrenched",
+      "word": "entrenched",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/entrenched.mp3"
+    },
+    {
+      "slug": "exceptional",
+      "word": "exceptional",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/exceptional.mp3"
+    },
+    {
+      "slug": "exhausted",
+      "word": "exhausted",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/exhausted.mp3"
+    },
+    {
+      "slug": "expertise",
+      "word": "expertise",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/expertise.mp3"
+    },
+    {
+      "slug": "faddish",
+      "word": "faddish",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/faddish.mp3"
+    },
+    {
+      "slug": "finite",
+      "word": "finite",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/finite.mp3"
+    },
+    {
+      "slug": "flagship",
+      "word": "flagship",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/flagship.mp3"
+    },
+    {
+      "slug": "flat-pack",
+      "word": "flat-pack",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/flat-pack.mp3"
+    },
+    {
+      "slug": "fraud",
+      "word": "fraud",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/fraud.mp3"
+    },
+    {
+      "slug": "friction",
+      "word": "friction",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/friction.mp3"
+    },
+    {
+      "slug": "funnelling",
+      "word": "funnelling",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/funnelling.mp3"
+    },
+    {
+      "slug": "glossed-over",
+      "word": "glossed over",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/glossed-over.mp3"
+    },
+    {
+      "slug": "halo",
+      "word": "halo",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/halo.mp3"
+    },
+    {
+      "slug": "handicap",
+      "word": "handicap",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/handicap.mp3"
+    },
+    {
+      "slug": "herald",
+      "word": "herald",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/herald.mp3"
+    },
+    {
+      "slug": "heuristic",
+      "word": "heuristic",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/heuristic.mp3"
+    },
+    {
+      "slug": "hierarchical",
+      "word": "hierarchical",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/hierarchical.mp3"
+    },
+    {
+      "slug": "identical",
+      "word": "identical",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/identical.mp3"
+    },
+    {
+      "slug": "imitate",
+      "word": "imitate",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/imitate.mp3"
+    },
+    {
+      "slug": "imposed",
+      "word": "imposed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/imposed.mp3"
+    },
+    {
+      "slug": "impression",
+      "word": "impression",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/impression.mp3"
+    },
+    {
+      "slug": "in-light-of",
+      "word": "in light of",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/in-light-of.mp3"
+    },
+    {
+      "slug": "incompetence",
+      "word": "incompetence",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/incompetence.mp3"
+    },
+    {
+      "slug": "inevitable",
+      "word": "inevitable",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/inevitable.mp3"
+    },
+    {
+      "slug": "inflated",
+      "word": "inflated",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/inflated.mp3"
+    },
+    {
+      "slug": "ingrained",
+      "word": "ingrained",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/ingrained.mp3"
+    },
+    {
+      "slug": "installed",
+      "word": "installed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/installed.mp3"
+    },
+    {
+      "slug": "instances",
+      "word": "instances",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/instances.mp3"
+    },
+    {
+      "slug": "internally",
+      "word": "internally",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/internally.mp3"
+    },
+    {
+      "slug": "interpersonal",
+      "word": "interpersonal",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/interpersonal.mp3"
+    },
+    {
+      "slug": "justify",
+      "word": "justify",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/justify.mp3"
+    },
+    {
+      "slug": "keynote",
+      "word": "keynote",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/keynote.mp3"
+    },
+    {
+      "slug": "laborious",
+      "word": "laborious",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/laborious.mp3"
+    },
+    {
+      "slug": "lens",
+      "word": "lens",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/lens.mp3"
+    },
+    {
+      "slug": "leverage",
+      "word": "leverage",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/leverage.mp3"
+    },
+    {
+      "slug": "lowball",
+      "word": "lowball",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/lowball.mp3"
+    },
+    {
+      "slug": "luck",
+      "word": "luck",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/luck.mp3"
+    },
+    {
+      "slug": "meticulous",
+      "word": "meticulous",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/meticulous.mp3"
+    },
+    {
+      "slug": "misconstrued",
+      "word": "misconstrued",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/misconstrued.mp3"
+    },
+    {
+      "slug": "nuance",
+      "word": "nuance",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/nuance.mp3"
+    },
+    {
+      "slug": "obligation",
+      "word": "obligation",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/obligation.mp3"
+    },
+    {
+      "slug": "onlookers",
+      "word": "onlookers",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/onlookers.mp3"
+    },
+    {
+      "slug": "overcommitted",
+      "word": "overcommitted",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/overcommitted.mp3"
+    },
+    {
+      "slug": "overshadowed",
+      "word": "overshadowed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/overshadowed.mp3"
+    },
+    {
+      "slug": "overshadowing",
+      "word": "overshadowing",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/overshadowing.mp3"
+    },
+    {
+      "slug": "oversight",
+      "word": "oversight",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/oversight.mp3"
+    },
+    {
+      "slug": "overvalue",
+      "word": "overvalue",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/overvalue.mp3"
+    },
+    {
+      "slug": "ownership",
+      "word": "ownership",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/ownership.mp3"
+    },
+    {
+      "slug": "paradox",
+      "word": "paradox",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/paradox.mp3"
+    },
+    {
+      "slug": "perpetually",
+      "word": "perpetually",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/perpetually.mp3"
+    },
+    {
+      "slug": "perseverance",
+      "word": "perseverance",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/perseverance.mp3"
+    },
+    {
+      "slug": "phenomenon",
+      "word": "phenomenon",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/phenomenon.mp3"
+    },
+    {
+      "slug": "predictive",
+      "word": "predictive",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/predictive.mp3"
+    },
+    {
+      "slug": "presumed",
+      "word": "presumed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/presumed.mp3"
+    },
+    {
+      "slug": "proficiency",
+      "word": "proficiency",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/proficiency.mp3"
+    },
+    {
+      "slug": "projected",
+      "word": "projected",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/projected.mp3"
+    },
+    {
+      "slug": "quiet",
+      "word": "quiet",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/quiet.mp3"
+    },
+    {
+      "slug": "rapport",
+      "word": "rapport",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/rapport.mp3"
+    },
+    {
+      "slug": "rationalise",
+      "word": "rationalise",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/rationalise.mp3"
+    },
+    {
+      "slug": "realigns",
+      "word": "realigns",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/realigns.mp3"
+    },
+    {
+      "slug": "reconstruct",
+      "word": "reconstruct",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/reconstruct.mp3"
+    },
+    {
+      "slug": "recruiter",
+      "word": "recruiter",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/recruiter.mp3"
+    },
+    {
+      "slug": "reference-point",
+      "word": "reference point",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/reference-point.mp3"
+    },
+    {
+      "slug": "reframe",
+      "word": "reframe",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/reframe.mp3"
+    },
+    {
+      "slug": "relinquished",
+      "word": "relinquished",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/relinquished.mp3"
+    },
+    {
+      "slug": "replicated",
+      "word": "replicated",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/replicated.mp3"
+    },
+    {
+      "slug": "retrospective",
+      "word": "retrospective",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/retrospective.mp3"
+    },
+    {
+      "slug": "routine",
+      "word": "routine",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/routine.mp3"
+    },
+    {
+      "slug": "safeguard",
+      "word": "safeguard",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/safeguard.mp3"
+    },
+    {
+      "slug": "salient",
+      "word": "salient",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/salient.mp3"
+    },
+    {
+      "slug": "sentimental",
+      "word": "sentimental",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/sentimental.mp3"
+    },
+    {
+      "slug": "skewed",
+      "word": "skewed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/skewed.mp3"
+    },
+    {
+      "slug": "slack",
+      "word": "slack",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/slack.mp3"
+    },
+    {
+      "slug": "spiral",
+      "word": "spiral",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/spiral.mp3"
+    },
+    {
+      "slug": "stake",
+      "word": "stake",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/stake.mp3"
+    },
+    {
+      "slug": "stark",
+      "word": "stark",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/stark.mp3"
+    },
+    {
+      "slug": "stemmed",
+      "word": "stemmed",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/stemmed.mp3"
+    },
+    {
+      "slug": "subtext",
+      "word": "subtext",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/subtext.mp3"
+    },
+    {
+      "slug": "suffered",
+      "word": "suffered",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/suffered.mp3"
+    },
+    {
+      "slug": "sunk",
+      "word": "sunk",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/sunk.mp3"
+    },
+    {
+      "slug": "tact",
+      "word": "tact",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/tact.mp3"
+    },
+    {
+      "slug": "technician",
+      "word": "technician",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/technician.mp3"
+    },
+    {
+      "slug": "threshold",
+      "word": "threshold",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/threshold.mp3"
+    },
+    {
+      "slug": "tinker",
+      "word": "tinker",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/tinker.mp3"
+    },
+    {
+      "slug": "triumphant",
+      "word": "triumphant",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/triumphant.mp3"
+    },
+    {
+      "slug": "trough",
+      "word": "trough",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/trough.mp3"
+    },
+    {
+      "slug": "unchecked",
+      "word": "unchecked",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/unchecked.mp3"
+    },
+    {
+      "slug": "unconsciously",
+      "word": "unconsciously",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/unconsciously.mp3"
+    },
+    {
+      "slug": "underestimate",
+      "word": "underestimate",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/underestimate.mp3"
+    },
+    {
+      "slug": "underscoring",
+      "word": "underscoring",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/underscoring.mp3"
+    },
+    {
+      "slug": "undervalue",
+      "word": "undervalue",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/undervalue.mp3"
+    },
+    {
+      "slug": "unquestioningly",
+      "word": "unquestioningly",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/unquestioningly.mp3"
+    },
+    {
+      "slug": "upkeep",
+      "word": "upkeep",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/upkeep.mp3"
+    },
+    {
+      "slug": "validation",
+      "word": "validation",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/validation.mp3"
+    },
+    {
+      "slug": "valuation",
+      "word": "valuation",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/valuation.mp3"
+    },
+    {
+      "slug": "vivid",
+      "word": "vivid",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/vivid.mp3"
+    },
+    {
+      "slug": "willpower",
+      "word": "willpower",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/willpower.mp3"
+    },
+    {
+      "slug": "workforce",
+      "word": "workforce",
+      "voice": "en-GB-Neural2-F",
+      "path": "audio/vocab/workforce.mp3"
+    }
+  ],
+  "dialogues": [
+    {
+      "lessonId": "b2c1-lesson-01-narrative-tenses",
+      "shortPrefix": "lesson-01",
+      "title": "Narrative Tenses in Extended Storytelling",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Did you read that case study about the halo effect? The one with the manager and her star employee?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Yes — Elena, right? She'd already fallen for David's one dazzling presentation months before the actual review."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. By the time she sat down to write it, she'd basically decided he was brilliant before looking at any real evidence."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Meanwhile poor Priya was quietly doing all this meticulous work that nobody noticed."
+        },
+        {
+          "speaker": "Anna",
+          "line": "That's what got me — her rating came out distorted downward for no real reason."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "It only came out because an auditor happened to compare the numbers months later."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Which forced the whole company to rewrite how they do reviews."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "A pretty expensive lesson for one dazzling afternoon."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-02-used-to-vs-would",
+      "shortPrefix": "lesson-02",
+      "title": "Used To vs. Would for Past Habits",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I read about Parkinson's Law today — the idea that work expands to fill whatever time you give it."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "That explains our old finance team perfectly. Reports used to take two weeks even though the writing itself barely consumed two days."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Meetings would stretch on forever too, back before the new director came in."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, the office used to feel busy all the time, even when there wasn't much real work."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Then deadlines got tightened and somehow productivity barely suffered."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Which just confirms Parkinson was onto something."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Most of that old slack apparently stemmed from how loose the deadlines used to be."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I guess we should be grateful for tighter deadlines, annoying as they are."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-03-future-in-the-past",
+      "shortPrefix": "lesson-03",
+      "title": "Future in the Past + Future Perfect Continuous",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Remember Aurora? It was going to launch in six months, and now it's been what, three years?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Don't remind me. The database was wrong from day one, but leadership were not going to reconsider it once they'd sunk that much money in."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Classic sunk cost fallacy. They kept funnelling resources into it instead of cutting their losses."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "The committee even promised the board Aurora would have been generating serious revenue by the following fiscal year."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Did it?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Not even close. Analysts now think we'll have been paying for its upkeep for years longer than anyone planned."
+        },
+        {
+          "speaker": "Anna",
+          "line": "It's hard to justify walking away once you've spent that much, I suppose."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Which is exactly the trap."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-04-academic-hedging",
+      "shortPrefix": "lesson-04",
+      "title": "Academic Hedging: Seem To, Appear To, Tend To, Be Likely To",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Have you heard of the Dunning-Kruger effect? People with limited competence tend to overestimate their own ability."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Definitely seen that in meetings. The least experienced person always seems to lack the awareness that they're missing something."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Right, and that's the paradox — you need expertise to even notice your own gaps."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Meanwhile the genuinely skilled people are likely to underrate themselves, from what I've read."
+        },
+        {
+          "speaker": "Anna",
+          "line": "It's such a strange handicap. Confidence and actual ability barely seem to line up."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Apparently it fades with real experience, though — confidence eventually realigns with competence."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Until then, the loudest voice in the room is likely to sound the most certain, not the most correct."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Which is exactly why I've started listening more carefully to the quiet people."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-05-neednt-have",
+      "shortPrefix": "lesson-05",
+      "title": "Needn't Have vs. Didn't Need To",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I read something about decision fatigue today. Apparently we needn't have scheduled four strategy meetings on the same day last month."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I remember that day. By the fourth meeting nobody could decide anything properly."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly — each one depleted the same finite reserve of willpower, according to the research."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "To be fair, we didn't need to attend all four. Two of them were actually optional."
+        },
+        {
+          "speaker": "Anna",
+          "line": "I didn't know that at the time. The real culprit apparently isn't laziness, it's plain cognitive exhaustion."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Makes sense. Even Priya needn't have reviewed every single expense line herself that week."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Right, a junior colleague could have handled the routine ones easily."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Lesson learned — we didn't need to redesign the whole process, just cap how many decisions we make per day."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-06-deduction-continuous",
+      "shortPrefix": "lesson-06",
+      "title": "Deduction With Continuous Aspect",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Did you hear everyone suddenly has a theory about why the flagship app failed?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Yeah, someone told me the investors must have been ignoring obvious warning signs."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Turns out the engineers must have been raising concerns for months. It was all in the internal messages."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "So whoever approved the launch date can't have been reading those messages carefully?"
+        },
+        {
+          "speaker": "Anna",
+          "line": "Apparently they did read them — several executives had, actually."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "That's classic hindsight bias, isn't it? Everyone now insists they must have been suspecting trouble all along."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly, even though most of them enthusiastically endorsed the launch at the time."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "\"I knew it all along\" is a pretty comforting phrase to reach for after the fact."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-07-inversion-conditionals",
+      "shortPrefix": "lesson-07",
+      "title": "Inversion in Conditionals",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Did you see the new safety spending numbers? They jumped right after that near-miss on the factory floor, even though the actual risk hadn't changed."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "That's the availability heuristic in action. Had the finance team looked at the long-run data first, they probably wouldn't have reacted so strongly."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. Were we to rely more on statistics and less on the last dramatic story, our budgets would look completely different."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Should a bigger, quieter risk ever materialise without a memorable case behind it, I bet we'd underestimate it badly."
+        },
+        {
+          "speaker": "Anna",
+          "line": "That's basically what the risk officer admitted in the report — anecdotal evidence keeps outweighing the actual data."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Had a single striking incident been reported in the trade press last year, this exact risk would probably be rated as urgent already."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Should any manager ever notice a decision leaning on one vivid story instead of the full data set, that's the moment to pause."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Agreed. Let's build a proper review into the process before the next budget cycle."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-08-conditional-alternatives",
+      "shortPrefix": "lesson-08",
+      "title": "Conditional Alternatives to If",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I still don't get why we're funding this project, provided that everyone agrees it's underperforming."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "It's classic loss aversion. Cancelling it now means admitting a loss, and nobody wants to be the one who does that."
+        },
+        {
+          "speaker": "Anna",
+          "line": "As long as we keep treating the sunk cost as a reference point, we'll never make an objective call."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, unless someone forces the comparison to a fresh alternative, we'll stay entrenched."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Suppose we asked the team to imagine starting from zero today — would they still choose this project?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Almost certainly not. But they'd only agree to a genuinely risky new idea provided that the downside is capped first."
+        },
+        {
+          "speaker": "Anna",
+          "line": "That's fair, honestly. On condition that we set a proper loss threshold, I'd actually back a new proposal."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Agreed. Let's build that safeguard in before we bring anything to the board."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-09-hypothetical-without-if",
+      "shortPrefix": "lesson-09",
+      "title": "Hypothetical Meaning Without If",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I still can't believe the supplier rejected our offer. It was fair by any objective valuation."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Classic endowment effect. Without recognising it, they're overvaluing the contract just because they already hold it."
+        },
+        {
+          "speaker": "Anna",
+          "line": "That would explain it. Their counterpart on our side sees the exact same numbers completely differently."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "But for that one clause allowing a thirty-day trial, I think this deal would have collapsed already."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Right, because nothing's technically been relinquished during the trial — it softens the sense of loss."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Exactly. Without that intervening step, their sense of ownership would have hardened into an inflated stake immediately."
+        },
+        {
+          "speaker": "Anna",
+          "line": "We should reframe it as an exchange, not a loss on their side — otherwise their attachment will dominate the whole conversation."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Agreed. Without deliberately correcting for the bias, we'll just keep going in circles."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-10-advanced-wish",
+      "shortPrefix": "lesson-10",
+      "title": "Advanced Wish / If Only",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I wish I had asked more questions before we signed off on that vendor. Because if I had, we might never have overcommitted like this."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Don't be too hard on yourself. Everyone rationalised it at the time — myself included."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Honestly, I wish the board would stop pretending the numbers looked fine from the start. They didn't, and people knew it."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "If only we had cancelled after the first missed deadline, we'd have saved ourselves eighteen months of this."
+        },
+        {
+          "speaker": "Anna",
+          "line": "The sunk cost made it so much harder to justify walking away, even when everyone privately agreed it was failing."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I wish I hadn't reassured everyone that it was under control. Because if I hadn't, someone might have challenged it months earlier."
+        },
+        {
+          "speaker": "Anna",
+          "line": "We need to get better at reframing a bad decision honestly instead of defending it forever."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Agreed. Let's actually admit it in the review this time, not just talk around it."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-11-passive-combined-aspects",
+      "shortPrefix": "lesson-11",
+      "title": "Passive With Combined Aspects",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I just read this article about the bystander effect — apparently it happens in offices just as much as in emergencies."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Oh, like when an alert is being watched by five different inboxes and nobody actually clicks resolve?"
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly that. Everyone presumed someone more senior would handle it."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "That explains so much. Having been copied on an email, I always assume my part is basically done."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Right, and that's exactly the problem — responsibility becomes so diffuse that nobody actually owns it."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "So what's the fix? Just tell people to care more?"
+        },
+        {
+          "speaker": "Anna",
+          "line": "No, apparently that doesn't work. The article says you need real accountability — one named person responsible for each task."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Makes sense. Otherwise the same oversight just keeps repeating, month after month."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-12-impersonal-get-passive",
+      "shortPrefix": "lesson-12",
+      "title": "Impersonal Passive & Get-Passive Together",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "So what did you think of the candidate this morning? Everyone in the room seemed to love her instantly."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Yeah, it's said that first impressions form within the first few minutes, and honestly that's exactly what happened."
+        },
+        {
+          "speaker": "Anna",
+          "line": "True. After that, every slightly awkward pause got interpreted as thoughtfulness instead of nerves."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Meanwhile the candidate before her got overlooked completely, even though his answers were arguably stronger."
+        },
+        {
+          "speaker": "Anna",
+          "line": "He's believed to have frozen a little at the start, and nobody really recovered from that impression of him."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "It's a textbook halo effect, isn't it? One good moment and suddenly everything else looks impressive too."
+        },
+        {
+          "speaker": "Anna",
+          "line": "It is now recommended we use a proper scoring sheet next time, so it's less about gut feeling."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Agreed. Otherwise a strong candidate keeps getting hired for the wrong reasons, or not hired at all."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-13-nominalisation",
+      "shortPrefix": "lesson-13",
+      "title": "Nominalisation",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Have you heard of the Peter Principle? I think it explains exactly what happened with our new team lead."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "The idea that people get promoted until they're no longer competent? Yeah, I've read about it."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. His promotion was based entirely on how good he was as a technician, not as a manager."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, and delegation and interpersonal skills weren't even part of the assessment."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Now the whole team is struggling because he's clearly out of his depth."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "But a formal demotion would look terrible for the company, so nobody wants to reverse the decision."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Meanwhile the workforce underneath him just sits there, waiting for a vacancy that never opens."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "It's a slow stagnation, exactly like the theory describes."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-14-advanced-articles-quantifiers",
+      "shortPrefix": "lesson-14",
+      "title": "Advanced Articles & Quantifiers",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I listened to this podcast about survivorship bias last night — it's basically about why we only ever hear success stories."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Like the startup founder who drops out of university and becomes a billionaire?"
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly that story. A number of founders try the exact same thing and just fail quietly, but nobody talks about them."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Makes sense. The majority of failed ventures probably never even get mentioned anywhere."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Right, and apparently few of them are ever written about, because there's no audience for a quiet failure."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Did the podcast mention any actual research on this?"
+        },
+        {
+          "speaker": "Anna",
+          "line": "Yeah, a few researchers studied failed companies directly and found identical habits in both successful and failed founders."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "So luck and timing matter a lot more than everyone likes to acknowledge."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-15-participle-clauses",
+      "shortPrefix": "lesson-15",
+      "title": "Participle Clauses",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Having just read about anchoring bias, I finally understand why recruiters always ask your expected salary first."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, whoever names a number first sets the anchor for the whole conversation."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. Concerned about seeming unreasonable, most candidates just accept whatever range comes up first."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Trained to recognise the bias, though, you can consciously push back against it."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Having rehearsed a counteroffer beforehand definitely helps — you don't end up anchoring on their number instead."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I read that candidates who mention a high figure first end up earning disproportionately more, even with identical qualifications."
+        },
+        {
+          "speaker": "Anna",
+          "line": "That benchmark data is honestly a bit alarming."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "It is. Next negotiation, I'm speaking first."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-16-advanced-relative-clauses",
+      "shortPrefix": "lesson-16",
+      "title": "Advanced Relative Clauses",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "I finally get why our Tokyo call felt so strange — it's this whole high-context thing, whereby half the meaning is never actually said out loud."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, whereas we just say exactly what we mean, which apparently comes across as blunt."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. The client to whom I sent that very direct email never replied, and now I understand why."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I raised an objection once, whereupon everyone went completely silent — I had no idea what I'd done wrong."
+        },
+        {
+          "speaker": "Anna",
+          "line": "It probably wasn't the objection itself, which they don't mind, but how bluntly you phrased it."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "The real issue on which we still disagree internally is how direct our emails should be by default."
+        },
+        {
+          "speaker": "Anna",
+          "line": "The manager with whom I discussed this suggested softening requests with a bit more context first."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Makes sense. I'll try that next time, which honestly should have been obvious from the start."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-17-ellipsis-substitution",
+      "shortPrefix": "lesson-17",
+      "title": "Ellipsis & Substitution",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Honestly, sometimes I still feel like a total fraud, even after ten years in this job."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Same here. I think most people in this office feel like that, if I'm honest."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Really? I always assumed it was just me."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Definitely not — and apparently so did half the senior team, according to an article I read."
+        },
+        {
+          "speaker": "Anna",
+          "line": "I dismiss compliments constantly. I just assume people are being polite."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Neither do I take them seriously, most of the time, if I'm honest."
+        },
+        {
+          "speaker": "Anna",
+          "line": "The article suggested keeping a list of achievements, to reread if necessary. Do you think that would actually help?"
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I hope so, honestly."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-18-negative-inversion",
+      "shortPrefix": "lesson-18",
+      "title": "Negative Inversion for Emphasis",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Never before have I seen a company adopt something this fast without any real evaluation."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "I know. Rarely does anyone here ask if a trend actually fits what we do."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Exactly. Not only did we adopt the new framework, but we also dropped the old one overnight."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Under no circumstances should we have skipped due diligence like that."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Seldom does management admit a trend failed once it's fashionable elsewhere."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "True. Not once did anyone ask what happens once everyone else moves on to the next buzzword."
+        },
+        {
+          "speaker": "Anna",
+          "line": "It's a classic bandwagon effect, if you ask me."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Completely. Let's hope we ask better questions next time."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-19-fronting-information-structure",
+      "shortPrefix": "lesson-19",
+      "title": "Fronting & Information Structure",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Such was my attachment to that wobbly bookshelf I built that I refused to throw it out for years."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Ha, classic IKEA effect. A particularly striking finding is that people rate self-built furniture higher, even when it looks worse."
+        },
+        {
+          "speaker": "Anna",
+          "line": "This attachment, apparently, has nothing to do with the object itself — it's all about the effort."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "So strong is the pull of your own labour that you'll defend a crooked shelf to the death."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Also documented is the exact same effect in cooking and gardening, funnily enough."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "This flawed final product thing explains so much about my garden, honestly."
+        },
+        {
+          "speaker": "Anna",
+          "line": "A key implication is that companies could build in a little friction on purpose."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Smart. Let people tinker a bit, and they'll love the result even more."
+        }
+      ]
+    },
+    {
+      "lessonId": "b2c1-lesson-20-discourse-capstone",
+      "shortPrefix": "lesson-20",
+      "title": "Discourse Capstone",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "line": "Having read about the Ringelmann effect, I finally understand why our biggest team is also our least productive per person."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Right, whereas the four-person squad clearly pulls its weight, the twelve-person one seems to coast."
+        },
+        {
+          "speaker": "Anna",
+          "line": "Notwithstanding all the extra headcount, output barely changed this quarter."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Rarely does anyone admit they're coasting, though — it happens without anyone deciding it."
+        },
+        {
+          "speaker": "Anna",
+          "line": "In light of this, maybe we should split the big team into smaller ones."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Insofar as the work actually needs that many people, sure — but a lot of it probably doesn't."
+        },
+        {
+          "speaker": "Anna",
+          "line": "The effect is over a century old, and nonetheless it still applies to us today."
+        },
+        {
+          "speaker": "Tomasz",
+          "line": "Some things never change, apparently."
+        }
+      ]
+    }
+  ]
+}

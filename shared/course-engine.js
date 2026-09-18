@@ -948,9 +948,16 @@ const Course = (() => {
   function renderCompareCard(containerId, items){
     const el = document.getElementById(containerId);
     if (!el) return;
+    // Each row is a CSS Grid (not an independent flex container) so the
+    // label/box columns line up across every row regardless of how long
+    // any one row's text is. flex-wrap here previously let each row
+    // decide, on its own, whether its label+box fit on one line — since
+    // that decision depends on that row's own text length, rows with
+    // shorter text stayed inline while longer ones wrapped, staggering
+    // the boxes out of alignment with each other.
     el.innerHTML = items.map(it => `
-      <div style="display:flex;gap:10px;align-items:baseline;margin-bottom:${it.groupEnd ? 20 : 8}px;flex-wrap:wrap">
-        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);flex-shrink:0;width:170px">${it.label}</span>
+      <div class="compare-row" style="margin-bottom:${it.groupEnd ? 20 : 8}px">
+        <span style="font-size:11px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">${it.label}</span>
         <span class="compare-box" data-key="${it.key}">"${it.text}"</span>
       </div>
     `).join('');
@@ -1087,7 +1094,32 @@ const Course = (() => {
      transcript lines revealing one-by-one during playback (or all at
      once via "Show full transcript"), and the zero-height-until-shown
      transcript container from theme.css. ---------------- */
-  function initListening({dialogue, speakerA, speakerB}){
+  // Per-lesson combined dialogue audio (one MP3 per lesson, stitched by
+  // generate_audio.py) + a small sidecar JSON of {start,end} seconds per
+  // line, used to drive the same "reveal line as it's spoken" UX as the
+  // speechSynthesis fallback, but timed against the real recording.
+  // File-first with a cached fetch(HEAD) check, exactly like speakSmart —
+  // missing files (nothing generated yet) transparently fall back to the
+  // per-line speechSynthesis loop with zero code changes needed later.
+  const dialogueAudioCache = new Map(); // shortPrefix -> {mp3, timings}|false
+  async function checkDialogueAudio(shortPrefix){
+    if (dialogueAudioCache.has(shortPrefix)) return dialogueAudioCache.get(shortPrefix);
+    const mp3 = `audio/${shortPrefix}-listening.mp3`;
+    const jsonUrl = `audio/${shortPrefix}-listening.json`;
+    let result = false;
+    try {
+      const res = await fetch(mp3, { method: 'HEAD' });
+      if (res.ok){
+        const timingRes = await fetch(jsonUrl);
+        const timings = timingRes.ok ? await timingRes.json() : null;
+        result = { mp3, timings };
+      }
+    } catch (e){ result = false; }
+    dialogueAudioCache.set(shortPrefix, result);
+    return result;
+  }
+
+  function initListening({dialogue, speakerA, speakerB, lessonId}){
     const audioEl = document.getElementById('dialogue-audio');
     const playBtn = document.getElementById('play-dialogue');
     const stopBtn = document.getElementById('stop-dialogue');
@@ -1099,6 +1131,10 @@ const Course = (() => {
       `<div class="transcript-line" data-idx="${i}"><b>${esc(line.speaker)}:</b> ${esc(line.line)}</div>`
     ).join('');
     const lineEls = transcriptEl.querySelectorAll('.transcript-line');
+    // "lesson-01" from "b2c1-lesson-01-narrative-tenses" — matches the
+    // short-prefix convention every other generated filename already uses.
+    const shortPrefixMatch = (lessonId || '').match(/^b2c1-(lesson-\d+)/);
+    const shortPrefix = shortPrefixMatch ? shortPrefixMatch[1] : lessonId;
 
     function updateExpansion(){
       const anyShown = !!transcriptEl.querySelector('.transcript-line.shown');
@@ -1108,12 +1144,7 @@ const Course = (() => {
     let playing = false;
     let cancelRequested = false;
 
-    async function playAll(){
-      if (playing) return;
-      playing = true;
-      cancelRequested = false;
-      playBtn.textContent = '⏸ Playing…';
-      lineEls.forEach(el => el.classList.remove('active'));
+    async function playViaSpeechSynthesis(){
       for (let i = 0; i < dialogue.length; i++){
         if (cancelRequested) break;
         const el = lineEls[i];
@@ -1133,6 +1164,58 @@ const Course = (() => {
           window.speechSynthesis.speak(u);
         });
       }
+    }
+
+    async function playViaAudioFile(audioInfo){
+      await new Promise((resolve) => {
+        const timings = audioInfo.timings;
+        function onTimeUpdate(){
+          if (!timings) return;
+          const t = audioEl.currentTime;
+          const idx = timings.findIndex(seg => t >= seg.start && t < seg.end);
+          if (idx === -1) return;
+          if (!lineEls[idx].classList.contains('shown')){
+            lineEls[idx].classList.add('shown');
+            updateExpansion();
+          }
+          lineEls.forEach(l => l.classList.remove('active'));
+          lineEls[idx].classList.add('active');
+          lineEls[idx].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }
+        function cleanup(){
+          audioEl.removeEventListener('timeupdate', onTimeUpdate);
+          audioEl.removeEventListener('ended', onEnded);
+          audioEl.removeEventListener('error', onEnded);
+          resolve();
+        }
+        function onEnded(){ cleanup(); }
+        audioEl.addEventListener('timeupdate', onTimeUpdate);
+        audioEl.addEventListener('ended', onEnded);
+        audioEl.addEventListener('error', onEnded);
+        audioEl.src = audioInfo.mp3;
+        audioEl.currentTime = 0;
+        audioEl.play().catch(onEnded);
+        // If there's no timing file, just reveal the whole transcript —
+        // still better than nothing, and correctness (which line is
+        // "active") isn't guessable without the timing sidecar.
+        if (!timings) lineEls.forEach(l => l.classList.add('shown'));
+        updateExpansion();
+        if (cancelRequested) cleanup();
+      });
+    }
+
+    async function playAll(){
+      if (playing) return;
+      playing = true;
+      cancelRequested = false;
+      playBtn.textContent = '⏸ Playing…';
+      lineEls.forEach(el => el.classList.remove('active'));
+      const audioInfo = shortPrefix ? await checkDialogueAudio(shortPrefix) : false;
+      if (audioInfo){
+        await playViaAudioFile(audioInfo);
+      } else {
+        await playViaSpeechSynthesis();
+      }
       lineEls.forEach(l => l.classList.remove('active'));
       playing = false;
       playBtn.textContent = '▶ Play dialogue';
@@ -1142,6 +1225,7 @@ const Course = (() => {
       cancelRequested = true;
       playing = false;
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      if (audioEl && !audioEl.paused){ audioEl.pause(); audioEl.currentTime = 0; }
       playBtn.textContent = '▶ Play dialogue';
       lineEls.forEach(l => l.classList.remove('active'));
     });

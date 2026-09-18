@@ -383,7 +383,7 @@ Course.initPageChrome({{lessonId: LESSON_ID}});
   document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {{}}));
 
   /* ---------------- listening ---------------- */
-  Course.initListening({{dialogue: {j(d["listening"]["dialogue"])}, speakerA: 'Anna', speakerB: 'Tomasz'}});
+  Course.initListening({{dialogue: {j(d["listening"]["dialogue"])}, speakerA: 'Anna', speakerB: 'Tomasz', lessonId: LESSON_ID}});
 {listen_wire}
 
   /* ---------------- wrap-up ---------------- */
