@@ -211,7 +211,7 @@ def render_lesson(d):
       <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
       <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
       <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
-      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+      <p id="discuss-limit-msg" style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
     </div>
   </section>'''
 
@@ -316,30 +316,27 @@ def render_lesson(d):
     # warmup/diagnostic containers are pre-rendered in HTML with fixed ids (warm-q1 etc.), so
     # instead of renderMCQList (which also renders markup) we just wire initMCQ directly against
     # the pre-built option buttons — matching the original course's hand-authored pattern exactly.
-    warmup_wire = "\n".join(
-        f'''  Course.initMCQ('warm-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'warmup-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['warmup-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["warmup"])
-    )
-    diag_wire = "\n".join(
-        f'''  Course.initMCQ('diag-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'diagnostic-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['diagnostic-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["diagnostic"])
-    )
-    comp_wire = "\n".join(
-        f'''  Course.initMCQ('comp-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'reading-comp-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['reading-comp-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["reading"]["comprehension"])
-    )
-    vocab_wire = "\n".join(
-        f'''  Course.initMCQ('vocab-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'vocab-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['vocab-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["vocab_check"]["match"])
-    )
-    listen_wire = "\n".join(
-        f'''  Course.initMCQ('listen-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'listening-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['listening-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["listening"]["comprehension"])
-    )
-    exit_wire = "\n".join(
-        f'''  Course.initMCQ('exit-q{i+1}', {{lessonId: LESSON_ID, sectionId: 'exit-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['exit-{i+1}']||{{}}).answer_given}});'''
-        for i, q in enumerate(d["exit"])
-    )
+    def _mcq_group(prefix, section_prefix, questions):
+        """Wires one initMCQ per question, then a single
+        ensureAnswerPositionVariety call so the group's correct answers
+        don't all end up on the same on-screen position by chance."""
+        wires = [
+            f'''  Course.initMCQ('{prefix}-q{i+1}', {{lessonId: LESSON_ID, sectionId: '{section_prefix}-{i+1}', correctValue: {j(next(o["value"] for o in q["options"] if o["correct"]))}, restoreAnswer: (sectionMap['{section_prefix}-{i+1}']||{{}}).answer_given}});'''
+            for i, q in enumerate(questions)
+        ]
+        variety_items = j([
+            {"containerId": f"{prefix}-q{i+1}", "correctValue": next(o["value"] for o in q["options"] if o["correct"])}
+            for i, q in enumerate(questions)
+        ])
+        wires.append(f'''  Course.ensureAnswerPositionVariety({variety_items});''')
+        return "\n".join(wires)
+
+    warmup_wire = _mcq_group("warm", "warmup", d["warmup"])
+    diag_wire = _mcq_group("diag", "diagnostic", d["diagnostic"])
+    comp_wire = _mcq_group("comp", "reading-comp", d["reading"]["comprehension"])
+    vocab_wire = _mcq_group("vocab", "vocab", d["vocab_check"]["match"])
+    listen_wire = _mcq_group("listen", "listening", d["listening"]["comprehension"])
+    exit_wire = _mcq_group("exit", "exit", d["exit"])
 
     script = f'''
 const LESSON_ID = {j(lesson_id)};
@@ -378,9 +375,8 @@ Course.initPageChrome({{lessonId: LESSON_ID}});
   Course.renderBuilders('builders', {j(practice["builders"])}, {{lessonId: LESSON_ID, sectionPrefix: 'practice-builder'}});
 
   /* ---------------- speaking ---------------- */
-  Course.initSpeaking({{max: 2}});
-  Course.renderDiscussQuestions('discuss-questions', {j(d["speaking"]["group_questions"])});
-  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {{}}));
+  Course.initSpeaking({{max: 2, lessonId: LESSON_ID, sectionMap, soloTaskLabel: {j(d["speaking"]["solo_text"])}}});
+  Course.renderDiscussQuestions('discuss-questions', {j(d["speaking"]["group_questions"])}, {{lessonId: LESSON_ID, max: 2, sectionPrefix: 'speaking-q'}});
 
   /* ---------------- listening ---------------- */
   Course.initListening({{dialogue: {j(d["listening"]["dialogue"])}, speakerA: 'Anna', speakerB: 'Tomasz', lessonId: LESSON_ID}});

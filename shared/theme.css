@@ -262,7 +262,9 @@ body.theme-discourse{
   display:flex;flex-wrap:wrap;gap:8px;min-height:46px;padding:10px;
   border:1.5px dashed var(--border-strong);border-radius:var(--radius-md);background:var(--surface-alt);
 }
-.builder-target .chip{background:var(--accent-soft);border-color:var(--accent-soft-border);color:var(--accent-dark)}
+.builder-target .chip{background:var(--accent-soft);border-color:var(--accent-soft-border);color:var(--accent-dark);cursor:grab}
+.builder-target .chip.dragging{opacity:.4}
+.builder-target .chip.drag-over{outline:2px dashed var(--accent);outline-offset:2px}
 
 /* ---------- Speaking / listening task cards ---------- */
 .task-card{
@@ -283,10 +285,11 @@ body.theme-discourse{
 .gram-explain.open{display:block}
 
 /* ---------- Listening transcript ----------
-   The container takes zero visual space until content actually
-   becomes visible (either via "Show full transcript" or lines
-   revealing during playback) — not just hidden via opacity while
-   still occupying layout height. */
+   The container takes zero visual space until "Show full transcript"
+   is pressed — not just hidden via opacity while still occupying
+   layout height. Playback never auto-reveals lines; it only ever
+   highlights the current one via .active once the transcript is
+   already shown. */
 #transcript{max-height:0;overflow:hidden;transition:max-height .3s ease}
 #transcript.expanded{max-height:2000px;margin-top:14px}
 .transcript-line{

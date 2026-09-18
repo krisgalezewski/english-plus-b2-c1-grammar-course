@@ -31,7 +31,8 @@ def _render_item(kind_prefix, i, item):
       </div>'''
         correct_value = next(o["value"] for o in item["options"] if o["correct"])
         wire = f'''  Course.initMCQ('{kind_prefix}-q{i+1}', {{lessonId: LESSON_ID, sectionId: '{kind_prefix}-{i+1}', correctValue: {j(correct_value)}, restoreAnswer: (sectionMap['{kind_prefix}-{i+1}']||{{}}).answer_given}});'''
-        return html, wire
+        variety_entry = {"containerId": f"{kind_prefix}-q{i+1}", "correctValue": correct_value}
+        return html, wire, variety_entry
     else:  # gapfill
         width = item.get("width", 170)
         html = f'''
@@ -41,7 +42,7 @@ def _render_item(kind_prefix, i, item):
         <div id="{kind_prefix}-g{i+1}-fb"></div>
       </div>'''
         wire = f'''  Course.initGapFill('{kind_prefix}-g{i+1}-input','{kind_prefix}-g{i+1}-check','{kind_prefix}-g{i+1}-fb', {{lessonId: LESSON_ID, sectionId: '{kind_prefix}-gap-{i+1}', correctAnswers: Course.withContractions({j(item["answers"])}), restore: sectionMap['{kind_prefix}-gap-{i+1}'] ? {{answerGiven: sectionMap['{kind_prefix}-gap-{i+1}'].answer_given, isCorrect: sectionMap['{kind_prefix}-gap-{i+1}'].override_correct ?? sectionMap['{kind_prefix}-gap-{i+1}'].is_correct}} : null}});'''
-        return html, wire
+        return html, wire, None
 
 
 def render_test(d):
@@ -52,10 +53,15 @@ def render_test(d):
     part1 = d["part1"]
     p1_html_items = []
     p1_wires = []
+    p1_variety = []
     for i, item in enumerate(part1["items"]):
-        html, wire = _render_item("p1", i, item)
+        html, wire, variety_entry = _render_item("p1", i, item)
         p1_html_items.append(html)
         p1_wires.append(wire)
+        if variety_entry:
+            p1_variety.append(variety_entry)
+    if p1_variety:
+        p1_wires.append(f'''  Course.ensureAnswerPositionVariety({j(p1_variety)});''')
 
     part1_section = f'''
   <section class="section" id="sec-part1">
@@ -71,10 +77,15 @@ def render_test(d):
     if d.get("part2"):
         part2 = d["part2"]
         p2_html_items = []
+        p2_variety = []
         for i, item in enumerate(part2["items"]):
-            html, wire = _render_item("p2", i, item)
+            html, wire, variety_entry = _render_item("p2", i, item)
             p2_html_items.append(html)
             p2_wires.append(wire)
+            if variety_entry:
+                p2_variety.append(variety_entry)
+        if p2_variety:
+            p2_wires.append(f'''  Course.ensureAnswerPositionVariety({j(p2_variety)});''')
         part2_section = f'''
   <section class="section" id="sec-part2">
     <div class="section-label"><span class="num">2</span> {part2["heading"]}</div>

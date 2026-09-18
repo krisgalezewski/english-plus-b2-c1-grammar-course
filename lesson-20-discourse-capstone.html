@@ -281,7 +281,7 @@
       <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
       <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
       <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
-      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+      <p id="discuss-limit-msg" style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
     </div>
   </section>
 
@@ -382,10 +382,12 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
   Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
   Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "warm-q1", "correctValue": "right"}, {"containerId": "warm-q2", "correctValue": "right"}, {"containerId": "warm-q3", "correctValue": "right"}]);
   Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
   Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
   Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
   Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "diag-q1", "correctValue": "right"}, {"containerId": "diag-q2", "correctValue": "right"}, {"containerId": "diag-q3", "correctValue": "right"}, {"containerId": "diag-q4", "correctValue": "right"}]);
 
   /* ---------------- concept widget ---------------- */
   Course.renderConceptWidget({
@@ -404,6 +406,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
   Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
   Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "comp-q1", "correctValue": "right"}, {"containerId": "comp-q2", "correctValue": "right"}, {"containerId": "comp-q3", "correctValue": "right"}]);
 
   /* ---------------- vocab check ---------------- */
   Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
@@ -411,6 +414,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
   Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
   Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "vocab-q1", "correctValue": "right"}, {"containerId": "vocab-q2", "correctValue": "right"}, {"containerId": "vocab-q3", "correctValue": "right"}, {"containerId": "vocab-q4", "correctValue": "right"}, {"containerId": "vocab-q5", "correctValue": "right"}]);
     Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["consequential"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
   Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["underscoring"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
   Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["diffused"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
@@ -428,15 +432,15 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.renderBuilders('builders', [{"words": ["Notwithstanding", "the", "setbacks,", "the", "launch", "proceeded", "as", "planned."]}, {"words": ["The", "old", "system", "was", "manual,", "whereas", "the", "new", "one", "is", "automated."]}, {"words": ["In", "light", "of", "the", "feedback,", "the", "policy", "was", "revised."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
 
   /* ---------------- speaking ---------------- */
-  Course.initSpeaking({max: 2});
-  Course.renderDiscussQuestions('discuss-questions', ["Describe something that went badly at first, but that you nonetheless kept working on. What changed?", "Compare two approaches, teams or periods of time using 'whereas' to highlight the contrast.", "In light of everything you've learned in this course, what's one grammar structure you now use more confidently than before?"]);
-  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+  Course.initSpeaking({max: 2, lessonId: LESSON_ID, sectionMap, soloTaskLabel: "Give a short 'retrospective' about a project, job or course you've completed, using at least two formal connectors (nonetheless, notwithstanding, whereas, in light of, insofar as) and at least two earlier structures from this course (a conditional, a passive, a participle clause, or an inversion)."});
+  Course.renderDiscussQuestions('discuss-questions', ["Describe something that went badly at first, but that you nonetheless kept working on. What changed?", "Compare two approaches, teams or periods of time using 'whereas' to highlight the contrast.", "In light of everything you've learned in this course, what's one grammar structure you now use more confidently than before?"], {lessonId: LESSON_ID, max: 2, sectionPrefix: 'speaking-q'});
 
   /* ---------------- listening ---------------- */
   Course.initListening({dialogue: [{"speaker": "Anna", "line": "Having read about the Ringelmann effect, I finally understand why our biggest team is also our least productive per person."}, {"speaker": "Tomasz", "line": "Right, whereas the four-person squad clearly pulls its weight, the twelve-person one seems to coast."}, {"speaker": "Anna", "line": "Notwithstanding all the extra headcount, output barely changed this quarter."}, {"speaker": "Tomasz", "line": "Rarely does anyone admit they're coasting, though — it happens without anyone deciding it."}, {"speaker": "Anna", "line": "In light of this, maybe we should split the big team into smaller ones."}, {"speaker": "Tomasz", "line": "Insofar as the work actually needs that many people, sure — but a lot of it probably doesn't."}, {"speaker": "Anna", "line": "The effect is over a century old, and nonetheless it still applies to us today."}, {"speaker": "Tomasz", "line": "Some things never change, apparently."}], speakerA: 'Anna', speakerB: 'Tomasz', lessonId: LESSON_ID});
   Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
   Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
   Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "listen-q1", "correctValue": "right"}, {"containerId": "listen-q2", "correctValue": "right"}, {"containerId": "listen-q3", "correctValue": "right"}]);
 
   /* ---------------- wrap-up ---------------- */
   Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
@@ -444,6 +448,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
   Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
   Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "exit-q1", "correctValue": "right"}, {"containerId": "exit-q2", "correctValue": "right"}, {"containerId": "exit-q3", "correctValue": "right"}, {"containerId": "exit-q4", "correctValue": "right"}, {"containerId": "exit-q5", "correctValue": "right"}]);
   Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
 })();
 

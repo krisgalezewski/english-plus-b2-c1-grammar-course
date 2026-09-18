@@ -272,7 +272,9 @@ body.theme-discourse{
   display:flex;flex-wrap:wrap;gap:8px;min-height:46px;padding:10px;
   border:1.5px dashed var(--border-strong);border-radius:var(--radius-md);background:var(--surface-alt);
 }
-.builder-target .chip{background:var(--accent-soft);border-color:var(--accent-soft-border);color:var(--accent-dark)}
+.builder-target .chip{background:var(--accent-soft);border-color:var(--accent-soft-border);color:var(--accent-dark);cursor:grab}
+.builder-target .chip.dragging{opacity:.4}
+.builder-target .chip.drag-over{outline:2px dashed var(--accent);outline-offset:2px}
 
 /* ---------- Speaking / listening task cards ---------- */
 .task-card{
@@ -293,10 +295,11 @@ body.theme-discourse{
 .gram-explain.open{display:block}
 
 /* ---------- Listening transcript ----------
-   The container takes zero visual space until content actually
-   becomes visible (either via "Show full transcript" or lines
-   revealing during playback) — not just hidden via opacity while
-   still occupying layout height. */
+   The container takes zero visual space until "Show full transcript"
+   is pressed — not just hidden via opacity while still occupying
+   layout height. Playback never auto-reveals lines; it only ever
+   highlights the current one via .active once the transcript is
+   already shown. */
 #transcript{max-height:0;overflow:hidden;transition:max-height .3s ease}
 #transcript.expanded{max-height:2000px;margin-top:14px}
 .transcript-line{
@@ -807,7 +810,7 @@ window.SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
       <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
       <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
-      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+      <p id="discuss-limit-msg" style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
     </div>
   </section>
 
@@ -1376,20 +1379,48 @@ const Course = (() => {
 
   /* ----------------------------------------------------------
      SHUFFLE-WITH-VARIETY
+     After a whole task's worth of related MCQs has been built (each
+     one already independently shuffled by shuffleOptions inside
+     initMCQ), this spreads the CORRECT answer's on-screen position as
+     evenly as mathematically possible across the group, so a task
+     never ends up with every correct answer in the same spot (e.g.
+     always "top") purely by chance — which independent per-question
+     randomising can easily produce, especially with only 2 options.
+
+     items: [{ containerId, correctValue }] for one task's questions.
+     For N questions sharing K on-screen positions, exactly floor(N/K)
+     or ceil(N/K) of them get each position (counts differ by at most
+     1) — e.g. 3 two-option questions -> a 2/1 split, 5 -> a 3/2 split
+     — while WHICH question lands on which position stays randomised.
      ---------------------------------------------------------- */
-  function ensureGroupVariety(containerIds){
-    if (containerIds.length < 2) return;
-    const firstIsCorrect = containerIds.map(id => {
-      const first = document.querySelector(`#${id} .opt`);
-      return first && first.dataset.value === 'right';
+  function ensureAnswerPositionVariety(items){
+    const usable = (items || []).filter(it => it && document.getElementById(it.containerId));
+    if (usable.length < 2) return;
+    const numOptions = Math.min(...usable.map(it => document.getElementById(it.containerId).querySelectorAll('.opt').length));
+    if (numOptions < 2) return;
+
+    const n = usable.length;
+    const base = Math.floor(n / numOptions);
+    let extra = n - base * numOptions;
+    const targetPositions = [];
+    for (let p = 0; p < numOptions; p++){
+      const count = base + (extra > 0 ? 1 : 0);
+      if (extra > 0) extra--;
+      for (let k = 0; k < count; k++) targetPositions.push(p);
+    }
+    const assigned = shuffleArray(targetPositions);
+
+    usable.forEach((it, idx) => {
+      const container = document.getElementById(it.containerId);
+      const opts = Array.from(container.querySelectorAll('.opt'));
+      const correctIdx = opts.findIndex(o => o.dataset.value === it.correctValue);
+      if (correctIdx === -1) return;
+      const targetIdx = Math.min(assigned[idx], opts.length - 1);
+      if (correctIdx === targetIdx) return;
+      const [correctEl] = opts.splice(correctIdx, 1);
+      opts.splice(targetIdx, 0, correctEl);
+      opts.forEach(o => container.appendChild(o));
     });
-    const allSame = firstIsCorrect.every(v => v === firstIsCorrect[0]);
-    if (!allSame) return;
-    const targetId = containerIds[Math.floor(Math.random() * containerIds.length)];
-    const container = document.getElementById(targetId);
-    const opts = Array.from(container.querySelectorAll('.opt'));
-    const differentIdx = opts.findIndex(o => o.dataset.value !== opts[0].dataset.value);
-    if (differentIdx > 0) container.insertBefore(opts[differentIdx], opts[0]);
   }
 
   /* ----------------------------------------------------------
@@ -1675,6 +1706,7 @@ const Course = (() => {
         </div>
       </div>`;
     }).join('');
+    const positionItems = [];
     items.forEach((item, i) => {
       const sectionId = `${sectionPrefix}-${i+1}`;
       const correctOpt = item.options.find(o => o.correct);
@@ -1684,7 +1716,9 @@ const Course = (() => {
         lessonId, sectionId, correctValue,
         restoreAnswer: restore ? restore.answer_given : null
       });
+      positionItems.push({ containerId: `${rootId}-q${i+1}`, correctValue });
     });
+    ensureAnswerPositionVariety(positionItems);
   }
 
   /* ---------------- Renders a numbered list of gap-fill questions.
@@ -1723,6 +1757,10 @@ const Course = (() => {
         <p style="font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:8px">Round ${i+1}</p>
         <div class="builder-target" id="${rootId}-target${i+1}"></div>
         <div class="builder-bank" id="${rootId}-bank${i+1}" style="margin-top:10px"></div>
+        <div style="margin-top:10px;display:flex;gap:8px">
+          <button class="btn btn-ghost btn-sm" id="${rootId}-reset${i+1}">↺ Reset</button>
+          <button class="btn btn-primary btn-sm" id="${rootId}-check${i+1}" disabled>Check order</button>
+        </div>
         <div id="${rootId}-fb${i+1}" style="margin-top:8px"></div>
       </div>`).join('');
 
@@ -1731,53 +1769,119 @@ const Course = (() => {
       const bankEl = document.getElementById(`${rootId}-bank${i+1}`);
       const targetEl = document.getElementById(`${rootId}-target${i+1}`);
       const fbEl = document.getElementById(`${rootId}-fb${i+1}`);
+      const resetBtn = document.getElementById(`${rootId}-reset${i+1}`);
+      const checkBtn = document.getElementById(`${rootId}-check${i+1}`);
       const restoreRow = sectionMap[sectionId];
-      let placed = [];
+      let placed = []; // [{ w, idx }]
       let done = false;
+      let dragFromPos = null;
 
       function normalize(s){ return s.toLowerCase().replace(/[.!?]+$/, '').replace(/\s+/g,' ').trim(); }
 
+      function updateCheckState(){
+        checkBtn.disabled = done || placed.length !== r.words.length;
+      }
+
       function finish(){
         done = true;
-        const built = placed.join(' ');
+        const built = placed.map(p => p.w).join(' ');
         const correct = normalize(built) === normalize(r.words.join(' '));
         fbEl.innerHTML = correct
           ? `<div class="fb-ok">✓ Correct!</div>`
           : `<div class="fb-no">Not quite. A correct order: "${r.words.join(' ')}"</div>`;
         logProgress({ lessonId, sectionId, answerGiven: built, isCorrect: correct });
         [...bankEl.children].forEach(c => c.style.pointerEvents = 'none');
+        checkBtn.disabled = true;
+        resetBtn.style.display = 'none';
+        renderTarget();
       }
 
-      function renderBank(){
-        const bankWords = shuffleArray(r.words.map((w, idx) => ({ w, idx })));
+      function renderBank(bankWords){
         bankEl.innerHTML = '';
         bankWords.forEach(item => {
           const chip = document.createElement('button');
+          chip.type = 'button';
           chip.className = 'chip';
           chip.textContent = item.w;
+          if (placed.some(p => p.idx === item.idx)) chip.classList.add('used');
           chip.addEventListener('click', () => {
             if (done || chip.classList.contains('used')) return;
             chip.classList.add('used');
-            placed.push(item.w);
+            placed.push(item);
             renderTarget();
-            if (placed.length === r.words.length) finish();
+            updateCheckState();
           });
           bankEl.appendChild(chip);
         });
       }
+
+      // Placed chips can be dragged to swap their order — so a course
+      // taker who needs to fix the order of two words doesn't have to
+      // send them back to the bank and re-place them from scratch.
       function renderTarget(){
-        targetEl.innerHTML = placed.map(w => `<span class="chip">${w}</span>`).join('');
+        targetEl.innerHTML = '';
+        placed.forEach((item, pos) => {
+          const chip = document.createElement('span');
+          chip.className = 'chip';
+          chip.textContent = item.w;
+          if (!done){
+            chip.draggable = true;
+            chip.addEventListener('dragstart', (e) => {
+              dragFromPos = pos;
+              chip.classList.add('dragging');
+              e.dataTransfer.effectAllowed = 'move';
+              e.dataTransfer.setData('text/plain', String(pos));
+            });
+            chip.addEventListener('dragend', () => {
+              chip.classList.remove('dragging');
+              dragFromPos = null;
+            });
+            chip.addEventListener('dragover', (e) => {
+              e.preventDefault();
+              e.dataTransfer.dropEffect = 'move';
+              chip.classList.add('drag-over');
+            });
+            chip.addEventListener('dragleave', () => chip.classList.remove('drag-over'));
+            chip.addEventListener('drop', (e) => {
+              e.preventDefault();
+              chip.classList.remove('drag-over');
+              const fromPos = dragFromPos !== null ? dragFromPos : Number(e.dataTransfer.getData('text/plain'));
+              if (Number.isNaN(fromPos) || fromPos === pos) return;
+              const [moved] = placed.splice(fromPos, 1);
+              placed.splice(pos, 0, moved);
+              renderTarget();
+            });
+          }
+          targetEl.appendChild(chip);
+        });
       }
 
-      if (restoreRow){
-        placed = [...r.words];
+      resetBtn.addEventListener('click', () => {
+        placed = [];
+        done = false;
+        fbEl.innerHTML = '';
+        renderBank(shuffleArray(r.words.map((w, idx) => ({ w, idx }))));
         renderTarget();
+        updateCheckState();
+      });
+
+      checkBtn.addEventListener('click', () => {
+        if (checkBtn.disabled) return;
+        finish();
+      });
+
+      if (restoreRow){
+        placed = r.words.map((w, idx) => ({ w, idx }));
         done = true;
+        renderTarget();
         const correct = restoreRow.override_correct ?? restoreRow.is_correct;
         fbEl.innerHTML = correct ? `<div class="fb-ok">✓ Correct!</div>` : `<div class="fb-no">A correct order: "${r.words.join(' ')}"</div>`;
         bankEl.innerHTML = '';
+        checkBtn.disabled = true;
+        resetBtn.style.display = 'none';
       } else {
-        renderBank();
+        renderBank(shuffleArray(r.words.map((w, idx) => ({ w, idx }))));
+        updateCheckState();
       }
     });
   }
@@ -1800,6 +1904,7 @@ const Course = (() => {
         </div>
       </div>`;
     }).join('');
+    const positionItems = [];
     items.forEach((item, i) => {
       const sectionId = `${sectionPrefix}-${i+1}`;
       const restore = sectionMap[sectionId];
@@ -1807,7 +1912,9 @@ const Course = (() => {
         lessonId, sectionId, correctValue: item.correct,
         restoreAnswer: restore ? restore.answer_given : null
       });
+      positionItems.push({ containerId: `${rootId}-q${i+1}`, correctValue: item.correct });
     });
+    ensureAnswerPositionVariety(positionItems);
   }
 
   /* ---------------- Hoverable compare cards (shared across every
@@ -2034,115 +2141,149 @@ const Course = (() => {
     const shortPrefixMatch = (lessonId || '').match(/^b2c1-(lesson-\d+)/);
     const shortPrefix = shortPrefixMatch ? shortPrefixMatch[1] : lessonId;
 
-    function updateExpansion(){
-      const anyShown = !!transcriptEl.querySelector('.transcript-line.shown');
-      transcriptEl.classList.toggle('expanded', anyShown);
+    // Transcript stays fully hidden until "Show full transcript" is
+    // pressed, exactly like the original course — playback only ever
+    // highlights the current line (via .active), it never auto-reveals
+    // text, so listening practice stays an actual listening exercise.
+    let transcriptShown = false;
+    function setTranscriptShown(shown){
+      transcriptShown = shown;
+      lineEls.forEach(l => l.classList.toggle('shown', shown));
+      transcriptEl.classList.toggle('expanded', shown);
+      showBtn.textContent = shown ? 'Hide transcript' : 'Show full transcript';
     }
 
-    let playing = false;
-    let cancelRequested = false;
+    // ---- Mode state: resolved once (real audio file vs. speechSynthesis
+    // fallback), then the single Play/Pause button drives whichever mode
+    // is active, matching the original course's toggle-button pattern
+    // (no separate pause button — the Play button becomes Pause/Resume). ----
+    let audioInfo = null;      // {mp3, timings} | false, once resolved
+    let mode = null;           // 'audio' | 'tts', once resolved
+    let isPlaying = false;
+    let currentIdx = 0;        // tts mode: which line we're on/resuming from
+    let finished = false;
 
-    async function playViaSpeechSynthesis(){
-      for (let i = 0; i < dialogue.length; i++){
-        if (cancelRequested) break;
-        const el = lineEls[i];
-        el.classList.add('shown');
-        updateExpansion();
-        lineEls.forEach(l => l.classList.remove('active'));
-        el.classList.add('active');
-        el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        await new Promise(resolve => {
-          if (!('speechSynthesis' in window)){ setTimeout(resolve, 900); return; }
-          window.speechSynthesis.cancel();
-          const u = new SpeechSynthesisUtterance(dialogue[i].line);
-          u.rate = 0.95;
-          u.pitch = dialogue[i].speaker === speakerA ? 1.15 : 0.85;
-          u.onend = resolve;
-          u.onerror = resolve;
-          window.speechSynthesis.speak(u);
-        });
-      }
-    }
-
-    async function playViaAudioFile(audioInfo){
-      await new Promise((resolve) => {
-        const timings = audioInfo.timings;
-        function onTimeUpdate(){
-          if (!timings) return;
-          const t = audioEl.currentTime;
-          const idx = timings.findIndex(seg => t >= seg.start && t < seg.end);
-          if (idx === -1) return;
-          if (!lineEls[idx].classList.contains('shown')){
-            lineEls[idx].classList.add('shown');
-            updateExpansion();
-          }
-          lineEls.forEach(l => l.classList.remove('active'));
-          lineEls[idx].classList.add('active');
-          lineEls[idx].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
-        }
-        function cleanup(){
-          audioEl.removeEventListener('timeupdate', onTimeUpdate);
-          audioEl.removeEventListener('ended', onEnded);
-          audioEl.removeEventListener('error', onEnded);
-          resolve();
-        }
-        function onEnded(){ cleanup(); }
-        audioEl.addEventListener('timeupdate', onTimeUpdate);
-        audioEl.addEventListener('ended', onEnded);
-        audioEl.addEventListener('error', onEnded);
-        audioEl.src = audioInfo.mp3;
-        audioEl.currentTime = 0;
-        audioEl.play().catch(onEnded);
-        // If there's no timing file, just reveal the whole transcript —
-        // still better than nothing, and correctness (which line is
-        // "active") isn't guessable without the timing sidecar.
-        if (!timings) lineEls.forEach(l => l.classList.add('shown'));
-        updateExpansion();
-        if (cancelRequested) cleanup();
-      });
-    }
-
-    async function playAll(){
-      if (playing) return;
-      playing = true;
-      cancelRequested = false;
-      playBtn.textContent = '⏸ Playing…';
-      lineEls.forEach(el => el.classList.remove('active'));
-      const audioInfo = shortPrefix ? await checkDialogueAudio(shortPrefix) : false;
-      if (audioInfo){
-        await playViaAudioFile(audioInfo);
-      } else {
-        await playViaSpeechSynthesis();
-      }
-      lineEls.forEach(l => l.classList.remove('active'));
-      playing = false;
+    function updateButtonLabel(){
+      if (isPlaying){ playBtn.textContent = '⏸ Pause'; return; }
+      if (mode === 'tts' && window.speechSynthesis && window.speechSynthesis.paused){ playBtn.textContent = '▶ Resume'; return; }
+      if (mode === 'audio' && audioEl && audioEl.currentTime > 0 && !finished){ playBtn.textContent = '▶ Resume'; return; }
       playBtn.textContent = '▶ Play dialogue';
     }
-    playBtn.addEventListener('click', playAll);
-    stopBtn.addEventListener('click', () => {
-      cancelRequested = true;
-      playing = false;
+
+    function setActiveLine(idx){
+      lineEls.forEach(l => l.classList.remove('active'));
+      if (idx >= 0 && idx < lineEls.length){
+        lineEls[idx].classList.add('active');
+        if (transcriptShown) lineEls[idx].scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      }
+    }
+
+    function resetToStart(){
+      isPlaying = false;
+      finished = false;
+      currentIdx = 0;
       if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-      if (audioEl && !audioEl.paused){ audioEl.pause(); audioEl.currentTime = 0; }
-      playBtn.textContent = '▶ Play dialogue';
+      if (audioEl){ audioEl.pause(); audioEl.currentTime = 0; }
       lineEls.forEach(l => l.classList.remove('active'));
-    });
-    showBtn.addEventListener('click', () => {
-      const willShow = !transcriptEl.classList.contains('expanded') || ![...lineEls].every(l => l.classList.contains('shown'));
-      if (willShow){
-        lineEls.forEach(l => l.classList.add('shown'));
-        showBtn.textContent = 'Hide transcript';
-      } else {
-        lineEls.forEach(l => l.classList.remove('shown'));
-        showBtn.textContent = 'Show full transcript';
+      updateButtonLabel();
+    }
+
+    /* ---- speechSynthesis mode: recursive line-by-line playback so
+       pause/resume can work mid-dialogue (speechSynthesis.pause() only
+       pauses the utterance in flight; resume() continues it). ---- */
+    function speakLineAt(idx){
+      if (idx >= dialogue.length){
+        isPlaying = false; finished = true; currentIdx = 0;
+        lineEls.forEach(l => l.classList.remove('active'));
+        updateButtonLabel();
+        return;
       }
-      updateExpansion();
-    });
+      currentIdx = idx;
+      setActiveLine(idx);
+      if (!('speechSynthesis' in window)){
+        setTimeout(() => { if (isPlaying) speakLineAt(idx + 1); }, 900);
+        return;
+      }
+      const u = new SpeechSynthesisUtterance(dialogue[idx].line);
+      u.rate = 0.95;
+      u.pitch = dialogue[idx].speaker === speakerA ? 1.15 : 0.85;
+      u.onend = () => { if (isPlaying) speakLineAt(idx + 1); };
+      u.onerror = () => { if (isPlaying) speakLineAt(idx + 1); };
+      window.speechSynthesis.speak(u);
+    }
+
+    function onAudioTimeUpdate(){
+      const timings = audioInfo && audioInfo.timings;
+      if (!timings) return;
+      const t = audioEl.currentTime;
+      const idx = timings.findIndex(seg => t >= seg.start && t < seg.end);
+      if (idx === -1) return;
+      setActiveLine(idx);
+    }
+    function onAudioEnded(){
+      isPlaying = false; finished = true;
+      lineEls.forEach(l => l.classList.remove('active'));
+      updateButtonLabel();
+    }
+
+    async function togglePlay(){
+      // Resolve mode once, on first press.
+      if (mode === null){
+        audioInfo = shortPrefix ? await checkDialogueAudio(shortPrefix) : false;
+        mode = audioInfo ? 'audio' : 'tts';
+        if (mode === 'audio'){
+          audioEl.src = audioInfo.mp3;
+          audioEl.addEventListener('timeupdate', onAudioTimeUpdate);
+          audioEl.addEventListener('ended', onAudioEnded);
+          audioEl.addEventListener('error', onAudioEnded);
+        }
+      }
+
+      if (mode === 'audio'){
+        if (finished){ resetToStart(); }
+        if (audioEl.paused){
+          isPlaying = true;
+          audioEl.play().catch(onAudioEnded);
+        } else {
+          isPlaying = false;
+          audioEl.pause();
+        }
+        updateButtonLabel();
+        return;
+      }
+
+      // tts mode
+      if (!isPlaying){
+        isPlaying = true;
+        if (finished) currentIdx = 0;
+        finished = false;
+        if (window.speechSynthesis.paused){
+          window.speechSynthesis.resume();
+        } else {
+          // Defensive reset, fresh-start only (never on resume/pause):
+          // speechSynthesis has a well-documented browser bug where it
+          // can silently stop accepting new speech after earlier calls
+          // elsewhere on the page (e.g. the vocab-word audio buttons).
+          window.speechSynthesis.cancel();
+          speakLineAt(currentIdx);
+        }
+      } else {
+        isPlaying = false;
+        window.speechSynthesis.pause();
+      }
+      updateButtonLabel();
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    stopBtn.addEventListener('click', resetToStart);
+    showBtn.addEventListener('click', () => setTranscriptShown(!transcriptShown));
   }
 
-  /* ---------------- Speaking: solo/group mode toggle + discussion
-     question picker (max N selectable). ---------------- */
-  function initSpeaking({max = 2} = {}){
+  /* ---------------- Speaking: solo/group mode toggle + the solo
+     "I've done this" mark, which is a real toggle (restorable, and can
+     be switched back off) rather than a one-way lock — matching the
+     original course. ---------------- */
+  function initSpeaking({max = 2, lessonId, sectionMap = {}, soloTaskLabel = ''} = {}){
     const soloBtn = document.getElementById('mode-solo');
     const groupBtn = document.getElementById('mode-group');
     const soloPane = document.getElementById('speak-solo');
@@ -2159,37 +2300,75 @@ const Course = (() => {
     }
     const doneBtn = document.getElementById('solo-done-btn');
     if (doneBtn){
-      doneBtn.addEventListener('click', () => {
-        doneBtn.textContent = '✓ Done';
-        doneBtn.disabled = true;
-      });
-    }
-    const picker = document.getElementById('discuss-questions');
-    if (picker){
-      const picked = new Set();
-      const buttons = [...picker.querySelectorAll('.discuss-q')];
-      function refresh(){
-        buttons.forEach(b => {
-          const on = picked.has(b.dataset.idx);
-          b.classList.toggle('picked', on);
-          if (!on && picked.size >= max) b.classList.add('disabled'); else b.classList.remove('disabled');
-        });
+      let soloDone = !!(sectionMap['speaking-solo'] && sectionMap['speaking-solo'].status === 'completed');
+      function renderSoloBtn(){
+        doneBtn.textContent = soloDone ? '✓ Marked as done' : "✓ I've done this";
+        doneBtn.classList.toggle('btn-primary', soloDone);
       }
-      buttons.forEach(b => {
-        b.addEventListener('click', () => {
-          if (picked.has(b.dataset.idx)) picked.delete(b.dataset.idx);
-          else if (picked.size < max) picked.add(b.dataset.idx);
-          refresh();
+      renderSoloBtn();
+      doneBtn.addEventListener('click', () => {
+        soloDone = !soloDone;
+        renderSoloBtn();
+        logProgress({
+          lessonId, sectionId: 'speaking-solo', exerciseType: 'oral',
+          status: soloDone ? 'completed' : 'not_attempted', answerGiven: soloTaskLabel
         });
       });
     }
   }
-  function renderDiscussQuestions(rootId, questions){
+
+  /* Renders the group discussion-question picker AND wires it, in one
+     self-contained call — restorable from sectionMap, capped at `max`
+     picks. (Previously this only rendered markup, and the actual click
+     wiring lived in initSpeaking — but initSpeaking always ran BEFORE
+     this had rendered any buttons yet, so it found zero .discuss-q
+     elements and wired nothing. Self-contained avoids that class of
+     ordering bug entirely.) */
+  function renderDiscussQuestions(rootId, questions, {lessonId, max = 2, sectionPrefix = 'speaking-q'} = {}){
     const root = document.getElementById(rootId);
     if (!root) return;
+    const sectionMap = getSectionMap(lessonId);
+    const msgEl = document.getElementById('discuss-limit-msg');
     root.innerHTML = questions.map((q, i) => `
       <button class="discuss-q" data-idx="${i}"><span class="chk"></span><span>${q}</span></button>
     `).join('');
+    const buttons = [...root.querySelectorAll('.discuss-q')];
+    const picked = new Set();
+    buttons.forEach((b, i) => {
+      const sectionId = `${sectionPrefix}${i+1}`;
+      const restored = sectionMap[sectionId];
+      if (restored && restored.status === 'completed'){
+        picked.add(i);
+        b.classList.add('picked');
+      }
+    });
+    function setMsg(text, isWarning){
+      if (!msgEl) return;
+      msgEl.textContent = text;
+      msgEl.style.color = isWarning ? 'var(--bad)' : '';
+    }
+    buttons.forEach((b, i) => {
+      b.addEventListener('click', () => {
+        const sectionId = `${sectionPrefix}${i+1}`;
+        const isPicked = picked.has(i);
+        if (isPicked){
+          picked.delete(i);
+          b.classList.remove('picked');
+        } else {
+          if (picked.size >= max){
+            setMsg(`You can only pick up to ${max} — deselect one first.`, true);
+            return;
+          }
+          picked.add(i);
+          b.classList.add('picked');
+        }
+        setMsg(`You can select up to ${max} questions.`, false);
+        logProgress({
+          lessonId, sectionId, exerciseType: 'oral',
+          status: isPicked ? 'not_attempted' : 'completed', answerGiven: questions[i]
+        });
+      });
+    });
   }
 
   /* ---------------- Reading passage + comprehension, wired together. ---------------- */
@@ -2316,7 +2495,7 @@ const Course = (() => {
 
   return { logProgress, getLessonRows, getCurrentRows, getSectionMap, lessonScore, weakSections, exportReport, exportReportPDF,
            speak, speakSmart, initVocab, initMCQ, initGapFill, initErrorSpot, initMatching, withContractions, renderScoreRing, getStudentName,
-           shuffleArray, shuffleOptions, ensureGroupVariety, showPopup, hidePopup, resetLocalProgress, syncFromSupabase,
+           shuffleArray, shuffleOptions, ensureAnswerPositionVariety, showPopup, hidePopup, resetLocalProgress, syncFromSupabase,
            getGlossary, saveToGlossary, removeFromGlossary, syncGlossaryFromSupabase,
            getGroupId: () => GROUP_ID, isConnected: () => !!supabaseClient,
            vocabSpan, gramSpan, renderMCQList, renderGapFillList, renderBuilders, renderCategorise,
@@ -2338,10 +2517,12 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
   Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
   Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "warm-q1", "correctValue": "right"}, {"containerId": "warm-q2", "correctValue": "right"}, {"containerId": "warm-q3", "correctValue": "right"}]);
   Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
   Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
   Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
   Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "diag-q1", "correctValue": "right"}, {"containerId": "diag-q2", "correctValue": "right"}, {"containerId": "diag-q3", "correctValue": "right"}, {"containerId": "diag-q4", "correctValue": "right"}]);
 
   /* ---------------- concept widget ---------------- */
   Course.renderConceptWidget({
@@ -2360,6 +2541,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
   Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
   Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "comp-q1", "correctValue": "right"}, {"containerId": "comp-q2", "correctValue": "right"}, {"containerId": "comp-q3", "correctValue": "right"}]);
 
   /* ---------------- vocab check ---------------- */
   Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
@@ -2367,6 +2549,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
   Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
   Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "vocab-q1", "correctValue": "right"}, {"containerId": "vocab-q2", "correctValue": "right"}, {"containerId": "vocab-q3", "correctValue": "right"}, {"containerId": "vocab-q4", "correctValue": "right"}, {"containerId": "vocab-q5", "correctValue": "right"}]);
     Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["brushed"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
   Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["concluded"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
   Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["endorsed"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
@@ -2384,15 +2567,15 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.renderBuilders('builders', [{"words": ["Someone", "must", "have", "been", "working", "late", "last", "night."]}, {"words": ["She", "can't", "have", "been", "sleeping", "with", "the", "music", "on."]}, {"words": ["They", "must", "have", "been", "arguing", "about", "the", "budget."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
 
   /* ---------------- speaking ---------------- */
-  Course.initSpeaking({max: 2});
-  Course.renderDiscussQuestions('discuss-questions', ["Look around the room (or think of your workplace) — what evidence would let you deduce what someone \"must have been doing\" recently?", "Discuss a time you misjudged a situation because your deduction turned out to be wrong.", "Practise making a deduction about a friend's mood or behaviour using continuous aspect: \"She must have been feeling...\""]);
-  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+  Course.initSpeaking({max: 2, lessonId: LESSON_ID, sectionMap, soloTaskLabel: "Describe a small mystery from your own life (a strange noise, a missing item, a message you couldn't explain) and offer two competing deductions using \"must have been -ing\" and \"can't have been -ing\"."});
+  Course.renderDiscussQuestions('discuss-questions', ["Look around the room (or think of your workplace) — what evidence would let you deduce what someone \"must have been doing\" recently?", "Discuss a time you misjudged a situation because your deduction turned out to be wrong.", "Practise making a deduction about a friend's mood or behaviour using continuous aspect: \"She must have been feeling...\""], {lessonId: LESSON_ID, max: 2, sectionPrefix: 'speaking-q'});
 
   /* ---------------- listening ---------------- */
   Course.initListening({dialogue: [{"speaker": "Anna", "line": "Did you hear everyone suddenly has a theory about why the flagship app failed?"}, {"speaker": "Tomasz", "line": "Yeah, someone told me the investors must have been ignoring obvious warning signs."}, {"speaker": "Anna", "line": "Turns out the engineers must have been raising concerns for months. It was all in the internal messages."}, {"speaker": "Tomasz", "line": "So whoever approved the launch date can't have been reading those messages carefully?"}, {"speaker": "Anna", "line": "Apparently they did read them — several executives had, actually."}, {"speaker": "Tomasz", "line": "That's classic hindsight bias, isn't it? Everyone now insists they must have been suspecting trouble all along."}, {"speaker": "Anna", "line": "Exactly, even though most of them enthusiastically endorsed the launch at the time."}, {"speaker": "Tomasz", "line": "\"I knew it all along\" is a pretty comforting phrase to reach for after the fact."}], speakerA: 'Anna', speakerB: 'Tomasz', lessonId: LESSON_ID});
   Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
   Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
   Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "listen-q1", "correctValue": "right"}, {"containerId": "listen-q2", "correctValue": "right"}, {"containerId": "listen-q3", "correctValue": "right"}]);
 
   /* ---------------- wrap-up ---------------- */
   Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
@@ -2400,6 +2583,7 @@ Course.initPageChrome({lessonId: LESSON_ID});
   Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
   Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
   Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.ensureAnswerPositionVariety([{"containerId": "exit-q1", "correctValue": "right"}, {"containerId": "exit-q2", "correctValue": "right"}, {"containerId": "exit-q3", "correctValue": "right"}, {"containerId": "exit-q4", "correctValue": "right"}, {"containerId": "exit-q5", "correctValue": "right"}]);
   Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
 })();
 
