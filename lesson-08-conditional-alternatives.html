@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditional Alternatives to If | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-conditionals">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 8 of 20 · Sophisticated Conditionals</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Conditional Alternatives to If</h1>
+    <p class="lesson-sub">Provided that, as long as, unless, suppose, on condition that — precision beyond a plain "if".</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">"If" is neutral and general. Other conditional linkers add nuance — a stricter requirement, an exception, a negotiated term. Recognising them is essential for contracts, negotiations and formal proposals.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "We'll sign the deal, provided that the price stays fixed" adds a…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">strict requirement that must be met</button><button class="opt" data-value="wrong">vague possibility with no real condition</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Unless you object, we'll proceed as planned" means we'll proceed…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">if you do NOT object</button><button class="opt" data-value="wrong">only if you DO object</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Suppose the client rejects the offer — what's our next move?" is used to…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">introduce a hypothetical scenario for discussion</button><button class="opt" data-value="wrong">state a fact that has already happened</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">"Unless" secretly means "if...not" — it's the one that trips people up most, because the negative is built into the word itself.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. You can take the afternoon off, ___ you finish the report first.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">as long as</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. We won't renew the contract ___ the terms improve.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">unless</button><button class="opt" data-value="wrong">provided that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. The vendor agreed to the deadline, ___ we paid a deposit upfront.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">on condition that</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ the client calls before Friday, what should I tell them?</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">Suppose</button><button class="opt" data-value="wrong">Unless</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Five ways to say "if", each with its own flavour</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">These linkers all introduce a condition, but they aren't interchangeable — each carries a slightly different shade of meaning, from strict requirement to pure hypothesis.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-provided">Provided that / As long as</button><button class="pill" id="mode-w-unless">Unless</button><button class="pill" id="mode-w-suppose">Suppose / On condition</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Provided (that) / As long as + clause — a strict, near-mandatory requirement.</div>
+          <div class="formula" style="border-left-color:var(--c-modal)">✅ Unless + clause — equivalent to "if...not"; an exception to the main statement.</div>
+          <div class="formula" style="border-left-color:var(--c-future);margin-bottom:20px">✅ Suppose / Supposing + clause — a hypothetical raised for discussion; On condition that + clause — a formal negotiated term.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> never double the negative with "unless".<br><br>
+            ❌ "Unless you don't finish, you can leave." — this accidentally means the opposite of what's intended.<br>
+            ✅ "Unless you finish, you can't leave." — "unless" already carries the "not", so the clause after it should be positive.<br><br>
+            Also, "provided that" and "as long as" both take a present tense even for future meaning, exactly like "if": "provided that it arrives on time" (not "will arrive").</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Same idea, different shade of meaning</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each version to see the subtle difference each linker adds.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Why Losing Feels Worse Than Winning Feels Good</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>People tend to weigh losses roughly twice as heavily as equivalent gains — a well-documented <span class="vocab" data-word="asymmetry">asymmetry</span> that psychologists call loss <span class="vocab" data-word="aversion">aversion</span>. This bias shapes decisions well beyond the laboratory. An employee will keep funding a mediocre project <span class="gram" data-gram="g1">provided that</span> killing it means formally admitting a loss, yet the same employee would walk away from an equally-sized potential gain without a second thought.</p><p>The effect depends heavily on the <span class="vocab" data-word="reference point">reference point</span> a person starts from. A manager who has already mentally spent a bonus treats losing part of it as a real loss, not merely a smaller gain — and <span class="gram" data-gram="g2">as long as</span> that framing holds, she will take startling risks simply to avoid confirming the loss. Teams often become <span class="vocab" data-word="entrenched">entrenched</span> in failing strategies for exactly this reason: cutting losses feels worse than it logically should, purely because of how the brain accounts for money already committed.</p><p>Sensible risk-taking is still possible, but usually only under certain conditions. Employees say they would try a genuinely risky idea <span class="gram" data-gram="g3">provided that</span> the <span class="vocab" data-word="downside">downside</span> is <span class="vocab" data-word="capped">capped</span> in advance — <span class="gram" data-gram="g4">unless</span> the cap is missing entirely, in which case almost nobody volunteers. "<span class="gram" data-gram="g5">Suppose</span> we removed the <span class="vocab" data-word="safeguard">safeguard</span> of a spending ceiling altogether," one operations director asked her team; "would anyone still take the same risk?" Nobody said yes. The company now approves experimental projects only <span class="gram" data-gram="g6">on condition that</span> a maximum loss <span class="vocab" data-word="threshold">threshold</span> is agreed before work begins.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, how does loss aversion make employees treat a mediocre project?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">They keep funding it, because cancelling it means formally admitting a loss.</button><button class="opt" data-value="wrong">They cancel it immediately, regardless of how much has already been spent.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Why does the manager in the passage take startling risks to protect her bonus?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Because she has already mentally spent it, so losing part of it feels like a real loss.</button><button class="opt" data-value="wrong">Because company policy requires her to take risks every quarter.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Under what condition are employees willing to try a genuinely risky idea?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Only if the potential downside is capped in advance.</button><button class="opt" data-value="wrong">Only if a senior director personally guarantees success.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Loss "aversion" describes…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">a strong reluctance to experience a loss</button><button class="opt" data-value="wrong">an eagerness to take on any available risk</button><button class="opt" data-value="wrong2">indifference between gains and losses</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The "asymmetry" between gains and losses means…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">the two are not weighed equally by the mind</button><button class="opt" data-value="wrong">the two are always felt with exactly equal intensity</button><button class="opt" data-value="wrong2">gains are never noticed at all</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. A strategy that has become "entrenched" is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">firmly established and hard to change</button><button class="opt" data-value="wrong">brand new and untested</button><button class="opt" data-value="wrong2">abandoned after one failure</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. A "safeguard" is put in place to…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">protect against harm or loss</button><button class="opt" data-value="wrong">increase the size of a potential loss</button><button class="opt" data-value="wrong2">speed up an approval process</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. If a potential loss is "capped", it is…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">limited to a fixed maximum</button><button class="opt" data-value="wrong">allowed to grow without any limit</button><button class="opt" data-value="wrong2">impossible to measure in advance</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Employees will only take the risk if the <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> is capped in advance.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. A bonus already spent mentally becomes the new <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> .</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Projects are approved only once a loss <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> is agreed.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. Removing the spending ceiling changed the whole team's sense of <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> .</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — provided that / as long as / unless / suppose / on condition that</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. You can leave early today, <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (as long as) you finish the report first.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. We won't approve the budget <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (unless) the numbers are revised.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3.  <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (Suppose) the client cancels at the last minute — what's our backup plan?</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. The vendor accepted the deadline, <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (on condition that) we paid a deposit.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5.  <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (Provided that) the figures are accurate, the board should approve this easily.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. The deal falls through <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (unless) both sides sign by Friday.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Which shade of meaning?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Decide what each sentence is really doing: stating a strict requirement, framing an exception, or raising a pure hypothetical.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a real or imagined negotiation (a job offer, a lease, a deal) using at least two different conditional linkers from today's lesson — not just "if".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing why the team keeps funding a struggling project.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Why, according to Tomasz, does nobody want to cancel the underperforming project?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">Because cancelling it means formally admitting a loss.</button><button class="opt" data-value="wrong">Because the contract legally prevents cancellation.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Anna suggest asking the team to imagine?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Whether they'd still choose the project if starting from zero today.</button><button class="opt" data-value="wrong">Whether they'd prefer a longer deadline.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Under what condition would the team agree to a genuinely risky new idea?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Provided that the downside is capped in advance.</button><button class="opt" data-value="wrong">Provided that the board approves it unanimously first.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. We'll approve the plan ___ the budget stays under control.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">provided that</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The meeting goes ahead ___ someone cancels beforehand.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">unless</button><button class="opt" data-value="wrong">as long as</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. ___ the merger collapses tomorrow — what would our next step be?</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">Suppose</button><button class="opt" data-value="wrong">Unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. They extended the deadline, ___ we report weekly.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">on condition that</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. You'll get full access ___ you complete the training first.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">as long as</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-08-conditional-alternatives";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-provided", "key": "provided"}, {"id": "mode-w-unless", "key": "unless"}, {"id": "mode-w-suppose", "key": "suppose"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"provided": [{"label": "a strict requirement, near-synonym of \"if and only if\"", "example": "You'll get the bonus, provided that targets are met."}, {"label": "a firm condition, slightly less formal", "example": "As long as the numbers add up, the board will approve it."}], "unless": [{"label": "\"if...not\" — the negative built in", "example": "We won't ship unless the tests pass."}, {"label": "an exception to an otherwise fixed plan", "example": "The meeting goes ahead unless someone cancels."}], "suppose": [{"label": "introducing a pure hypothetical for discussion", "example": "Suppose the merger falls through — then what?"}, {"label": "on condition that: a formal, negotiated term", "example": "They'll extend the deadline, on condition that we report weekly."}]},
+    quizLabels: {"provided": "Provided that / As long as", "unless": "Unless", "suppose": "Suppose / On condition that"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Neutral", "text": "If the client approves the budget, we'll start next week.", "explain": "Plain, neutral condition — no extra nuance."}, {"key": "c2", "label": "Strict requirement", "text": "Provided that the client approves the budget, we'll start next week.", "explain": "Sounds like a firm, near-contractual requirement, not a loose possibility."}, {"key": "c3", "label": "Exception framing", "text": "We'll start next week unless the client rejects the budget.", "explain": "Frames the default as \"yes, we're starting\" — the condition is the exception, not the rule."}, {"key": "c4", "label": "Negotiated term", "text": "The client will approve it, on condition that we cut costs by 10%.", "explain": "Formal, contract-style phrasing — implies a term that was actually negotiated."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Provided that\" — a strict requirement: the employee keeps funding the project only under this exact condition.", "g2": "\"As long as\" — a firm condition on the framing (already-spent bonus) continuing to hold.", "g3": "\"Provided that\" — repeats the strict-requirement structure, now attached to trying a risky idea.", "g4": "\"Unless\" — equivalent to \"if...not\": if the cap is not in place, nobody volunteers.", "g5": "\"Suppose\" — introduces a hypothetical scenario the director raises for discussion, not a stated fact.", "g6": "\"On condition that\" — a formal, negotiated term the company now attaches to approving any project."});
+  Course.initVocab({"asymmetry": {"word": "asymmetry", "ipa": "/eɪˈsɪm.ə.tri/", "meaning": "a lack of balance or equality between two things", "example": "There's a well-documented asymmetry between how losses and gains are felt."}, "aversion": {"word": "aversion", "ipa": "/əˈvɜː.ʃən/", "meaning": "a strong dislike or reluctance towards something", "example": "Loss aversion makes people avoid losses more than they pursue equal gains."}, "reference point": {"word": "reference point", "ipa": "/ˈref.ər.əns pɔɪnt/", "meaning": "the starting position someone judges gains and losses against", "example": "A bonus already spent mentally becomes the new reference point."}, "entrenched": {"word": "entrenched", "ipa": "/ɪnˈtrentʃt/", "meaning": "firmly established and difficult to change", "example": "Teams often become entrenched in failing strategies."}, "downside": {"word": "downside", "ipa": "/ˈdaʊn.saɪd/", "meaning": "the negative or unfavourable aspect of a situation", "example": "Employees will take a risk only if the downside is capped."}, "capped": {"word": "capped", "ipa": "/kæpt/", "meaning": "limited to a fixed maximum amount", "example": "The potential loss was capped before the project began."}, "safeguard": {"word": "safeguard", "ipa": "/ˈseɪf.gɑːd/", "meaning": "a measure taken to protect against harm or loss", "example": "Removing the safeguard of a spending ceiling changed everyone's answer."}, "threshold": {"word": "threshold", "ipa": "/ˈθreʃ.həʊld/", "meaning": "a fixed limit that triggers a rule once crossed", "example": "Projects are approved only once a maximum loss threshold is agreed."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["downside"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["reference point"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["threshold"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["aversion"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["as long as"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["unless"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["Suppose"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["on condition that"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["Provided that"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["unless"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"We'll sign, provided that the price stays fixed.\"", "correct": "Strict requirement"}, {"prompt": "\"The launch proceeds unless the tests fail.\"", "correct": "Exception to the default"}, {"prompt": "\"Suppose the funding doesn't come through — what's plan B?\"", "correct": "Pure hypothetical"}, {"prompt": "\"They'll renew the lease, on condition that rent stays the same.\"", "correct": "Strict requirement"}], ["Strict requirement", "Exception to the default", "Pure hypothetical"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["You", "can", "take", "the", "afternoon", "off,", "as", "long", "as", "you", "finish."]}, {"words": ["We", "won't", "renew", "the", "contract", "unless", "the", "terms", "improve."]}, {"words": ["Suppose", "the", "client", "rejects", "the", "offer", "—", "what", "next?"]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["What's a condition you'd insist on before accepting a new job (\"I'd accept, provided that...\")?", "Suppose your company had to cut costs by 20% overnight — what would you protect first?", "Tell your group about a rule at work that only applies unless a specific exception occurs."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I still don't get why we're funding this project, provided that everyone agrees it's underperforming."}, {"speaker": "Tomasz", "line": "It's classic loss aversion. Cancelling it now means admitting a loss, and nobody wants to be the one who does that."}, {"speaker": "Anna", "line": "As long as we keep treating the sunk cost as a reference point, we'll never make an objective call."}, {"speaker": "Tomasz", "line": "Right, unless someone forces the comparison to a fresh alternative, we'll stay entrenched."}, {"speaker": "Anna", "line": "Suppose we asked the team to imagine starting from zero today — would they still choose this project?"}, {"speaker": "Tomasz", "line": "Almost certainly not. But they'd only agree to a genuinely risky new idea provided that the downside is capped first."}, {"speaker": "Anna", "line": "That's fair, honestly. On condition that we set a proper loss threshold, I'd actually back a new proposal."}, {"speaker": "Tomasz", "line": "Agreed. Let's build that safeguard in before we bring anything to the board."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

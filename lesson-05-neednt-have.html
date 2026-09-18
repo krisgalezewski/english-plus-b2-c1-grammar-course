@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Needn't Have vs. Didn't Need To | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-aspect">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 5 of 20 · Aspect & Modality, Refined</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Needn't Have vs. Didn't Need To</h1>
+    <p class="lesson-sub">Two ways to talk about unnecessary past actions — but only one tells you the action happened anyway.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">Both phrases describe an action that wasn't necessary, but they answer a different question: did the action actually happen, or was it simply skipped?</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "I needn't have brought an umbrella" tells us the speaker…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">brought one, but it turned out to be unnecessary</button><button class="opt" data-value="wrong">didn't bring one at all</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "I didn't need to book a table" tells us the speaker…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">simply didn't book one — it wasn't required</button><button class="opt" data-value="wrong">booked a table that turned out to be pointless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Which phrase always implies the action DID happen?</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">needn't have + past participle</button><button class="opt" data-value="wrong">didn't need to + base verb</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Think of "needn't have" as hindsight regret about something you DID do. "Didn't need to" is just a neutral statement about what wasn't required.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. She ___ rushed — the meeting was cancelled, but she'd already left.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. We ___ apply for a visa — our stay was under 90 days.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">didn't need to</button><button class="opt" data-value="wrong">needn't have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. He ___ explained it twice — I understood the first time, but he did it anyway.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. They ___ change the schedule at all — everyone was already free.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">didn't need to</button><button class="opt" data-value="wrong">needn't have</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Did it happen, or was it just unnecessary?</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">"Needn't have + past participle" always means the action happened, but with hindsight it wasn't necessary. "Didn't need to + base verb" is neutral — it just says the requirement wasn't there.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-neednthave">Needn't Have</button><button class="pill" id="mode-w-didntneed">Didn't Need To</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--accent)">✅ Needn't have + past participle — the action HAPPENED, but hindsight shows it wasn't necessary: "I needn't have worried."</div>
+          <div class="formula" style="border-left-color:var(--c-past);margin-bottom:20px">✅ Didn't need to + base verb — neutral; doesn't confirm whether the action happened: "I didn't need to worry."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "didn't need to" can sometimes describe an action that happened too, but only with extra context.<br><br>
+            ✅ "I needn't have bought a gift — she'd already got one." — clearly happened, clearly regretted with hindsight.<br>
+            ⚠️ "I didn't need to buy a gift, but I did anyway, just to be safe." — here the second clause is doing the work of confirming it happened; the phrase alone doesn't tell you.<br>
+            ❌ Never use "needn't have" for something that never happened at all — that's simply "didn't need to."</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Same situation, different meaning</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see exactly what each sentence confirms.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Decision Fatigue and the Limits of Willpower</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Looking back at the product's chaotic launch week, the operations team <span class="gram" data-gram="g1">needn't have scheduled</span> four separate strategy meetings in a single day; each one further <span class="vocab" data-word="depleted">depleted</span> a <span class="vocab" data-word="finite">finite</span> reserve of mental energy that researchers call <span class="vocab" data-word="willpower">willpower</span>, leaving the final decisions of the day measurably worse than the first.</p><p>Employees, on the other hand, <span class="gram" data-gram="g2">didn't need to attend</span> every single meeting — attendance for two of the four was entirely optional, though almost nobody realised it at the time. The <span class="vocab" data-word="culprit">culprit</span>, researchers point out, is not laziness but simple <span class="vocab" data-word="cognitive">cognitive</span> exhaustion: after a long run of decisions, however <span class="vocab" data-word="routine">routine</span>, judgement <span class="vocab" data-word="deteriorates">deteriorates</span>, and people increasingly default to whichever option requires the least <span class="vocab" data-word="deliberation">deliberation</span>.</p><p>One manager later admitted she <span class="gram" data-gram="g3">needn't have reviewed</span> every single expense report personally that week — a junior colleague could easily have handled the routine ones — and that by insisting on doing it all herself, she'd simply <span class="vocab" data-word="exhausted">exhausted</span> the reserve she needed for harder calls later. The marketing lead, likewise, <span class="gram" data-gram="g4">needn't have drafted</span> three alternate versions of the launch email, since the first was approved without a single change. Interns, meanwhile, <span class="gram" data-gram="g5">didn't need to submit</span> formal daily reports at all; a quick verbal update would have done just as well, and the company <span class="gram" data-gram="g6">didn't need to redesign</span> its entire approval process to fix any of this — a far simpler rule, capping decisions per person per day, turned out to be enough.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does the passage say about the four strategy meetings scheduled in one day?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">They weren't necessary, even though they did happen.</button><button class="opt" data-value="wrong">They were required by official company policy.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to the passage, what is the real cause of worse decisions later in the day?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Simple cognitive exhaustion, not laziness.</button><button class="opt" data-value="wrong">A lack of proper training among staff.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What did the company conclude about redesigning its approval process?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">That it was never actually necessary.</button><button class="opt" data-value="wrong">That it should have been done years earlier.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Willpower" refers to…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">the ability to control oneself and make decisions</button><button class="opt" data-value="wrong">physical strength and stamina</button><button class="opt" data-value="wrong2">a formal company policy</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The "culprit" behind a problem is…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">its cause or source</button><button class="opt" data-value="wrong">its eventual solution</button><button class="opt" data-value="wrong2">a person who reports it</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Deliberation" means…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">careful thought before deciding</button><button class="opt" data-value="wrong">an instant, thoughtless reaction</button><button class="opt" data-value="wrong2">a formal written complaint</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. Something "finite" is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">limited, not unlimited</button><button class="opt" data-value="wrong">endless and unlimited</button><button class="opt" data-value="wrong2">extremely valuable</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. If judgement "deteriorates", it…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">becomes progressively worse</button><button class="opt" data-value="wrong">becomes noticeably sharper</button><button class="opt" data-value="wrong2">stays exactly the same</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Each extra meeting further <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> the team's mental reserve.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Even <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> decisions add to the mental load over a day.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Researchers point to simple <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> exhaustion, not laziness.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. By evening, she'd completely <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> the reserve she needed for harder calls.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — needn't have + past participle, or didn't need to + base verb?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. We <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (needn't / worry) — the flight was delayed anyway.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. She <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (not need / bring) her passport — it was a domestic flight.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. He <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (needn't / apologise) — nobody was upset in the first place.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. They <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (not need / book) early — there were plenty of seats left.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. I <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (needn't / rush) — the train was ten minutes late.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. You <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (not need / call) — I already knew about the change.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word is wrong in each sentence. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe something you did that turned out to be unnecessary (a purchase, a worry, an effort), using "needn't have".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing decision fatigue after a chaotic work week.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Anna say about the four strategy meetings held on the same day?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">They weren't necessary, even though they happened.</button><button class="opt" data-value="wrong">They were required by official company policy.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Anna say is the real culprit behind worse decisions later in the day?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Plain cognitive exhaustion.</button><button class="opt" data-value="wrong">Poor training among staff.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Tomasz conclude at the end of the conversation?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">They didn't need to redesign the whole process.</button><button class="opt" data-value="wrong">They need to hire a completely new team.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. We ___ rushed — the train was delayed anyway.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. She ___ apply for the extra permit — it wasn't required for her case.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">didn't need to</button><button class="opt" data-value="wrong">needn't have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. They ___ booked a translator — everyone spoke English fluently.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. He ___ call ahead — walk-ins were welcome.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">didn't need to</button><button class="opt" data-value="wrong">needn't have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. I ___ worried about the exam — it was cancelled.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-05-neednt-have";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-neednthave", "key": "neednthave"}, {"id": "mode-w-didntneed", "key": "didntneed"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"neednthave": [{"label": "the action happened, but wasn't necessary (hindsight)", "example": "I needn't have printed the report — everyone had it digitally."}, {"label": "often implies mild regret or wasted effort", "example": "We needn't have worried — the flight was delayed anyway."}], "didntneed": [{"label": "a neutral statement about a requirement that didn't exist", "example": "I didn't need to print the report — it was already shared."}, {"label": "doesn't tell us whether the action happened or not", "example": "We didn't need to worry, so we didn't."}]},
+    quizLabels: {"neednthave": "Needn't Have", "didntneed": "Didn't Need To"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Needn't have", "text": "I needn't have booked a hotel — my cousin offered a room.", "explain": "Confirms: the speaker DID book a hotel. With hindsight, it wasn't necessary."}, {"key": "c2", "label": "Didn't need to", "text": "I didn't need to book a hotel — my cousin offered a room.", "explain": "Doesn't confirm either way whether a hotel was booked — most naturally reads as: it wasn't required, so it wasn't done."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Needn't have scheduled\" — the meetings DID happen, but with hindsight they weren't necessary.", "g2": "\"Didn't need to attend\" — neutral: attendance simply wasn't required for two of the four meetings.", "g3": "\"Needn't have reviewed\" — she DID review every report herself, but it wasn't necessary given available help.", "g4": "\"Needn't have drafted\" — the alternate email versions WERE written, but turned out to be unnecessary effort.", "g5": "\"Didn't need to submit\" — neutral: there was no requirement for interns to submit daily reports at all.", "g6": "\"Didn't need to redesign\" — neutral: a full process redesign was never actually required to solve the problem."});
+  Course.initVocab({"depleted": {"word": "depleted", "ipa": "/dɪˈpliː.tɪd/", "meaning": "reduced in quantity, especially a resource", "example": "Each meeting further depleted the same mental reserve."}, "finite": {"word": "finite", "ipa": "/ˈfaɪ.naɪt/", "meaning": "having limits, not unlimited", "example": "Willpower draws on a finite reserve of mental energy."}, "willpower": {"word": "willpower", "ipa": "/ˈwɪl.paʊər/", "meaning": "the ability to control oneself and make decisions", "example": "Researchers describe willpower as a limited resource."}, "culprit": {"word": "culprit", "ipa": "/ˈkʌl.prɪt/", "meaning": "the cause of a problem, or a person responsible for it", "example": "The real culprit was exhaustion, not laziness."}, "cognitive": {"word": "cognitive", "ipa": "/ˈkɒɡ.nɪ.tɪv/", "meaning": "relating to mental processes like thinking and deciding", "example": "Cognitive exhaustion sets in after too many decisions."}, "routine": {"word": "routine", "ipa": "/ruːˈtiːn/", "meaning": "ordinary, done regularly as a fixed procedure", "example": "Even routine decisions add to the mental load."}, "deteriorates": {"word": "deteriorates", "ipa": "/dɪˈtɪə.ri.ə.reɪts/", "meaning": "becomes progressively worse", "example": "Judgement deteriorates after a long run of decisions."}, "deliberation": {"word": "deliberation", "ipa": "/dɪˌlɪb.əˈreɪ.ʃən/", "meaning": "careful thought and consideration before deciding", "example": "People default to whatever needs the least deliberation."}, "exhausted": {"word": "exhausted", "ipa": "/ɪɡˈzɔː.stɪd/", "meaning": "completely used up, drained of energy or resources", "example": "She exhausted the reserve she needed for harder calls."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["depleted"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["routine"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["cognitive"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["exhausted"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["needn't have worried"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["didn't need to bring"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["needn't have apologised"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["didn't need to book"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["needn't have rushed"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["didn't need to call"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["She", "needn't", "have", "bring", "an", "umbrella", "—", "it", "didn't", "rain."], errorIndices: [3], correction: "\"bring\" → \"brought\" (needn't have + past participle)"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["We", "didn't", "need", "brought", "extra", "chairs", "—", "there", "were", "enough."], errorIndices: [3], correction: "\"brought\" → \"to bring\" (didn't need to + base verb)"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["He", "needn't", "has", "explained", "it", "twice", "—", "I", "understood", "immediately."], errorIndices: [2], correction: "\"has\" → \"have\" (needn't have, not needn't has)"
+  });
+  Course.renderBuilders('builders', [{"words": ["I", "needn't", "have", "worried", "about", "the", "deadline", "at", "all."]}, {"words": ["They", "didn't", "need", "to", "change", "the", "schedule", "this", "time."]}, {"words": ["We", "needn't", "have", "left", "so", "early", "for", "the", "airport."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Tell your partner about a time you needn't have worried about something — what happened?", "Discuss something at work or school that people generally don't need to do, even though many still do it.", "Was there ever a situation where you weren't sure if something was necessary, and it turned out it wasn't? Use \"didn't need to\"."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I read something about decision fatigue today. Apparently we needn't have scheduled four strategy meetings on the same day last month."}, {"speaker": "Tomasz", "line": "I remember that day. By the fourth meeting nobody could decide anything properly."}, {"speaker": "Anna", "line": "Exactly — each one depleted the same finite reserve of willpower, according to the research."}, {"speaker": "Tomasz", "line": "To be fair, we didn't need to attend all four. Two of them were actually optional."}, {"speaker": "Anna", "line": "I didn't know that at the time. The real culprit apparently isn't laziness, it's plain cognitive exhaustion."}, {"speaker": "Tomasz", "line": "Makes sense. Even Priya needn't have reviewed every single expense line herself that week."}, {"speaker": "Anna", "line": "Right, a junior colleague could have handled the routine ones easily."}, {"speaker": "Tomasz", "line": "Lesson learned — we didn't need to redesign the whole process, just cap how many decisions we make per day."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

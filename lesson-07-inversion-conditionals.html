@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inversion in Conditionals | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-conditionals">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 7 of 20 · Sophisticated Conditionals</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Inversion in Conditionals</h1>
+    <p class="lesson-sub">Were I to..., Had I known..., Should you need... — dropping "if" for a more formal register.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">In formal writing and speech — reports, contracts, presentations — English often drops "if" entirely and inverts the subject and auxiliary instead. The meaning stays identical; only the register changes.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Had I known about the delay, I would have rescheduled" means the same as…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"If I had known about the delay, I would have rescheduled."</button><button class="opt" data-value="wrong">"I know about the delay, so I will reschedule."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Should you require further details, please contact HR" is a formal way of saying…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">"If you require further details, please contact HR."</button><button class="opt" data-value="wrong">"You definitely require further details, so contact HR."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Were she to accept the offer, the whole team would restructure" describes…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">a hypothetical future possibility, not a certainty</button><button class="opt" data-value="wrong">something that has already happened</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Inversion simply swaps "if + subject" for "auxiliary + subject" — Were I, Had I, Should you — and drops "if" completely. Nothing else in the sentence changes.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ the client sooner, we could have avoided the misunderstanding.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">Had we contacted</button><button class="opt" data-value="wrong">We had contacted</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ you need anything during the audit, my door is always open.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">Should</button><button class="opt" data-value="wrong">Would</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. ___ I in your position, I'd renegotiate the whole contract.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">Were</button><button class="opt" data-value="wrong">Was</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ the merger fall through, shareholders would need immediate reassurance.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">Should</button><button class="opt" data-value="wrong">If will</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Three inversion patterns, one purpose: sounding formal</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Formal or literary English can invert the subject and auxiliary of a conditional clause instead of using "if". Each pattern maps onto one of the three main conditional types.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-were">Were I to...</button><button class="pill" id="mode-w-had">Had I known...</button><button class="pill" id="mode-w-should">Should you...</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Were + subject + (to) + base verb — inverted 2nd conditional: "Were I to resign, the project would stall."</div>
+          <div class="formula" style="border-left-color:var(--c-modal)">✅ Had + subject + past participle — inverted 3rd conditional: "Had she called first, we would have prepared better."</div>
+          <div class="formula" style="border-left-color:var(--c-future);margin-bottom:20px">✅ Should + subject + base verb — inverted 1st conditional: "Should the client object, escalate to the manager."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> inversion only replaces the "if"-clause — never the main clause, and never with negatives contracted.<br><br>
+            ❌ "Weren't I to attend..." — negative inversion needs the full form, never a contraction: <b>"Were I not to attend..."</b><br>
+            ✅ "Had I not seen the email, I would have missed the deadline." — full "not", never "hadn't" in the inverted clause.<br><br>
+            Also remember: this is a register choice, not a meaning change. "Had we known" and "If we had known" describe exactly the same hypothetical — inversion just sounds more formal, precise, and report-like.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">With "if" vs. inverted — same meaning, different register</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each pair to see that the meaning never shifts, only the formality.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Why the Last Disaster Feels Like the Only Risk</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p><span class="gram" data-gram="g1">Had the team fully understood</span> how easily a single <span class="vocab" data-word="vivid">vivid</span> example can distort judgement, they might have built structured probability checks into every planning meeting from the outset. When people estimate how risky an activity is, they rarely consult statistics; instead, they consult memory. This mental shortcut, known as the availability <span class="vocab" data-word="heuristic">heuristic</span>, ranks dangers not by their true frequency but by how easily <span class="vocab" data-word="instances">instances</span> of them come to mind.</p><p>A recent near-miss on the factory floor made safety risks feel far more <span class="vocab" data-word="salient">salient</span> than they statistically deserved to, and for weeks afterward spending on precautions rose <span class="vocab" data-word="disproportionately">disproportionately</span>, even though nothing about the underlying probability had changed. <span class="gram" data-gram="g2">Were managers to rely less</span> on recent, dramatic cases and more on long-run data, budgets would almost certainly look different. Researchers studying judgement under uncertainty describe this as a form of <span class="vocab" data-word="bias">bias</span> that quietly substitutes ease of recall for actual likelihood.</p><p>The danger runs in both directions. <span class="gram" data-gram="g3">Should a rare but catastrophic risk materialise</span> without ever having been discussed or imagined, teams routinely <span class="vocab" data-word="underestimate">underestimate</span> it, precisely because no memorable case exists to retrieve. <span class="gram" data-gram="g4">Had a single striking incident</span> been reported in the trade press the previous year, that same risk would likely have been rated as far more urgent. "<span class="gram" data-gram="g5">Were we to audit</span> our safety decisions honestly," one risk officer admitted, "we'd find that <span class="vocab" data-word="anecdotal">anecdotal</span> evidence has quietly outweighed the actual data more often than we'd like to admit." <span class="gram" data-gram="g6">Should any manager ever notice</span> a decision leaning on a single dramatic story rather than a full data set, that is exactly the moment to pause and ask why.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, what actually determines how risky people judge an activity to be?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">How easily examples of that risk come to mind, not the true statistical frequency.</button><button class="opt" data-value="wrong">A formal calculation the safety department runs every quarter.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What happened to safety spending after the near-miss on the factory floor?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">It rose sharply, even though the underlying probability hadn't changed.</button><button class="opt" data-value="wrong">It stayed exactly the same, since managers relied only on long-run data.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Why do teams often fail to prepare for a rare but catastrophic risk?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Because no memorable example of it exists for them to recall.</button><button class="opt" data-value="wrong">Because insurance already covers every conceivable outcome.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. A cognitive "heuristic" is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">a mental shortcut used to make quick judgements</button><button class="opt" data-value="wrong">a formal statistical model used by actuaries</button><button class="opt" data-value="wrong2">a written safety regulation</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. If a risk feels unusually "salient", it feels…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">very noticeable or prominent</button><button class="opt" data-value="wrong">completely forgettable</button><button class="opt" data-value="wrong2">statistically negligible</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If spending rose "disproportionately", it rose…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">by an amount too large relative to the actual change in risk</button><button class="opt" data-value="wrong">by exactly the amount the risk had genuinely increased</button><button class="opt" data-value="wrong2">not at all, despite expectations</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. "Anecdotal" evidence is based on…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">individual stories rather than systematic data</button><button class="opt" data-value="wrong">a large, carefully controlled study</button><button class="opt" data-value="wrong2">government statistics collected over decades</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. To "underestimate" a risk means to…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">judge it as less serious than it really is</button><button class="opt" data-value="wrong">calculate its exact probability correctly</button><button class="opt" data-value="wrong2">exaggerate how dangerous it is</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. A single <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> example can outweigh a mountain of statistics.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. People recall <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> of a risk more easily if they were dramatic.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. The near-miss made the risk feel unusually <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> .</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. Without any dramatic story to recall, teams often <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> the danger.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — rewrite the if-clause using inversion (Were / Had / Should).</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1.  <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If I were you) I'd escalate this to the director right away.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2.  <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If we had known) about the outage sooner, we would have alerted customers.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3.  <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If you should need) anything else, my office is just down the hall.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If she were to accept) the transfer, the whole team would need restructuring.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5.  <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If he had reviewed) the figures earlier, he would have spotted the error.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6.  <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If the deadline should move) again, please inform every department.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word in each inverted conditional is wrong. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a workplace decision you'd make differently in hindsight, using at least one inverted conditional ("Had I known...", "Were I to do it again...").</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing a report about how the company's safety spending reacts to risk.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Why did safety spending jump after the near-miss, according to Anna?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">Because of a vivid recent case, not because the actual risk had changed.</button><button class="opt" data-value="wrong">Because a new safety regulation came into force.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Tomasz predict could happen to a quieter, bigger risk?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">It could be badly underestimated for lack of a memorable example.</button><button class="opt" data-value="wrong">It would automatically be flagged by the finance team.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do Anna and Tomasz agree to do before the next budget cycle?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Build a proper review into the process.</button><button class="opt" data-value="wrong">Cancel all future safety spending.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ I in charge, I'd delay the launch by a week.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">Were</button><button class="opt" data-value="wrong">Was</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ we tested more thoroughly, the bug would never have shipped.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">Had</button><button class="opt" data-value="wrong">Have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. ___ you need anything else, don't hesitate to call.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">Should</button><button class="opt" data-value="wrong">Would</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ the board to reject it, we'd need a new proposal by Friday.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">Were</button><button class="opt" data-value="wrong">Should</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. ___ she known earlier, she would have changed her schedule.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">Had</button><button class="opt" data-value="wrong">Should</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-07-inversion-conditionals";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-were", "key": "were"}, {"id": "mode-w-had", "key": "had"}, {"id": "mode-w-should", "key": "should"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"were": [{"label": "second conditional, replacing \"if I were\" or \"if I did\"", "example": "Were the board to reject the proposal, we'd need a backup plan."}, {"label": "a hypothetical future scenario, formal tone", "example": "Were she to relocate, the entire office structure would shift."}], "had": [{"label": "third conditional, replacing \"if I had\"", "example": "Had I reviewed the contract more carefully, I'd have spotted the clause."}, {"label": "a past hypothetical, often regretful", "example": "Had the team tested earlier, the bug would never have reached production."}], "should": [{"label": "first conditional, replacing \"if you should\" — a less-likely-but-possible future", "example": "Should the numbers change, please notify accounting immediately."}, {"label": "polite, formal instructions in emails or contracts", "example": "Should you require an extension, submit the request in writing."}]},
+    quizLabels: {"were": "Were I to... (2nd cond.)", "had": "Had I known... (3rd cond.)", "should": "Should you... (1st cond.)"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Standard, 2nd conditional", "text": "If the board rejected the proposal, we'd need a backup plan.", "explain": "Everyday spoken register — perfectly correct, just less formal."}, {"key": "c2", "label": "Inverted, 2nd conditional", "text": "Were the board to reject the proposal, we'd need a backup plan.", "explain": "Identical meaning, but the inversion signals a more formal, written or boardroom register."}, {"key": "c3", "label": "Standard, 3rd conditional", "text": "If we had tested earlier, the bug would never have reached production.", "explain": "A normal past hypothetical, conversational register."}, {"key": "c4", "label": "Inverted, 3rd conditional", "text": "Had we tested earlier, the bug would never have reached production.", "explain": "Same regret, same logic — but the inverted opening reads as more polished, typical of incident reports."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Inverted past hypothetical (\"Had the team fully understood...\") replacing \"If the team had fully understood...\" — a formal, report-like register for describing what didn't happen.", "g2": "Inverted second conditional (\"Were managers to rely less...\") replacing \"If managers relied less...\" — a present/future hypothetical about changed behaviour.", "g3": "Inverted first conditional (\"Should a rare but catastrophic risk materialise...\") replacing \"If a rare risk materialises...\" — a formal, less-certain future condition.", "g4": "Inverted third conditional (\"Had a single striking incident been reported...\") — a past hypothetical explaining how a different memory would have changed the rating.", "g5": "Inverted second conditional (\"Were we to audit...\") — a hypothetical scenario raised by the risk officer, formal spoken register.", "g6": "Inverted first conditional (\"Should any manager ever notice...\") — a formal way of covering a possible future situation, suited to a closing warning."});
+  Course.initVocab({"vivid": {"word": "vivid", "ipa": "/ˈvɪv.ɪd/", "meaning": "producing a strong, clear impression in the mind", "example": "A single vivid example can outweigh a mountain of statistics."}, "heuristic": {"word": "heuristic", "ipa": "/hjʊˈrɪs.tɪk/", "meaning": "a mental shortcut used to make quick judgements", "example": "The availability heuristic ranks risks by how memorable they are."}, "instances": {"word": "instances", "ipa": "/ˈɪn.stən.sɪz/", "meaning": "individual examples or occurrences of something", "example": "People recall instances of a risk more easily if they were dramatic."}, "salient": {"word": "salient", "ipa": "/ˈseɪ.li.ənt/", "meaning": "very noticeable or prominent", "example": "The near-miss made the risk feel unusually salient."}, "disproportionately": {"word": "disproportionately", "ipa": "/ˌdɪs.prəˈpɔː.ʃən.ət.li/", "meaning": "to an extent that is too large or small relative to something else", "example": "Spending rose disproportionately after the incident."}, "bias": {"word": "bias", "ipa": "/ˈbaɪ.əs/", "meaning": "a systematic tendency to judge things inaccurately", "example": "The bias substitutes ease of recall for actual likelihood."}, "underestimate": {"word": "underestimate", "ipa": "/ˌʌn.dər.ˈes.tɪ.meɪt/", "meaning": "to judge something as smaller, less likely or less serious than it really is", "example": "Teams often underestimate risks with no memorable example behind them."}, "anecdotal": {"word": "anecdotal", "ipa": "/ˌæn.ɪkˈdəʊ.təl/", "meaning": "based on individual stories rather than systematic evidence", "example": "Anecdotal evidence quietly outweighed the actual data."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["vivid"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["instances"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["salient"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["underestimate"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["Were I you"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["Had we known"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["Should you need"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["Were she to accept"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["Had he reviewed"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["Should the deadline move"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["Weren't", "I", "in", "your", "position,", "I'd", "accept", "the", "offer", "immediately."], errorIndices: [0], correction: "\"Weren't\" → \"Were\" (inversion never contracts the negative; it would need \"Were I not in...\")"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["Had", "she", "have", "known", "about", "the", "delay,", "she", "would", "have", "left", "earlier."], errorIndices: [2], correction: "\"have\" → delete it (it is simply \"Had she known\", not \"Had she have known\")"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["Should", "the", "client", "objects,", "escalate", "the", "issue", "to", "the", "manager."], errorIndices: [3], correction: "\"objects\" → \"object\" (Should + subject + base verb, not the -s form)"
+  });
+  Course.renderBuilders('builders', [{"words": ["Had", "we", "contacted", "the", "client", "sooner,", "this", "wouldn't", "have", "happened."]}, {"words": ["Should", "you", "require", "further", "details,", "please", "contact", "HR."]}, {"words": ["Were", "I", "in", "your", "position,", "I'd", "renegotiate", "the", "contract."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Should your company ever face a major crisis, what's the first thing you think should happen?", "Were you to redesign your team's onboarding process from scratch, what would you change?", "Tell your group about a decision where, had you had more information at the time, the outcome would have been different."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Did you see the new safety spending numbers? They jumped right after that near-miss on the factory floor, even though the actual risk hadn't changed."}, {"speaker": "Tomasz", "line": "That's the availability heuristic in action. Had the finance team looked at the long-run data first, they probably wouldn't have reacted so strongly."}, {"speaker": "Anna", "line": "Exactly. Were we to rely more on statistics and less on the last dramatic story, our budgets would look completely different."}, {"speaker": "Tomasz", "line": "Should a bigger, quieter risk ever materialise without a memorable case behind it, I bet we'd underestimate it badly."}, {"speaker": "Anna", "line": "That's basically what the risk officer admitted in the report — anecdotal evidence keeps outweighing the actual data."}, {"speaker": "Tomasz", "line": "Had a single striking incident been reported in the trade press last year, this exact risk would probably be rated as urgent already."}, {"speaker": "Anna", "line": "Should any manager ever notice a decision leaning on one vivid story instead of the full data set, that's the moment to pause."}, {"speaker": "Tomasz", "line": "Agreed. Let's build a proper review into the process before the next budget cycle."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

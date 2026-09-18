@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Relative Clauses | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 16 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Advanced Relative Clauses</h1>
+    <p class="lesson-sub">Whereby, whereupon, whole-clause 'which', and prepositions placed before whom/which in formal style.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">Beyond who/which/that, formal and written English uses a small set of advanced relative structures that let a clause refer to a whole idea, a process, or attach a preposition more elegantly.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "A system whereby employees can report issues anonymously" means a system…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">by means of which / through which employees can report issues</button><button class="opt" data-value="wrong">that employees are forbidden from using</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "She was promoted, which surprised nobody" — what does "which" refer to?</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">the whole idea that she was promoted, not one noun</button><button class="opt" data-value="wrong">only the word "promoted" as a single noun</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. In formal writing, "the colleague to whom I reported" is preferred over…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">"the colleague who I reported to"</button><button class="opt" data-value="wrong">"the colleague that I reported"</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">"Whereby" = by which/through which (a process). A comma + "which" referring back to a whole clause is extremely common in professional writing. Preposition-before-relative-pronoun (to whom, on which) is the formal register's version of ending a sentence with a preposition.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. The company introduced a scheme ___ staff could work four days a week.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">whereby</button><button class="opt" data-value="wrong">whereupon</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. He missed the deadline, ___ annoyed the entire team.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">which</button><button class="opt" data-value="wrong">that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. The client ___ we submitted the proposal has not replied yet.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">to whom</button><button class="opt" data-value="wrong">who</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. She announced her resignation, ___ the room fell silent.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">whereupon</button><button class="opt" data-value="wrong">wherein</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Beyond who, which and that</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">"Whereby" introduces a process or mechanism. "Whereupon" introduces an immediate consequence, very formal and often literary. A comma + "which" can refer to an entire preceding clause, not just a noun. Prepositions placed before whom/which sound more formal than stranding them at the end.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-whereby">Whereby</button><button class="pill" id="mode-w-whichclause">Whole-clause which</button><button class="pill" id="mode-w-prepwhom">Preposition + whom/which</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Whereby: <b>noun + whereby + clause</b> = by/through which. "A policy whereby latecomers are fined."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Comma + which: refers back to the <b>whole previous clause</b>, not a single noun. "He resigned suddenly, which shocked everyone."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Preposition + whom/which: <b>to/with/on/for + whom/which</b> — formal, never with "that" or "who" in this position.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "whereupon" (= and then, immediately) is much rarer and more literary than "whereby" — don't confuse the two, and don't overuse "whereupon" in ordinary business writing.<br><br>
+            ✅ "A policy whereby employees can request remote work." — describes a mechanism.<br>
+            ✅ "She raised the objection, whereupon the meeting was adjourned." — an immediate, almost dramatic consequence.<br><br>
+            Also: never write "to who" or "for which that" — prepositions combine only with whom (people) or which (things), never with "that".</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Which relative structure fits?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see why that specific form was chosen.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Reading Between the Lines: High-Context vs. Low-Context Teams</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Global teams often stumble not over what is said, but over how it is said. Researchers describe a spectrum of communication styles <span class="gram" data-gram="g1">whereby</span> meaning is conveyed either directly, through explicit words, or indirectly, through context, tone and shared assumptions. In a low-context culture, a manager typically states an instruction outright; in a high-context culture, the same message is often left as <span class="vocab" data-word="subtext">subtext</span>, wrapped in enough <span class="vocab" data-word="ambiguity">ambiguity</span> that no one need lose face if it is declined. The colleague <span class="gram" data-gram="g2">to whom</span> an indirect request is addressed may need considerable <span class="vocab" data-word="tact">tact</span> simply to work out what is actually being asked.</p><p>Managers frequently misjudge these signals, <span class="gram" data-gram="g3">which</span> explains why so many cross-border projects stall within the first few months. A manager's <span class="vocab" data-word="bluntness">bluntness</span>, entirely normal in a low-context office, can easily be <span class="vocab" data-word="misconstrued">misconstrued</span> as outright hostility elsewhere. In one well-known account, a Japanese colleague raised a gentle, indirect objection, <span class="gram" data-gram="g4">whereupon</span> the meeting was quietly rescheduled without anyone stating the real reason aloud.</p><p>The issue <span class="gram" data-gram="g5">on which</span> most cross-cultural trainers agree is that neither style is objectively better — each simply optimises for something different: <span class="vocab" data-word="candour">candour</span> and speed in low-context settings, <span class="vocab" data-word="deference">deference</span> and long-term harmony in high-context ones. Experienced managers develop a kind of bilingual sensitivity, <span class="gram" data-gram="g6">which</span> allows them to read <span class="vocab" data-word="nuance">nuance</span> in one setting and be reassuringly direct in another. The manager <span class="gram" data-gram="g7">with whom</span> a new hire feels comfortable enough to ask what they actually mean has usually already solved most of the problem.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, what mainly distinguishes a high-context culture from a low-context one?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">Whether meaning is conveyed explicitly in words or left to context and tone.</button><button class="opt" data-value="wrong">Whether employees are allowed to work remotely or not.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What happened after the Japanese colleague raised a gentle, indirect objection?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">The meeting was quietly rescheduled without the reason being stated.</button><button class="opt" data-value="wrong">The objection was formally recorded and debated at length.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do most cross-cultural trainers agree on, according to the passage?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">That neither communication style is objectively better than the other.</button><button class="opt" data-value="wrong">That low-context communication should always be preferred at work.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Subtext" is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">an implied meaning that is not stated directly</button><button class="opt" data-value="wrong">a formal written summary</button><button class="opt" data-value="wrong2">the exact opposite of what is said</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Ambiguity" means…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">having more than one possible meaning</button><button class="opt" data-value="wrong">being completely clear and precise</button><button class="opt" data-value="wrong2">being deliberately rude</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If someone's remark is "misconstrued", it is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">understood in a way that was not intended</button><button class="opt" data-value="wrong">understood exactly as intended</button><button class="opt" data-value="wrong2">ignored completely</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. "Deference" means…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">respectful yielding to someone's wishes or authority</button><button class="opt" data-value="wrong">open, forceful disagreement</button><button class="opt" data-value="wrong2">complete indifference</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Bluntness" describes speech that is…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">very direct, without softening the message</button><button class="opt" data-value="wrong">vague and full of hints</button><button class="opt" data-value="wrong2">extremely polite and formal</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Reading an indirect request takes real <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> .</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Low-context settings tend to reward <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> and speed.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. She had learned to read the <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> in her colleagues' silence.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. The real request was left as <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> rather than spelled out.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — whereby, whereupon, or comma + which?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. They introduced a rule <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (process) latecomers lose their parking space for a week.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. She interrupted the presentation, <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (consequence) her colleague simply left the room.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. He was late again, <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (whole clause) annoyed his manager considerably.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. The client <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (preposition + whom) we owe the most has gone quiet lately.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. They designed a scheme <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (process) profits are shared equally among staff.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. The topic <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (preposition + which) they most disagreed was never resolved.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Which advanced relative structure is this?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Tap the category that matches each sentence.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a policy, rule or system at your workplace or school using "whereby", then add a comment about it using comma + "which".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are debriefing after an awkward video call with the Tokyo office.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Why did Anna's direct email to the client go unanswered, in her view?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">The client comes from a high-context culture where directness can seem blunt.</button><button class="opt" data-value="wrong">The email was never actually delivered.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Anna suggest actually caused the silence after Tomasz's objection?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">How bluntly he phrased it, not the objection itself.</button><button class="opt" data-value="wrong">The objection being raised at the wrong time of day.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What did the manager suggest to Anna?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Softening requests with a bit more context first.</button><button class="opt" data-value="wrong">Avoiding email communication altogether.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. They introduced a system ___ complaints are logged automatically.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">whereby</button><button class="opt" data-value="wrong">whereupon</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. She was promoted early, ___ surprised nobody in the office.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">which</button><button class="opt" data-value="wrong">that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. The colleague ___ I report is based in another city.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">to whom</button><button class="opt" data-value="wrong">who</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. He raised the issue, ___ the meeting was extended by an hour.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">whereupon</button><button class="opt" data-value="wrong">whereby</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. The topic ___ they disagreed most was never resolved.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">on which</button><button class="opt" data-value="wrong">which on</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-16-advanced-relative-clauses";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-whereby", "key": "whereby"}, {"id": "mode-w-whichclause", "key": "whichclause"}, {"id": "mode-w-prepwhom", "key": "prepwhom"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"whereby": [{"label": "a process or mechanism (= by/through which)", "example": "They set up a system whereby refunds are processed automatically."}, {"label": "a formal arrangement", "example": "An agreement whereby both parties share the costs equally."}], "whichclause": [{"label": "referring to an entire preceding statement", "example": "The flight was delayed, which meant we missed the connection."}, {"label": "adding an evaluative comment on the whole clause", "example": "He apologised publicly, which impressed the board."}], "prepwhom": [{"label": "formal register, preposition before the pronoun", "example": "The manager to whom she reports is based abroad."}, {"label": "formal register with 'which'", "example": "The issue on which they disagreed was never resolved."}]},
+    quizLabels: {"whereby": "Whereby (a process)", "whichclause": "Comma + which (whole clause)", "prepwhom": "Preposition + whom/which"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Whereby", "text": "The firm created a scheme whereby staff could buy shares at a discount.", "explain": "Describes the mechanism of the scheme itself — \"whereby\" = through which."}, {"key": "c2", "label": "Whole-clause which", "text": "The merger fell through, which relieved almost everyone on the team.", "explain": "\"Which\" here refers to the entire event of the merger falling through, not just one noun."}, {"key": "c3", "label": "Preposition + whom", "text": "The consultant with whom we worked closely has since retired.", "explain": "Formal register: the preposition \"with\" is placed directly before \"whom\" rather than stranded at the end."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Whereby\" — introduces the mechanism of the communication spectrum (= through which meaning is conveyed).", "g2": "\"To whom\" — a preposition placed before the relative pronoun, formal register (replacing \"who...to\").", "g3": "Comma + \"which\" — refers to the whole idea that managers misjudge these signals, not to one noun.", "g4": "\"Whereupon\" — an immediate consequence: the objection was raised, and then the meeting was rescheduled.", "g5": "\"On which\" — the preposition placed before \"which\", formal register (replacing \"which...on\").", "g6": "Comma + \"which\" — refers to the whole idea that managers develop a kind of bilingual sensitivity.", "g7": "\"With whom\" — a preposition placed before the relative pronoun, formal register (replacing \"who...with\")."});
+  Course.initVocab({"subtext": {"word": "subtext", "ipa": "/ˈsʌb.tekst/", "meaning": "an implied meaning that is not stated directly", "example": "The real request was left as subtext rather than spelled out."}, "ambiguity": {"word": "ambiguity", "ipa": "/ˌæm.bɪˈɡjuː.ə.ti/", "meaning": "the quality of having more than one possible meaning, causing uncertainty", "example": "The message was wrapped in enough ambiguity to allow a graceful refusal."}, "tact": {"word": "tact", "ipa": "/tækt/", "meaning": "sensitivity and skill in dealing with others without causing offence", "example": "Reading an indirect request takes real tact."}, "bluntness": {"word": "bluntness", "ipa": "/ˈblʌnt.nəs/", "meaning": "the quality of speaking very directly, without softening the message", "example": "His bluntness was normal at home but shocked colleagues abroad."}, "misconstrued": {"word": "misconstrued", "ipa": "/ˌmɪs.kənˈstruːd/", "meaning": "interpreted incorrectly, understood in a way that was not intended", "example": "Her direct email was misconstrued as an insult."}, "candour": {"word": "candour", "ipa": "/ˈkæn.dər/", "meaning": "openness and honesty in expressing oneself", "example": "Low-context settings tend to reward candour and speed."}, "deference": {"word": "deference", "ipa": "/ˈdef.ər.əns/", "meaning": "respectful yielding to someone else's wishes, status or authority", "example": "Deference to seniority shaped how the objection was raised."}, "nuance": {"word": "nuance", "ipa": "/ˈnjuː.ɑːns/", "meaning": "a subtle difference in meaning, tone or expression", "example": "She had learned to read the nuance in her colleagues' silence."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["tact"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["candour"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["nuance"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["subtext"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["whereby"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["whereupon"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["which"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["to whom"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["whereby"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["on which"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"They set up a fund whereby small businesses could apply for grants.\"", "correct": "Whereby (a process)"}, {"prompt": "\"He announced his resignation, whereupon the office went completely silent.\"", "correct": "Whereupon (immediate result)"}, {"prompt": "\"She got the promotion, which nobody in the office found surprising.\"", "correct": "Whole-clause which"}, {"prompt": "\"The council approved a plan whereby residents can report faults online.\"", "correct": "Whereby (a process)"}], ["Whereby (a process)", "Whereupon (immediate result)", "Whole-clause which"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["They", "introduced", "a", "scheme", "whereby", "staff", "share", "profits."]}, {"words": ["He", "resigned", "suddenly,", "which", "shocked", "everyone", "in", "the", "office."]}, {"words": ["The", "manager", "to", "whom", "she", "reports", "is", "based", "abroad."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Is there a workplace policy whereby employees can request something unusual (flexible hours, remote work, extra leave)? Describe it.", "Tell your group about a time something surprising happened at work, which changed how people behaved afterwards.", "Describe a colleague or manager to whom you report, or with whom you work closely."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I finally get why our Tokyo call felt so strange — it's this whole high-context thing, whereby half the meaning is never actually said out loud."}, {"speaker": "Tomasz", "line": "Right, whereas we just say exactly what we mean, which apparently comes across as blunt."}, {"speaker": "Anna", "line": "Exactly. The client to whom I sent that very direct email never replied, and now I understand why."}, {"speaker": "Tomasz", "line": "I raised an objection once, whereupon everyone went completely silent — I had no idea what I'd done wrong."}, {"speaker": "Anna", "line": "It probably wasn't the objection itself, which they don't mind, but how bluntly you phrased it."}, {"speaker": "Tomasz", "line": "The real issue on which we still disagree internally is how direct our emails should be by default."}, {"speaker": "Anna", "line": "The manager with whom I discussed this suggested softening requests with a bit more context first."}, {"speaker": "Tomasz", "line": "Makes sense. I'll try that next time, which honestly should have been obvious from the start."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

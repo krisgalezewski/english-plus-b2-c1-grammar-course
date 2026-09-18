@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Passive With Combined Aspects | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-passive">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 11 of 20 · Advanced Passive & Noun Phrases</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Passive With Combined Aspects</h1>
+    <p class="lesson-sub">"Being reviewed" and "having been reviewed" — passive forms that carry continuous and perfect meaning at once.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">You already know the basic passive ("the report is reviewed"). Today we combine it with continuous and perfect aspect, so the passive can also say something is in progress right now, or was already finished before something else happened.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "The contract is being reviewed by legal" tells us the review is…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">in progress right now</button><button class="opt" data-value="wrong">completed and filed away</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Having been approved, the budget was released to the team" tells us the approval happened…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">before the release, as a completed step</button><button class="opt" data-value="wrong">at the same moment as the release</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Which pattern combines passive with continuous aspect?</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">being + past participle</button><button class="opt" data-value="wrong">to be + past participle</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">"Being + p.p." = an ongoing passive process right now. "Having been + p.p." = a finished passive step, usually explaining what came before the main event.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. The proposal ___ discussed in the boardroom as we speak.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">is being</button><button class="opt" data-value="wrong">is</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ signed by both parties, the agreement finally took effect.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">Having been</button><button class="opt" data-value="wrong">Being</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. The new servers ___ installed while the office is closed for the weekend.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">are being</button><button class="opt" data-value="wrong">have been</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ delayed twice already, the launch was finally rescheduled for March.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">Having been</button><button class="opt" data-value="wrong">Being</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Two ways to combine passive with aspect</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">"Being + past participle" adds continuous meaning to the passive — something is happening right now, done to someone or something. "Having been + past participle" adds perfect meaning — a passive step already finished before the next part of the sentence.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-being">Being + p.p.</button><button class="pill" id="mode-w-havingbeen">Having been + p.p.</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Passive continuous: <b>is/are/was/were + being + past participle</b> — an action in progress, done to the subject.</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Passive perfect participle: <b>having been + past participle</b> — a completed passive step before the main clause, often at the start of a sentence.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "having been + p.p." is a reduced clause, not a full sentence — it always needs a main clause with its own subject right after it.<br><br>
+            ✅ "Having been reviewed, the report was approved." — the report is the subject of both parts.<br>
+            ❌ "Having been reviewed, we approved the report." — this wrongly suggests <i>we</i> were reviewed, not the report. The reduced clause's implied subject must match the main clause's subject.<br><br>
+            Meanwhile, "being + p.p." simply slots into any passive tense the way "-ing" slots into any active continuous tense — no such subject trap there.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">In progress vs. already finished</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each version to see what the combined passive form adds.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Bystander Effect in Office Culture</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Social psychologists have long been fascinated by a puzzling pattern: when many people are capable of helping, each individual often ends up doing nothing. This is known as the bystander effect, and it shows up constantly in office culture, not only in emergencies. A flagged security alert <span class="gram" data-gram="g1">is being watched</span> by six different inboxes at once, yet nobody clicks "resolved", because each recipient quietly assumes that someone else, <span class="vocab" data-word="presumed">presumed</span> to be more senior or more responsible, will step in.</p><p>The underlying mechanism is simple: responsibility becomes <span class="vocab" data-word="diffuse">diffuse</span>, spread thinly across a group instead of assigned to one person. <span class="gram" data-gram="g2">Having been copied</span> on the original message, most employees feel their own <span class="vocab" data-word="obligation">obligation</span> has already been discharged, even though nothing has actually been done. An <span class="vocab" data-word="ambiguous">ambiguous</span> instruction — "someone should look into this" — only makes the diffusion worse, because no single name is ever attached to it, and the task <span class="gram" data-gram="g3">is being silently reassigned</span>, again and again, to nobody in particular.</p><p>By the time the issue finally <span class="gram" data-gram="g4">is being escalated</span> to a manager, days or even weeks may have passed. <span class="gram" data-gram="g5">Having been ignored</span> by a dozen <span class="vocab" data-word="onlookers">onlookers</span>, the original complaint has usually grown into a far bigger problem than it needed to be. Researchers argue that the real fix is not to shame individuals for their <span class="vocab" data-word="apathy">apathy</span>, but to build clear <span class="vocab" data-word="accountability">accountability</span> into the system itself, so that a task is never simply <span class="gram" data-gram="g6">being left</span> to whoever happens to notice it first. Without that structural change, the same <span class="vocab" data-word="oversight">oversight</span> keeps recurring, month after month, each time <span class="gram" data-gram="g7">having been quietly assumed</span> — wrongly — to be someone else's job.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, why does responsibility often fail to get handled in offices, even when many people are aware of a problem?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">Because it becomes spread thinly across everyone, so no one person owns it.</button><button class="opt" data-value="wrong">Because managers deliberately ignore all complaints they receive.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does an ambiguous instruction like "someone should look into this" tend to cause?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">It gets silently passed from person to person without ever being resolved.</button><button class="opt" data-value="wrong">It gets immediately escalated to senior management.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What solution do researchers suggest, according to the final paragraph?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Building clear accountability with a single named owner for each task.</button><button class="opt" data-value="wrong">Publicly shaming employees who ignore problems.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. If responsibility for a task is described as "diffuse", it means it is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">spread thinly across many people rather than owned by one</button><button class="opt" data-value="wrong">assigned very clearly to a single person</button><button class="opt" data-value="wrong2">written down in an official policy</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. An "ambiguous" instruction is one that…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">can be understood in more than one way</button><button class="opt" data-value="wrong">is extremely detailed and precise</button><button class="opt" data-value="wrong2">has already been carried out</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Onlookers" are people who…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">watch something happen without taking part</button><button class="opt" data-value="wrong">are directly and actively involved in solving a problem</button><button class="opt" data-value="wrong2">manage a team of employees</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. "Apathy" describes a feeling of…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">lack of interest or concern</button><button class="opt" data-value="wrong">intense enthusiasm</button><button class="opt" data-value="wrong2">deep anxiety</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Accountability" means…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">being responsible and answerable for one's actions</button><button class="opt" data-value="wrong">having no responsibility at all</button><button class="opt" data-value="wrong2">receiving credit without doing any work</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Everyone <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> someone else would deal with the complaint.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. He felt his <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> ended the moment he forwarded the email.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. The same <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> kept happening every single month.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. A dozen <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> noticed the problem but did nothing about it.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — passive continuous (being + p.p.) or passive perfect participle (having been + p.p.)?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. The building <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (renovate) while the staff work remotely.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2.  <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (warn) three times, the contractor finally fixed the leak. (Having...)</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. The invoices <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (process) as we speak, so please be patient.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (reject) once already, the proposal was rewritten from scratch. (Having...)</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. The candidates <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (interview) one after another this morning.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6.  <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (approve) by the board, the merger finally went ahead. (Having...)</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word is wrong in each sentence. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a process at your workplace or in your studies that is currently "being done" (e.g. being reviewed, being redesigned, being tested), then describe a step that had to happen first, using "having been...".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing an article about the bystander effect in office culture.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Tomasz compare to the bystander effect example from the article?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">A security alert being watched by many inboxes without anyone resolving it.</button><button class="opt" data-value="wrong">A fire alarm going off in an empty building.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to Anna, why doesn't simply telling people to "care more" fix the problem?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Because real accountability, not just concern, is what's actually needed.</button><button class="opt" data-value="wrong">Because most employees already care too much.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Tomasz say happens without a fix?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">The same oversight keeps repeating month after month.</button><button class="opt" data-value="wrong">The company loses money every single day.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. The kitchen ___ renovated while the restaurant is closed.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">is being</button><button class="opt" data-value="wrong">is</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ tested twice already, the app was finally released.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">Having been</button><button class="opt" data-value="wrong">Being</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. The applications ___ reviewed one by one this week.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">are being</button><button class="opt" data-value="wrong">have been</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ delayed by the strike, the shipment finally arrived on Friday.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">Having been</button><button class="opt" data-value="wrong">Being</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. The new policy ___ rolled out to every branch this month.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">is being</button><button class="opt" data-value="wrong">was</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-11-passive-combined-aspects";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-being", "key": "being"}, {"id": "mode-w-havingbeen", "key": "havingbeen"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"being": [{"label": "an action happening to someone/something right now", "example": "The candidates are being interviewed one by one this afternoon."}, {"label": "an ongoing process someone notices mid-way", "example": "She realised her proposal was being rewritten without her input."}], "havingbeen": [{"label": "a finished passive step, explaining what came before", "example": "Having been warned twice, he finally changed his approach."}, {"label": "a cause or condition completed earlier in formal writing", "example": "Having been reviewed by three departments, the plan was finally approved."}]},
+    quizLabels: {"being": "Being + past participle", "havingbeen": "Having been + past participle"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Simple passive", "text": "The report is reviewed every quarter.", "explain": "A routine, repeated passive action — no sense of \"right now\" or sequence."}, {"key": "c2", "label": "Passive + continuous", "text": "The report is being reviewed right now.", "explain": "\"Being + p.p.\" shows the review is actively in progress at this moment."}, {"key": "c3", "label": "Passive + perfect (reduced clause)", "text": "Having been reviewed, the report was sent to the board.", "explain": "\"Having been + p.p.\" shows the review was already finished before the next step happened."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Passive continuous (\"is being + p.p.\") — shows the watching is happening right now, by several inboxes at once.", "g2": "\"Having been + p.p.\" — a finished passive step (being copied) that explains why obligation feels already discharged.", "g3": "Passive continuous — an ongoing, repeated process of reassignment happening over time.", "g4": "Passive continuous — the escalation is shown as a gradual, in-progress action as days pass.", "g5": "\"Having been + p.p.\" — the ignoring was already complete before the complaint grew into a bigger problem.", "g6": "Passive continuous (negated) — \"is never simply being left\" shows an ongoing lack of ownership, not a single completed act.", "g7": "\"Having been + p.p.\" — each recurrence is preceded by a completed, incorrect assumption about whose job it was."});
+  Course.initVocab({"presumed": {"word": "presumed", "ipa": "/prɪˈzjuːmd/", "meaning": "assumed to be true without proof", "example": "Each reader presumed someone more senior would handle it."}, "diffuse": {"word": "diffuse", "ipa": "/dɪˈfjuːs/", "meaning": "spread out over a wide area, not concentrated", "example": "Responsibility becomes diffuse, spread thinly across a group."}, "obligation": {"word": "obligation", "ipa": "/ˌɒb.lɪˈɡeɪ.ʃən/", "meaning": "a duty to do something", "example": "Most employees feel their obligation has already been discharged."}, "ambiguous": {"word": "ambiguous", "ipa": "/æmˈbɪɡ.ju.əs/", "meaning": "unclear, open to more than one interpretation", "example": "An ambiguous instruction makes the diffusion worse."}, "onlookers": {"word": "onlookers", "ipa": "/ˈɒnˌlʊk.əz/", "meaning": "people who watch an event without taking part", "example": "The complaint had been ignored by a dozen onlookers."}, "apathy": {"word": "apathy", "ipa": "/ˈæp.ə.θi/", "meaning": "lack of interest or concern", "example": "The fix is not to shame individuals for their apathy."}, "accountability": {"word": "accountability", "ipa": "/əˌkaʊn.təˈbɪl.ɪ.ti/", "meaning": "being responsible and answerable for one's actions", "example": "Organisations need to build clear accountability into the system."}, "oversight": {"word": "oversight", "ipa": "/ˈəʊ.və.saɪt/", "meaning": "an unintentional failure to notice or do something", "example": "The same oversight keeps recurring month after month."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["presumed"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["obligation"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["oversight"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["onlookers"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["is being renovated"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["Having been warned"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["are being processed"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["Having been rejected"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["are being interviewed"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["Having been approved"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["The", "contract", "is", "being", "sign", "by", "both", "sides", "today."], errorIndices: [4], correction: "\"sign\" → \"signed\" (is being + past participle)"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["Have", "been", "approved,", "the", "budget", "was", "released", "immediately."], errorIndices: [0], correction: "\"Have\" → \"Having\" (Having been + past participle)"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["The", "servers", "was", "being", "upgraded", "over", "the", "weekend."], errorIndices: [2], correction: "\"was\" → \"were\" (plural subject needs \"were being\")"
+  });
+  Course.renderBuilders('builders', [{"words": ["The", "report", "is", "being", "reviewed", "by", "legal", "right", "now."]}, {"words": ["Having", "been", "approved,", "the", "budget", "was", "released."]}, {"words": ["The", "candidates", "were", "being", "interviewed", "all", "morning."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Describe something at your workplace that is currently being changed, upgraded or reviewed.", "Tell your group about a decision that could only be made after something else had been checked or approved first.", "Have you ever waited for something \"being processed\" for far longer than expected? What happened?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I just read this article about the bystander effect — apparently it happens in offices just as much as in emergencies."}, {"speaker": "Tomasz", "line": "Oh, like when an alert is being watched by five different inboxes and nobody actually clicks resolve?"}, {"speaker": "Anna", "line": "Exactly that. Everyone presumed someone more senior would handle it."}, {"speaker": "Tomasz", "line": "That explains so much. Having been copied on an email, I always assume my part is basically done."}, {"speaker": "Anna", "line": "Right, and that's exactly the problem — responsibility becomes so diffuse that nobody actually owns it."}, {"speaker": "Tomasz", "line": "So what's the fix? Just tell people to care more?"}, {"speaker": "Anna", "line": "No, apparently that doesn't work. The article says you need real accountability — one named person responsible for each task."}, {"speaker": "Tomasz", "line": "Makes sense. Otherwise the same oversight just keeps repeating, month after month."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

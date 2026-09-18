@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discourse Capstone | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 20 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Discourse Capstone</h1>
+    <p class="lesson-sub">Formal connectors (nonetheless, notwithstanding, whereas, in light of, insofar as) plus a cumulative review of the course's key structures.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">This final lesson introduces the last set of formal discourse connectors used in academic and professional writing, and also asks you to recall several structures from across the whole course — narrative tenses, conditionals, the passive, and participle clauses — all working together, the way real writing actually combines them.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Nonetheless" is closest in meaning to…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"however / despite that"</button><button class="opt" data-value="wrong">"therefore / as a result"</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Notwithstanding the delays, the project finished on budget" means…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">despite the delays, it finished on budget</button><button class="opt" data-value="wrong">because of the delays, it finished on budget</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Whereas the first team focused on design, the second focused on testing" shows…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">a contrast between two parallel situations</button><button class="opt" data-value="wrong">a cause-and-effect relationship</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Nonetheless/notwithstanding = formal "however/despite". Whereas = formal "while", for direct contrast. In light of = "given/considering". Insofar as = "to the extent that".</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. The results were disappointing; ___, the team pressed on.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">nonetheless</button><button class="opt" data-value="wrong">therefore</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ the risks involved, the board approved the investment.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">Notwithstanding</button><button class="opt" data-value="wrong">Because of</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. Marketing prioritised speed, ___ engineering prioritised stability.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">whereas</button><button class="opt" data-value="wrong">so that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ the new evidence, the policy will need to be reviewed.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">In light of</button><button class="opt" data-value="wrong">In case of</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Formal academic and professional connectors</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">These connectors mark contrast, concession and reasoning in a more formal register than everyday "but", "so" or "because" — common in reports, academic writing and formal presentations.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-contrast">Nonetheless / Notwithstanding</button><button class="pill" id="mode-w-whereas">Whereas</button><button class="pill" id="mode-w-reasoning">In light of / Insofar as</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Nonetheless (formal "however"): usually starts or joins a new sentence. "Sales fell; nonetheless, profit rose."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Notwithstanding + noun phrase (formal "despite"): "Notwithstanding the setbacks, the launch proceeded."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Whereas + clause (formal "while", for contrast); In light of + noun phrase ("given"); Insofar as + clause ("to the extent that").</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "notwithstanding" takes a noun phrase, not a full clause, and can even follow the noun phrase it modifies in very formal style: "the risks notwithstanding" or "notwithstanding the risks" — both are correct.<br><br>
+            Cumulative reminder: this whole course has combined narrative tenses, conditionals, the passive voice, modality, participle clauses and now discourse connectors — real professional writing constantly mixes all of these together in the same paragraph, exactly as the reading below does.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Choosing the right formal connector</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see exactly what relationship it signals.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Why Effort Shrinks in Teams: The Ringelmann Effect</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>When Max Ringelmann <span class="gram" data-gram="g1">conducted</span> his now-famous rope-pulling experiments in 1913, he <span class="gram" data-gram="g2">had</span> no idea he was about to name an effect that would apply just as neatly to modern meetings as to farm labourers pulling on a rope. Individuals, tested alone, pulled with a certain measurable force, <span class="gram" data-gram="g3">whereas</span> that same effort, once spread across a group, <span class="gram" data-gram="g4">was found</span> to shrink steadily as more people joined in. <span class="gram" data-gram="g5">Had each participant been pulling entirely alone</span>, the total recorded force would have been dramatically higher.</p><p><span class="gram" data-gram="g6">Notwithstanding</span> a century of further research, the exact psychological mechanism remains only partly understood, though most explanations point to reduced accountability: in a large group, <span class="vocab" data-word="diffused">diffused</span> responsibility makes any single person's contribution feel less <span class="vocab" data-word="consequential">consequential</span>. <span class="gram" data-gram="g7">Rarely does</span> anyone in a large team consciously decide to slack off; <span class="vocab" data-word="coasting">coasting</span> tends to happen quietly, below the level of conscious awareness. <span class="gram" data-gram="g8">Having studied</span> dozens of workplace teams since, researchers now describe this social loafing as one of the most <span class="vocab" data-word="replicated">replicated</span> findings in group psychology.</p><p><span class="vocab" data-word="In light of">In light of</span> this evidence, some companies have begun deliberately shrinking team sizes for tasks that reward individual <span class="vocab" data-word="accountability">accountability</span>, while keeping larger teams, <span class="gram" data-gram="g9">insofar as</span> the work genuinely benefits from parallel effort, for tasks that don't. The effect is not universal — <span class="gram" data-gram="g10">nonetheless</span>, it appears with remarkable consistency across cultures, industries and even species, <span class="vocab" data-word="underscoring">underscoring</span> just how deeply <span class="vocab" data-word="ingrained">ingrained</span> the pattern seems to be. A manager, <span class="gram" data-gram="g11">trained to notice the pattern</span>, can design around it; one, <span class="gram" data-gram="g12">left unaware</span>, will simply keep adding people to a struggling project and wonder why productivity per head keeps falling.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What did Ringelmann's original rope-pulling experiments show?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">Individual effort shrank steadily as group size grew.</button><button class="opt" data-value="wrong">Individual effort increased the more people joined in.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to the passage, what do most explanations for the effect point to?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Reduced accountability once responsibility is diffused across a group.</button><button class="opt" data-value="wrong">A lack of physical strength in larger groups.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What have some companies begun doing in light of this evidence?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Deliberately shrinking team sizes for tasks needing individual accountability.</button><button class="opt" data-value="wrong">Removing all individual accountability from every task.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. If responsibility is "diffused" across a group, it is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">spread out, no longer concentrated in one place</button><button class="opt" data-value="wrong">concentrated entirely in one person</button><button class="opt" data-value="wrong2">completely removed from the task</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Coasting" means…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">making less effort than one is capable of</button><button class="opt" data-value="wrong">working at maximum possible effort</button><button class="opt" data-value="wrong2">quitting a job suddenly</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. A "replicated" finding is one that has been…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">repeated with similar results in further research</button><button class="opt" data-value="wrong">proven false by later studies</button><button class="opt" data-value="wrong2">recorded only once, never repeated</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. "Accountability" refers to…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">being responsible and answerable for one's actions</button><button class="opt" data-value="wrong">being completely free of any responsibility</button><button class="opt" data-value="wrong2">a type of financial bonus</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. If a pattern is "ingrained", it is…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">deeply rooted and firmly established</button><button class="opt" data-value="wrong">brand new and not yet noticed</button><button class="opt" data-value="wrong2">easily and instantly removed</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Each contribution felt less <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> in a bigger group.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. The consistency across cultures is <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> how real the effect is.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Responsibility becomes <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> once a group grows large enough.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. It is one of the most <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> findings in group psychology.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — formal connectors, plus a mix of structures from across the whole course.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. The results were disappointing; <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (nonetheless), the team pressed on.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2.  <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (notwithstanding/the risks), the board approved the investment.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. Marketing prioritised speed, <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (whereas) engineering prioritised stability.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. By the time the audit began, the accountant <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (already/review) every file. (review: past perfect)</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5.  <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (if/the loan/not/secure), the venture would have collapsed. (review: third conditional)</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6.  <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (having/finish) the restructuring, the company finally returned to profit. (review: participle clause)</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">New connector, or a structure from earlier in the course?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Tap which category each sentence belongs to.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Give a short 'retrospective' about a project, job or course you've completed, using at least two formal connectors (nonetheless, notwithstanding, whereas, in light of, insofar as) and at least two earlier structures from this course (a conditional, a passive, a participle clause, or an inversion).</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing why their largest team seems to be their least productive per person.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Tomasz notice about the twelve-person team compared to the four-person squad?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">The larger team seems to coast rather than pull its weight.</button><button class="opt" data-value="wrong">The larger team is far more productive overall.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to Tomasz, how does coasting typically happen?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Without anyone consciously deciding to do it.</button><button class="opt" data-value="wrong">Only after a formal team announcement.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Anna suggest doing in light of the discussion?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Splitting the big team into smaller ones.</button><button class="opt" data-value="wrong">Doubling the size of every team immediately.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Sales were disappointing; ___, the team stayed motivated.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">nonetheless</button><button class="opt" data-value="wrong">therefore</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ the setbacks, the project finished on schedule.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">Notwithstanding</button><button class="opt" data-value="wrong">Because of</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. The old office was small, ___ the new one is huge.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">whereas</button><button class="opt" data-value="wrong">so that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ the new complaints, the policy will be revised. (review-adjacent, new connector)</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">In light of</button><button class="opt" data-value="wrong">In case of</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. ___ the figures twice, she still made an error. (review: participle clause)</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">Having reviewed</button><button class="opt" data-value="wrong">Have reviewed</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-20-discourse-capstone";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-contrast", "key": "contrast"}, {"id": "mode-w-whereas", "key": "whereas"}, {"id": "mode-w-reasoning", "key": "reasoning"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"contrast": [{"label": "'however' in a more formal register", "example": "The launch was delayed; nonetheless, demand remained strong."}, {"label": "'despite' + noun phrase, very formal", "example": "Notwithstanding the criticism, the plan went ahead unchanged."}], "whereas": [{"label": "a direct, parallel contrast between two clauses", "example": "The old system was manual, whereas the new one is fully automated."}], "reasoning": [{"label": "'given/considering' — reasoning from new information", "example": "In light of the recent complaints, the policy was revised."}, {"label": "'to the extent that' — a limited, conditional claim", "example": "The plan works, insofar as it reduces costs, but it creates new risks."}]},
+    quizLabels: {"contrast": "Nonetheless / Notwithstanding", "whereas": "Whereas (parallel contrast)", "reasoning": "In light of / Insofar as"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Nonetheless", "text": "The quarter was difficult; nonetheless, the team hit every target.", "explain": "Formal \"however\" — a contrast between two full statements."}, {"key": "c2", "label": "Notwithstanding", "text": "Notwithstanding the tight deadline, the report was thorough and well-argued.", "explain": "Formal \"despite\" + noun phrase — no full clause needed after it."}, {"key": "c3", "label": "Whereas", "text": "The London office handles sales, whereas the Berlin office handles support.", "explain": "A direct, parallel contrast between two comparable situations."}, {"key": "c4", "label": "In light of / Insofar as", "text": "In light of the feedback, the design was revised, insofar as budget allowed.", "explain": "\"In light of\" gives the reason for revising; \"insofar as\" limits the claim to what the budget actually permitted."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Narrative past simple — \"conducted\" (REVIEW): a single completed action at a specific point in the past.", "g2": "Past perfect — \"had no idea\" (REVIEW): a state that existed before the rest of the story unfolds.", "g3": "\"Whereas\" (NEW connector) — a direct, parallel contrast between individual and group effort.", "g4": "Passive voice — \"was found\" (REVIEW): the researchers are unimportant here, focus is on the result.", "g5": "Inverted third conditional, no \"if\" (REVIEW) — \"Had each participant been pulling alone\" = \"If each participant had been pulling alone\".", "g6": "\"Notwithstanding\" + noun phrase (NEW connector) — formal \"despite\".", "g7": "\"Rarely does\" (REVIEW, Lesson 18) — negative inversion: fronted frequency adverb triggering \"does\"-inversion.", "g8": "\"Having + past participle\" (REVIEW, Lesson 15) — the studying was completed before the description that follows.", "g9": "\"Insofar as\" (NEW connector) — limits the claim about larger teams to the extent it is actually true.", "g10": "\"Nonetheless\" (NEW connector) — formal \"however\", introducing a contrast with the previous statement.", "g11": "Past participle clause (REVIEW, Lesson 15) — \"trained to notice the pattern\" modifying \"manager\", passive meaning.", "g12": "Past participle clause (REVIEW, Lesson 15) — \"left unaware\" modifying \"one\", passive meaning, contrasting with g11."});
+  Course.initVocab({"diffused": {"word": "diffused", "ipa": "/dɪˈfjuːzd/", "meaning": "spread out among a group, no longer concentrated in one place", "example": "Diffused responsibility makes each person's role feel smaller."}, "consequential": {"word": "consequential", "ipa": "/ˌkɒn.sɪˈkwen.ʃəl/", "meaning": "important, having significant effects or consequences", "example": "Each contribution felt less consequential in a bigger group."}, "coasting": {"word": "coasting", "ipa": "/ˈkəʊs.tɪŋ/", "meaning": "making less effort than one is capable of, relying on momentum", "example": "Coasting tends to happen without anyone deciding to do it."}, "replicated": {"word": "replicated", "ipa": "/ˈrep.lɪ.keɪ.tɪd/", "meaning": "repeated with the same or similar results, especially in research", "example": "It is one of the most replicated findings in group psychology."}, "accountability": {"word": "accountability", "ipa": "/əˌkaʊn.təˈbɪl.ə.ti/", "meaning": "being responsible and answerable for one's own actions or results", "example": "Smaller teams can increase individual accountability."}, "underscoring": {"word": "underscoring", "ipa": "/ˌʌn.dəˈskɔːr.ɪŋ/", "meaning": "emphasising or drawing attention to something", "example": "The consistency across cultures is underscoring how real the effect is."}, "ingrained": {"word": "ingrained", "ipa": "/ɪnˈɡreɪnd/", "meaning": "firmly fixed or established, deeply rooted", "example": "The pattern seems deeply ingrained across species."}, "In light of": {"word": "in light of", "ipa": "/ɪn laɪt ɒv/", "meaning": "considering, given a particular piece of information", "example": "In light of this evidence, some companies changed their structure."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["consequential"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["underscoring"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["diffused"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["replicated"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["nonetheless"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["Notwithstanding the risks"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["whereas"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["had already reviewed"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["Had the loan not been secured", "If the loan had not been secured"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["Having finished"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"Notwithstanding the delays, the project finished on time.\"", "correct": "New: formal discourse connector"}, {"prompt": "\"Having reviewed the figures twice, she approved the budget.\"", "correct": "Review: earlier course structure"}, {"prompt": "\"The London office handles sales, whereas Berlin handles support.\"", "correct": "New: formal discourse connector"}, {"prompt": "\"Rarely does a single decision explain a decade of survival.\"", "correct": "Review: earlier course structure"}], ["New: formal discourse connector", "Review: earlier course structure"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["Notwithstanding", "the", "setbacks,", "the", "launch", "proceeded", "as", "planned."]}, {"words": ["The", "old", "system", "was", "manual,", "whereas", "the", "new", "one", "is", "automated."]}, {"words": ["In", "light", "of", "the", "feedback,", "the", "policy", "was", "revised."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Describe something that went badly at first, but that you nonetheless kept working on. What changed?", "Compare two approaches, teams or periods of time using 'whereas' to highlight the contrast.", "In light of everything you've learned in this course, what's one grammar structure you now use more confidently than before?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Having read about the Ringelmann effect, I finally understand why our biggest team is also our least productive per person."}, {"speaker": "Tomasz", "line": "Right, whereas the four-person squad clearly pulls its weight, the twelve-person one seems to coast."}, {"speaker": "Anna", "line": "Notwithstanding all the extra headcount, output barely changed this quarter."}, {"speaker": "Tomasz", "line": "Rarely does anyone admit they're coasting, though — it happens without anyone deciding it."}, {"speaker": "Anna", "line": "In light of this, maybe we should split the big team into smaller ones."}, {"speaker": "Tomasz", "line": "Insofar as the work actually needs that many people, sure — but a lot of it probably doesn't."}, {"speaker": "Anna", "line": "The effect is over a century old, and nonetheless it still applies to us today."}, {"speaker": "Tomasz", "line": "Some things never change, apparently."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Wish / If Only | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-conditionals">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 10 of 20 · Sophisticated Conditionals</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Advanced Wish / If Only</h1>
+    <p class="lesson-sub">Wish + would have, and layered regret: "I wish I'd known, because if I had, I wouldn't have..."</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">You already know "I wish I had done" for past regret. Today we add "wish + would have" for annoyance at someone else's past action, and practise chaining regret across two linked clauses.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "I wish he would have told me sooner" expresses…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">annoyance or frustration about a past action (or lack of one)</button><button class="opt" data-value="wrong">a neutral, factual observation about the past</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "If only I had checked the schedule, I wouldn't have missed the flight" chains together…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">a regret and its direct consequence</button><button class="opt" data-value="wrong">two completely unrelated past events</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "I wish I'd known, because if I had, I wouldn't have signed" is an example of…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">layered regret — wish plus a third conditional explaining the consequence</button><button class="opt" data-value="wrong">a simple present-tense wish about now</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">"Wish + would have" almost always signals irritation about someone else's (in)action — it's rarely neutral, and it's rarely used about yourself.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. I wish the manager ___ the deadline before we all stayed up all night.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">had mentioned</button><button class="opt" data-value="wrong">would mention</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. I wish he ___ interrupting every single meeting.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">would stop</button><button class="opt" data-value="wrong">stopped</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. If only she ___ me earlier, I could have rearranged my schedule.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">had told</button><button class="opt" data-value="wrong">told</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. I wish I'd backed up the file, because if I ___, I wouldn't have lost everything.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">had</button><button class="opt" data-value="wrong">did</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">From simple regret to layered regret</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">"Wish + past perfect" is regret about your own past. "Wish + would" is frustration about someone else's repeated behaviour. And you can chain a wish onto a third conditional to spell out exactly what the consequence would have been.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-pastregret">Wish + past perfect</button><button class="pill" id="mode-w-wouldhave">Wish + would(n't)</button><button class="pill" id="mode-w-layered">Layered regret</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Wish/If only + subject + had + past participle — regret about your own past.</div>
+          <div class="formula" style="border-left-color:var(--c-modal)">✅ Wish + subject + would(n't) + base verb — frustration at someone else's action/behaviour (never used about yourself).</div>
+          <div class="formula" style="border-left-color:var(--c-future);margin-bottom:20px">✅ Wish + past perfect, + because if + past perfect, + would(n't) have + past participle — layering a wish onto its exact consequence.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "wish + would" is almost never used about yourself, and never for something you have no control over changing about the present moment.<br><br>
+            ❌ "I wish I would stop being late." — sounds wrong; use "I wish I wouldn't be late" (rare) or, far more naturally, "I wish I weren't always late."<br>
+            ✅ "I wish he would stop being late." — perfectly natural, aimed at someone else's behaviour.<br><br>
+            For layered regret, keep the logic consistent: the "if" clause should restate the exact same past action as the wish, so the consequence clause follows logically.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Regret about yourself vs. frustration at someone else</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see why each pattern is chosen.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Defending the Decision You Already Made</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>When a decision turns out badly, the mind rarely settles for simple regret. Instead it experiences <span class="vocab" data-word="dissonance">dissonance</span> — the <span class="vocab" data-word="discomfort">discomfort</span> of holding two <span class="vocab" data-word="contradictory">contradictory</span> beliefs at once: "I am a careful decision-maker" and "I just approved a project that failed badly." "<span class="gram" data-gram="g1">I wish I had asked</span> more questions before signing off," the operations director admitted afterward. "<span class="gram" data-gram="g2">Because if I had</span>, we might never have <span class="vocab" data-word="overcommitted">overcommitted</span> to that vendor in the first place."</p><p>Rather than sit with that discomfort, people typically <span class="vocab" data-word="rationalise">rationalise</span> the original choice instead of abandoning it — reinterpreting the evidence, minimising the failure, or quietly rewriting their own memory of how confident they actually felt at the time. "<span class="gram" data-gram="g3">I wish the board would stop</span> pretending the numbers looked fine from the start," one finance manager complained; "they didn't, and everyone in that room knew it."</p><p>The pattern intensifies with sunk cost: the more money and reputation already invested, the harder people work to <span class="vocab" data-word="justify">justify</span> continuing rather than admit the original call was wrong. "<span class="gram" data-gram="g4">If only</span> we had cancelled the contract after the first missed deadline," the director said quietly, "we would have saved ourselves eighteen months of this." Colleagues nodded; nobody disagreed, but nobody had said so at the time either.</p><p>By the final review, the regret had layered into something more complicated than simple hindsight. "<span class="gram" data-gram="g5">I wish I hadn't reassured</span> the board that everything was under control," the director reflected, "<span class="gram" data-gram="g6">because if I hadn't</span>, someone might have challenged the decision months earlier, before it became impossible to unwind." Learning to <span class="vocab" data-word="reframe">reframe</span> a bad decision honestly — rather than defending it indefinitely — turned out to be the harder, and more valuable, lesson.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, what does cognitive dissonance make someone experience after a bad decision?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">The discomfort of holding two contradictory beliefs about themselves at once.</button><button class="opt" data-value="wrong">An immediate and complete change of career.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What do people typically do instead of abandoning a decision that turned out badly?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Rationalise it by reinterpreting the evidence or minimising the failure.</button><button class="opt" data-value="wrong">Report it immediately to an external regulator.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Why does the pattern intensify with sunk cost, according to the passage?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">The more already invested, the harder people work to justify continuing.</button><button class="opt" data-value="wrong">Because sunk costs are automatically refunded after a set period.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Cognitive "dissonance" describes…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">the discomfort of holding two conflicting beliefs at once</button><button class="opt" data-value="wrong">complete agreement between two beliefs</button><button class="opt" data-value="wrong2">a formal disagreement settled in court</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. To "rationalise" a bad decision means to…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">invent a logical-sounding reason to justify it</button><button class="opt" data-value="wrong">openly admit it was a mistake</button><button class="opt" data-value="wrong2">reverse it immediately</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Two beliefs that are "contradictory" are…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">inconsistent with each other</button><button class="opt" data-value="wrong">identical in every way</button><button class="opt" data-value="wrong2">unrelated to each other</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. To "justify" continuing a project means to…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">give a reason showing it is the right choice</button><button class="opt" data-value="wrong">cancel it without explanation</button><button class="opt" data-value="wrong2">hand it to a different team</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. To "reframe" a bad decision means to…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">consider it from a different perspective</button><button class="opt" data-value="wrong">delete all record of it</button><button class="opt" data-value="wrong2">repeat it exactly as before</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. People rationalise a decision rather than sit with the <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> .</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. They had <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> to a vendor without asking enough questions.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Learning to <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> a bad decision honestly is genuinely difficult.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. The two beliefs were completely <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> .</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — wish + past perfect, wish + would(n't), or layered regret with because if.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. I wish I <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (check) the figures before submitting the report.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. I wish he <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (stop) cancelling meetings at the last minute.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. If only she <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (tell) us sooner, we could have prepared properly.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. I wish I'd backed up the file, because if I <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (back up) it, I wouldn't have lost the data.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. I wish they <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (stop) interrupting each other during meetings.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. If only we'd escalated it earlier, because if we <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (escalate) it, the client would still be with us.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Which kind of regret?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Decide whether each sentence expresses regret about your own past, frustration at someone else's behaviour, or layered regret with a spelled-out consequence.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a work situation you regret, first using "I wish I had...", then add a layered sentence: "...because if I had, I wouldn't have...".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are reviewing why nobody challenged a vendor decision until it was too late.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Anna say she regrets not doing before the vendor was signed off?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">Asking more questions.</button><button class="opt" data-value="wrong">Hiring an external consultant.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to Tomasz, what would have happened if they had cancelled after the first missed deadline?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">They would have saved themselves eighteen months of trouble.</button><button class="opt" data-value="wrong">The vendor would have sued the company.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do Anna and Tomasz agree they need to get better at?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Reframing a bad decision honestly instead of defending it forever.</button><button class="opt" data-value="wrong">Signing contracts more quickly in future.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. I wish I ___ the contract more carefully before signing.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">had read</button><button class="opt" data-value="wrong">would read</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. I wish she ___ interrupting me during presentations.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">would stop</button><button class="opt" data-value="wrong">stopped</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If only we ___ earlier, we could have avoided the delay entirely.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">had started</button><button class="opt" data-value="wrong">started</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. I wish I'd asked for feedback, because if I ___, I'd have fixed it in time.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">had</button><button class="opt" data-value="wrong">did</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. I wish he ___ complaining about every small change.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">would stop</button><button class="opt" data-value="wrong">stops</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-10-advanced-wish";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-pastregret", "key": "pastregret"}, {"id": "mode-w-wouldhave", "key": "wouldhave"}, {"id": "mode-w-layered", "key": "layered"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"pastregret": [{"label": "regret about your own past action or inaction", "example": "I wish I had asked for clarification before the meeting."}, {"label": "regret framed with \"if only\" for extra emphasis", "example": "If only I hadn't forwarded that email to the whole team."}], "wouldhave": [{"label": "irritation at someone else's repeated behaviour, still ongoing", "example": "I wish he would stop rescheduling at the last minute."}, {"label": "frustration about a specific past action someone else took (or didn't)", "example": "I wish she would have mentioned the budget cut sooner."}], "layered": [{"label": "wish + a linked third conditional spelling out the consequence", "example": "I wish I'd read the contract, because if I had, I wouldn't have agreed to those terms."}, {"label": "if only + consequence chained with \"then\"", "example": "If only we'd tested it properly, then the bug would never have reached customers."}]},
+    quizLabels: {"pastregret": "Wish + past perfect", "wouldhave": "Wish + would(n't)", "layered": "Layered regret"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Regret, own past action", "text": "I wish I had double-checked the figures before submitting them.", "explain": "\"Wish + past perfect\" — regret about the speaker's own past action."}, {"key": "c2", "label": "Frustration at someone else", "text": "I wish he would stop changing the deadline every other day.", "explain": "\"Wish + would\" — irritation at someone else's ongoing, repeated behaviour."}, {"key": "c3", "label": "Layered regret", "text": "I wish I'd flagged the risk sooner, because if I had, we wouldn't have lost the client.", "explain": "The wish is chained to a full third conditional, spelling out the exact consequence."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Wish + past perfect\" — the director's regret about her own past inaction (not asking more questions).", "g2": "Layered regret continued: \"because if I had [asked]\" — a third conditional spelling out the consequence.", "g3": "\"Wish + would\" — frustration at the board's ongoing, repeated behaviour, not a one-off action.", "g4": "\"If only\" + past perfect — a stronger, more emotional version of \"I wish\", regretting a decision not made.", "g5": "\"Wish + past perfect\" (negative) — regret about something the director did do (reassuring the board) that she now regrets.", "g6": "Layered regret continued: \"because if I hadn't [reassured them]\" — completing the third-conditional consequence chain."});
+  Course.initVocab({"dissonance": {"word": "dissonance", "ipa": "/ˈdɪs.ən.əns/", "meaning": "a lack of harmony, especially between conflicting beliefs", "example": "Cognitive dissonance appears when two beliefs contradict each other."}, "discomfort": {"word": "discomfort", "ipa": "/dɪsˈkʌm.fət/", "meaning": "a feeling of unease or mild distress", "example": "People rationalise a decision rather than sit with the discomfort."}, "contradictory": {"word": "contradictory", "ipa": "/ˌkɒn.trəˈdɪk.tər.i/", "meaning": "opposed to or inconsistent with something else", "example": "The two beliefs were completely contradictory."}, "overcommitted": {"word": "overcommitted", "ipa": "/ˌəʊ.və.kəˈmɪ.tɪd/", "meaning": "taken on more obligation than is sensible", "example": "They had overcommitted to a vendor without asking enough questions."}, "rationalise": {"word": "rationalise", "ipa": "/ˈræʃ.ən.ə.laɪz/", "meaning": "to invent a logical-sounding reason to justify a decision or feeling", "example": "People rationalise a failed decision rather than admit it was wrong."}, "justify": {"word": "justify", "ipa": "/ˈdʒʌs.tɪ.faɪ/", "meaning": "to give a reason showing that something is right or reasonable", "example": "The team worked hard to justify continuing the project."}, "reframe": {"word": "reframe", "ipa": "/riːˈfreɪm/", "meaning": "to present or consider something from a different perspective", "example": "Learning to reframe a bad decision honestly is genuinely difficult."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["discomfort"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["overcommitted"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["reframe"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["contradictory"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["had checked"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["would stop"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["had told"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["had backed up"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["would stop"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["had escalated"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"I wish I had asked for help sooner.\"", "correct": "Regret about own past"}, {"prompt": "\"I wish she would stop micromanaging every task.\"", "correct": "Frustration at someone else"}, {"prompt": "\"I wish I'd spoken up, because if I had, this wouldn't have happened.\"", "correct": "Layered regret (wish + because if)"}, {"prompt": "\"If only he would return my calls occasionally.\"", "correct": "Frustration at someone else"}], ["Regret about own past", "Frustration at someone else", "Layered regret (wish + because if)"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["I", "wish", "I", "had", "flagged", "the", "risk", "sooner."]}, {"words": ["I", "wish", "he", "would", "stop", "rescheduling", "at", "the", "last", "minute."]}, {"words": ["If", "only", "we'd", "tested", "it,", "the", "bug", "wouldn't", "have", "shipped."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Is there something a colleague does that makes you think \"I wish they would stop...\"? Describe it.", "Tell your group about a decision you regret, and spell out exactly what would have happened differently.", "What's something at your workplace you wish had been handled differently, and why?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I wish I had asked more questions before we signed off on that vendor. Because if I had, we might never have overcommitted like this."}, {"speaker": "Tomasz", "line": "Don't be too hard on yourself. Everyone rationalised it at the time — myself included."}, {"speaker": "Anna", "line": "Honestly, I wish the board would stop pretending the numbers looked fine from the start. They didn't, and people knew it."}, {"speaker": "Tomasz", "line": "If only we had cancelled after the first missed deadline, we'd have saved ourselves eighteen months of this."}, {"speaker": "Anna", "line": "The sunk cost made it so much harder to justify walking away, even when everyone privately agreed it was failing."}, {"speaker": "Tomasz", "line": "I wish I hadn't reassured everyone that it was under control. Because if I hadn't, someone might have challenged it months earlier."}, {"speaker": "Anna", "line": "We need to get better at reframing a bad decision honestly instead of defending it forever."}, {"speaker": "Tomasz", "line": "Agreed. Let's actually admit it in the review this time, not just talk around it."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

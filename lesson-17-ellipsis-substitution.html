@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ellipsis & Substitution | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 17 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Ellipsis & Substitution</h1>
+    <p class="lesson-sub">Leaving words out and replacing whole clauses to sound natural, concise and fluent.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">Fluent English constantly avoids repeating itself. Ellipsis omits words that are obvious from context; substitution replaces a whole idea with a short word like "so", "neither" or "one". Both make speech and writing tighter and more natural.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "I think so" is a shorter way of saying…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"I think that the thing we discussed is true."</button><button class="opt" data-value="wrong">"I don't think about it at all."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "She finished early, and so did I" means…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">I also finished early</button><button class="opt" data-value="wrong">I finished much later than her</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Call me if necessary" is a shortened form of…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">"Call me if it is necessary to call me."</button><button class="opt" data-value="wrong">"Call me, because it's not necessary."</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Substitution swaps a whole clause for a small word (so, neither, one). Ellipsis simply deletes words the listener can easily reconstruct from context.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. "He didn't finish the report, and ___ did his colleague."</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">neither</button><button class="opt" data-value="wrong">so</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Will the client approve it?" "I hope ___."</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">so</button><button class="opt" data-value="wrong">it</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Please revise the draft ___ needed."</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">if</button><button class="opt" data-value="wrong">if it if</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. "I'd like the blue folder, not the red ___."</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">one</button><button class="opt" data-value="wrong">it</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Ellipsis vs. substitution</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Ellipsis deletes repeated words entirely ("if necessary" = "if it is necessary"). Substitution replaces a whole clause or noun with a small placeholder word (so, neither, one, do). Both avoid clumsy repetition.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-ellipsis">Ellipsis</button><button class="pill" id="mode-w-substitution">Substitution</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Ellipsis: <b>if/when/though + (subject + be) + adjective/participle</b> — "Contact HR if unsure." (= if you are unsure)</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Substitution with so/not: <b>think/hope/believe/expect/say + so/not</b> — "Will it work?" "I expect so."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ So/neither + auxiliary + subject: <b>so did I / neither does she / nor can they</b> — agreeing with a previous statement, positive or negative.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "so did I" (positive agreement) vs. "neither/nor did I" (negative agreement) invert subject and auxiliary — a very common C1 slip is forgetting the inversion.<br><br>
+            ❌ "She didn't attend, and I neither." <br>
+            ✅ "She didn't attend, and neither did I."<br><br>
+            Also: "one/ones" replaces a countable noun already mentioned, but never an uncountable one — "I'd like some more information" not "some more one".</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Full form vs. the natural, shortened version</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see exactly what's been left out or replaced.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Secret Doubts of High Achievers</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Even the most outwardly accomplished professionals often carry a private conviction that they do not really deserve their success — a pattern researchers term impostor syndrome. A surgeon who has performed hundreds of <span class="vocab" data-word="meticulous">meticulous</span> operations may still privately suspect that her results come down to luck rather than skill; a professor may <span class="vocab" data-word="attribute">attribute</span> a landmark paper to a generous co-author rather than to his own <span class="vocab" data-word="competence">competence</span>. "Do you ever feel like a total fraud?" one colleague asked a newly promoted director. "Honestly? I think <span class="gram" data-gram="g1">so</span>, most days," she admitted.</p><p>Psychologists have found that the feeling rarely fades with more evidence of success; if anything, it can become <span class="vocab" data-word="chronic">chronic</span>. One study interviewed dozens of high achievers and found that most had never told a colleague about it — and <span class="gram" data-gram="g2">neither had</span> their closest friends outside work, in many cases. When a mentor once <span class="vocab" data-word="confided">confided</span> her own doubts at a team dinner, a junior colleague admitted she felt exactly the same way. "I thought it was just me," she said, "and apparently <span class="gram" data-gram="g3">so did</span> half the department."</p><p>Sufferers often <span class="vocab" data-word="dismiss">dismiss</span> compliments outright, treating genuine praise as unearned and quietly waiting to be exposed as a <span class="vocab" data-word="fraud">fraud</span>. Therapists recommend keeping a written record of achievements, to be reread <span class="gram" data-gram="g4">if necessary</span> whenever self-doubt resurfaces, and seeking outside <span class="vocab" data-word="validation">validation</span> only sparingly. "Should I mention this to my manager?" one client asked. "Only if it genuinely comes up — but <span class="gram" data-gram="g5">if so</span>, be honest about it," the therapist replied. "I hope it helps." "I hope <span class="gram" data-gram="g6">so</span> too," the client said quietly.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, what do high achievers with impostor syndrome often believe about their own success?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">That it is down to luck rather than their own competence.</button><button class="opt" data-value="wrong">That it was achieved without any real effort at all.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What did the junior colleague realise after the mentor confided her own doubts?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">That she herself, and much of the department, felt exactly the same way.</button><button class="opt" data-value="wrong">That the mentor was planning to leave the company.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do sufferers of impostor syndrome typically do with genuine praise?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">They dismiss it outright, treating it as unearned.</button><button class="opt" data-value="wrong">They accept it immediately and confidently.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Someone described as "meticulous" is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">very careful and precise about details</button><button class="opt" data-value="wrong">careless and quick to make mistakes</button><button class="opt" data-value="wrong2">indifferent to the outcome</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Competence" refers to…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">the ability to do something well</button><button class="opt" data-value="wrong">a formal qualification or certificate</button><button class="opt" data-value="wrong2">a feeling of extreme confidence</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If a feeling is "chronic", it is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">long-lasting rather than temporary</button><button class="opt" data-value="wrong">gone within a few minutes</button><button class="opt" data-value="wrong2">impossible to describe</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. To "dismiss" a compliment means to…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">refuse to take it seriously</button><button class="opt" data-value="wrong">accept it warmly</button><button class="opt" data-value="wrong2">repeat it to someone else</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Validation" is…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">confirmation that something or someone is worthy</button><button class="opt" data-value="wrong">a formal written complaint</button><button class="opt" data-value="wrong2">a type of financial penalty</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. He <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> the paper's success to his co-author.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. The mentor <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> her own doubts at dinner.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. He lived in fear of being exposed as a <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> .</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. For some, the self-doubt becomes <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> rather than fading.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — so / neither-nor / one / ellipsis — pick the right substitution or omission.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. "Is the deal confirmed?" "I believe <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> ."</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. She hasn't signed the contract yet, and <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> has her partner.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. Please submit the form early <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (=if it is possible).</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. He didn't agree with the plan, and <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> did I.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. I'll take the red folder, not the blue <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> .</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. "Will they approve the merger?" "I hope <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> ."</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Ellipsis or substitution?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Tap whether the underlined idea in each sentence was deleted (ellipsis) or replaced with a word (substitution).</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Talk about a recent decision at work (yours or a team's), using at least one substitution (so, neither, one) and one ellipsis (if necessary, when possible).</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are having a surprisingly honest conversation over coffee.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Tomasz say about feeling like a fraud?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">He thinks most people in the office feel that way too.</button><button class="opt" data-value="wrong">He has never felt that way at all.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Anna do when she receives a compliment?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">She dismisses it, assuming people are just being polite.</button><button class="opt" data-value="wrong">She accepts it confidently every time.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does the article Tomasz read suggest doing?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Keeping a list of achievements to reread if necessary.</button><button class="opt" data-value="wrong">Avoiding all compliments from colleagues.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Is the report ready?" "I think ___."</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">so</button><button class="opt" data-value="wrong">it</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. He didn't finish on time, and ___ did she.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">neither</button><button class="opt" data-value="wrong">so</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Please revise the plan ___ (=if it is needed).</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">if needed</button><button class="opt" data-value="wrong">if it needed</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. I don't like this design, I prefer the older ___.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">one</button><button class="opt" data-value="wrong">it</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Will they extend the deadline?" "I hope ___."</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">so</button><button class="opt" data-value="wrong">that</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-17-ellipsis-substitution";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-ellipsis", "key": "ellipsis"}, {"id": "mode-w-substitution", "key": "substitution"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"ellipsis": [{"label": "omitting a repeated subject/verb after 'if', 'when', 'though'", "example": "Update the file if needed."}, {"label": "omitting a repeated verb phrase after 'and', 'but'", "example": "She can attend the meeting, but I can't [attend]."}], "substitution": [{"label": "'so'/'not' replacing a whole clause after report verbs", "example": "\"Is the deal final?\" \"I believe so.\""}, {"label": "'so did / neither did / nor did' agreeing with a previous statement", "example": "He apologised, and so did she."}, {"label": "'one/ones' replacing a countable noun", "example": "I'll take the smaller one."}]},
+    quizLabels: {"ellipsis": "Ellipsis (deleted words)", "substitution": "Substitution (replaced with so/one/neither)"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Ellipsis", "text": "Please revise the draft if necessary.", "explain": "= \"if it is necessary\" — the subject and verb are deleted because they're obvious from context."}, {"key": "c2", "label": "Substitution: so", "text": "\"Will the board approve the budget?\" \"I think so.\"", "explain": "\"So\" replaces the whole clause \"that the board will approve the budget\"."}, {"key": "c3", "label": "Substitution: neither", "text": "He hasn't replied yet, and neither has she.", "explain": "\"Neither has she\" replaces \"she hasn't replied yet either\", with subject-auxiliary inversion."}, {"key": "c4", "label": "Substitution: one", "text": "I don't want this laptop, I want the newer one.", "explain": "\"One\" replaces the repeated countable noun \"laptop\"."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Substitution with \"so\" — replaces the whole clause \"that I feel like a fraud\" after the verb \"think\".", "g2": "Substitution with \"neither had\" — negative agreement with \"had never told a colleague\", with subject-auxiliary inversion.", "g3": "Substitution with \"so did\" — positive agreement with \"felt exactly the same way\", with subject-auxiliary inversion.", "g4": "Ellipsis after \"if\" — the full form would be \"if it is necessary\"; subject and verb are omitted.", "g5": "Substitution with \"if so\" — replaces the whole clause \"if it genuinely comes up\".", "g6": "Substitution with \"so\" — replaces the whole clause \"that it helps\" after the verb \"hope\"."});
+  Course.initVocab({"meticulous": {"word": "meticulous", "ipa": "/məˈtɪk.jʊ.ləs/", "meaning": "very careful and precise about details", "example": "She had performed hundreds of meticulous operations."}, "attribute": {"word": "attribute", "ipa": "/əˈtrɪb.juːt/", "meaning": "to say that something is caused by or due to something else", "example": "He attributed the paper's success to his co-author, not himself."}, "competence": {"word": "competence", "ipa": "/ˈkɒm.pɪ.təns/", "meaning": "the ability to do something well or effectively", "example": "She rarely gave herself credit for her own competence."}, "chronic": {"word": "chronic", "ipa": "/ˈkrɒn.ɪk/", "meaning": "persisting for a long time; long-lasting rather than temporary", "example": "For some, the self-doubt becomes chronic rather than fading."}, "confided": {"word": "confided", "ipa": "/kənˈfaɪ.dɪd/", "meaning": "told someone a secret or private feeling, trusting them", "example": "The mentor confided her own doubts at a team dinner."}, "dismiss": {"word": "dismiss", "ipa": "/dɪˈsmɪs/", "meaning": "to refuse to take something seriously, to reject it as unimportant", "example": "She would dismiss every compliment she received."}, "fraud": {"word": "fraud", "ipa": "/frɔːd/", "meaning": "a person who pretends to be something they are not, a deceiver", "example": "He lived in fear of being exposed as a fraud."}, "validation": {"word": "validation", "ipa": "/ˌvæl.ɪˈdeɪ.ʃən/", "meaning": "confirmation or recognition that someone or something is valid or worthy", "example": "Therapists suggest seeking outside validation only sparingly."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["attributed"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["confided"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["fraud"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["chronic"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["so"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["neither"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["if possible"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["neither", "nor"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["one"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["so"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"Contact IT if needed.\"", "correct": "Ellipsis (words deleted)"}, {"prompt": "\"He passed the exam, and so did she.\"", "correct": "Substitution (words replaced)"}, {"prompt": "\"She can present today, but I can't.\"", "correct": "Ellipsis (words deleted)"}, {"prompt": "\"I don't want this version, I want the older one.\"", "correct": "Substitution (words replaced)"}], ["Ellipsis (words deleted)", "Substitution (words replaced)"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["He", "didn't", "reply,", "and", "neither", "did", "she."]}, {"words": ["Update", "the", "spreadsheet", "if", "necessary."]}, {"words": ["I'd", "rather", "take", "the", "smaller", "one."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Tell your group about a time you agreed with someone using 'so did I' or disagreed using 'neither did I' or 'nor did I'.", "Describe two options you once had to choose between (\"I preferred the... one\").", "What's an instruction you've heard at work that used ellipsis, like 'if necessary' or 'when possible'?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Honestly, sometimes I still feel like a total fraud, even after ten years in this job."}, {"speaker": "Tomasz", "line": "Same here. I think most people in this office feel like that, if I'm honest."}, {"speaker": "Anna", "line": "Really? I always assumed it was just me."}, {"speaker": "Tomasz", "line": "Definitely not — and apparently so did half the senior team, according to an article I read."}, {"speaker": "Anna", "line": "I dismiss compliments constantly. I just assume people are being polite."}, {"speaker": "Tomasz", "line": "Neither do I take them seriously, most of the time, if I'm honest."}, {"speaker": "Anna", "line": "The article suggested keeping a list of achievements, to reread if necessary. Do you think that would actually help?"}, {"speaker": "Tomasz", "line": "I hope so, honestly."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

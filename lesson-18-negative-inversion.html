@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Negative Inversion for Emphasis | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 18 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Negative Inversion for Emphasis</h1>
+    <p class="lesson-sub">Never have I..., Rarely does..., Not only... but also..., Under no circumstances... — fronting negatives for dramatic effect.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">When a negative or restrictive adverbial (never, rarely, not only, under no circumstances) is moved to the front of a sentence for emphasis, the subject and auxiliary verb invert — exactly like in a question.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Never have I seen such chaos" is a more emphatic version of…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"I have never seen such chaos."</button><button class="opt" data-value="wrong">"I have seen chaos sometimes."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Rarely does he arrive on time" uses inversion because…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">"rarely" is fronted for emphasis, triggering subject-auxiliary inversion</button><button class="opt" data-value="wrong">"rarely" always requires the past tense</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Under no circumstances should you share this password" is stronger than…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">"You should not share this password under any circumstances."</button><button class="opt" data-value="wrong">"You can share this password sometimes."</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">If the sentence starts with a negative/limiting expression (never, rarely, seldom, not only, under no circumstances, little), invert the subject and the first auxiliary — just like forming a question.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. Never ___ such a disorganised handover before.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">have I seen</button><button class="opt" data-value="wrong">I have seen</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. Rarely ___ the board this divided on a single issue.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">is</button><button class="opt" data-value="wrong">was</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. Not only ___ the deadline, but she also exceeded every target.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">did she meet</button><button class="opt" data-value="wrong">she met</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. Under no circumstances ___ this data with a third party.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">should you share</button><button class="opt" data-value="wrong">you should share</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Fronted negatives trigger inversion</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Moving a negative or restrictive expression to the front of a sentence for emphasis forces subject-auxiliary inversion, exactly as in a question — a hallmark of formal, emphatic written English.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-never">Never / Rarely / Seldom</button><button class="pill" id="mode-w-notonly">Not only... but also</button><button class="pill" id="mode-w-circumstances">Under no circumstances / Little</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Never/Rarely/Seldom + auxiliary + subject + verb: "Rarely does she complain."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Not only + auxiliary + subject + verb, but (also) + clause: "Not only did he apologise, but he also offered a refund."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Under no circumstances / On no account / Little + auxiliary + subject + verb: "Under no circumstances should you forward this email."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> if there's no existing auxiliary, you must add "do/does/did" — just like forming a question — you can't simply swap word order with the main verb.<br><br>
+            ❌ "Rarely he arrives on time."<br>
+            ✅ "Rarely does he arrive on time."<br><br>
+            Also, this inversion only happens with a genuinely fronted negative/limiting expression — an ordinary sentence with "never" in its usual mid-position ("I have never seen that") does NOT invert.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Neutral statement vs. emphatic inversion</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see how fronting the negative changes the tone.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Why Everyone Suddenly Wants the Same Thing</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p><span class="gram" data-gram="g1">Never before has</span> a management trend spread as fast as agile transformation did in the early 2010s, moving from a handful of software teams to entire corporations within a few short years. Researchers studying the phenomenon describe something close to a bandwagon effect: firms <span class="vocab" data-word="adopt">adopt</span> a new practice not because internal evidence supports it, but because enough visible rivals already have. A single influential case study, repeated at enough conferences, can turn a niche idea into an unavoidable <span class="vocab" data-word="buzzword">buzzword</span>.</p><p><span class="gram" data-gram="g2">Rarely do executives</span> pause long enough to ask whether a trend actually suits their own company, choosing instead to <span class="vocab" data-word="imitate">imitate</span> the confident language of consultants and competitors. Genuine <span class="vocab" data-word="due diligence">due diligence</span> — quietly testing an idea before committing budget to it — gets skipped almost entirely; <span class="gram" data-gram="g3">not once did</span> anyone on the board of one major retailer ask whether the idea would actually work in their specific context.</p><p><span class="gram" data-gram="g4">Not only do companies imitate</span> their most visible rivals, but they also mistake popularity itself for proof of value — the more <span class="vocab" data-word="faddish">faddish</span> an idea appears, the more urgently it seems to demand adoption. <span class="gram" data-gram="g5">Under no circumstances would</span> a rational planner recommend adopting an untested framework purely because it is fashionable, and yet <span class="vocab" data-word="entrenched">entrenched</span> habits of imitation quietly override that caution in one company after another. <span class="gram" data-gram="g6">Seldom does</span> anyone <span class="vocab" data-word="herald">herald</span> the eventual, quiet abandonment of a failed trend with anything like the fanfare that greeted its arrival — it simply fades, adopted <span class="vocab" data-word="unquestioningly">unquestioningly</span> in one wave and abandoned just as quietly in the next.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, why do firms often adopt a new management trend?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">Because enough visible rivals have already adopted it, not because of internal evidence.</button><button class="opt" data-value="wrong">Because independent research has proven it improves results.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does the passage say typically gets skipped when a trend spreads quickly?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Genuine due diligence, such as quietly testing the idea first.</button><button class="opt" data-value="wrong">The announcement of the new practice to staff.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What happens when a trend eventually fails, according to the final paragraph?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">It quietly fades away, without the fanfare that greeted its arrival.</button><button class="opt" data-value="wrong">Companies formally announce and analyse its failure in detail.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. A "buzzword" is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">a fashionable term often with little real substance</button><button class="opt" data-value="wrong">a precise technical measurement</button><button class="opt" data-value="wrong2">a formal legal term</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. To "imitate" someone means to…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">copy their behaviour or actions</button><button class="opt" data-value="wrong">strongly criticise them</button><button class="opt" data-value="wrong2">completely ignore them</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Something "faddish" is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">temporarily fashionable, likely to fade quickly</button><button class="opt" data-value="wrong">permanently and reliably useful</button><button class="opt" data-value="wrong2">extremely rare and unknown</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. If a habit is "entrenched", it is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">firmly established and hard to change</button><button class="opt" data-value="wrong">brand new and untested</button><button class="opt" data-value="wrong2">already completely abandoned</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. To "herald" something means to…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">announce or signal its approach publicly</button><button class="opt" data-value="wrong">quietly hide it from view</button><button class="opt" data-value="wrong2">formally cancel it</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Firms often <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> a trend simply because rivals already have.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Genuine <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> gets skipped when a trend spreads fast.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. The framework was adopted <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:140px"> across the company.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. The idea turned into an unavoidable <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> at conferences.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — negative inversion — never, rarely, not only, under no circumstances.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. Never <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (see) such a chaotic handover before.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. Rarely <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (arrive) before nine.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. Not only <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (rise) revenue, but profits also doubled.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. Under no circumstances <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (share) this password with anyone.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. Little <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (know) how close the deal came to collapsing.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. Seldom <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (agree) so quickly on a major decision.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word is wrong in each sentence. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe an unusual or impressive result at work (or in your life), using at least two inverted structures: never/rarely + inversion, and not only... but also.</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are questioning why their company just adopted yet another management trend.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Anna find unusual about how the company adopted the new trend?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">It happened extremely fast without any real evaluation.</button><button class="opt" data-value="wrong">It took several years of careful discussion.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Tomasz say should not have happened?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Skipping due diligence before adopting the framework.</button><button class="opt" data-value="wrong">Consulting external experts before deciding.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Anna call the pattern they are describing?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">A classic bandwagon effect.</button><button class="opt" data-value="wrong">A carefully planned strategic shift.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Never ___ such a disorganised handover before.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">have I seen</button><button class="opt" data-value="wrong">I have seen</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Rarely ___ the team this united on a decision.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">is</button><button class="opt" data-value="wrong">was</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Not only ___ the target, but she also exceeded it.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">did she meet</button><button class="opt" data-value="wrong">she met</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. Under no circumstances ___ this file with outside parties.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">should you share</button><button class="opt" data-value="wrong">you should share</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. Little ___ how close the deal came to collapsing.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">did they know</button><button class="opt" data-value="wrong">they did know</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-18-negative-inversion";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-never", "key": "never"}, {"id": "mode-w-notonly", "key": "notonly"}, {"id": "mode-w-circumstances", "key": "circumstances"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"never": [{"label": "emphasising something has never happened", "example": "Never have we faced a crisis of this scale."}, {"label": "emphasising something happens very infrequently", "example": "Rarely does the CEO address staff directly."}], "notonly": [{"label": "adding a second, stronger point", "example": "Not only did sales rise, but profits doubled too."}, {"label": "emphasising a surprising combination", "example": "Not only is she a lawyer, but she also runs a startup."}], "circumstances": [{"label": "an absolute prohibition", "example": "Under no circumstances should this door be left unlocked."}, {"label": "a surprising realisation, formal/literary tone", "example": "Little did they know the merger would collapse within weeks."}]},
+    quizLabels: {"never": "Never / Rarely / Seldom + inversion", "notonly": "Not only + inversion... but also", "circumstances": "Under no circumstances / Little + inversion"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Neutral", "text": "I have never seen such a disorganised handover.", "explain": "Standard word order — a plain statement of fact."}, {"key": "c2", "label": "Emphatic (inverted)", "text": "Never have I seen such a disorganised handover.", "explain": "Fronting \"never\" and inverting creates a much stronger, almost dramatic emphasis — common in speeches and formal writing."}, {"key": "c3", "label": "Neutral", "text": "She met the deadline and also exceeded every target.", "explain": "A plain coordinated sentence — informative but unremarkable."}, {"key": "c4", "label": "Emphatic (inverted)", "text": "Not only did she meet the deadline, but she also exceeded every target.", "explain": "\"Not only\" fronted with inversion sets up a stronger, more rhetorical second point introduced by \"but also\"."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Never before has\" — fronted negative time expression + present perfect inversion, emphasising this was unprecedented.", "g2": "\"Rarely do executives\" — fronted frequency adverb triggers inversion with \"do\".", "g3": "\"Not once did\" — fronted negative frequency expression triggers inversion with \"did\".", "g4": "\"Not only do companies imitate\" — fronted \"not only\" triggers inversion with \"do\", paired later with \"but also\".", "g5": "\"Under no circumstances would\" — fronted absolute-limiting phrase triggers inversion with \"would\".", "g6": "\"Seldom does\" — fronted frequency adverb triggers inversion with \"does\"."});
+  Course.initVocab({"adopt": {"word": "adopt", "ipa": "/əˈdɒpt/", "meaning": "to begin to use a new practice, method or idea", "example": "Firms adopt a trend because rivals already have."}, "buzzword": {"word": "buzzword", "ipa": "/ˈbʌz.wɜːd/", "meaning": "a fashionable word or phrase, often with little real substance behind it", "example": "The idea turned into an unavoidable buzzword at conferences."}, "imitate": {"word": "imitate", "ipa": "/ˈɪm.ɪ.teɪt/", "meaning": "to copy the behaviour, style or actions of someone else", "example": "Executives often imitate the language of confident competitors."}, "due diligence": {"word": "due diligence", "ipa": "/ˌdjuː ˈdɪl.ɪ.dʒəns/", "meaning": "careful investigation or checking carried out before making a decision", "example": "Genuine due diligence gets skipped when a trend spreads fast."}, "faddish": {"word": "faddish", "ipa": "/ˈfæd.ɪʃ/", "meaning": "temporarily fashionable, likely to go out of style quickly", "example": "The more faddish an idea seemed, the faster it spread."}, "entrenched": {"word": "entrenched", "ipa": "/ɪnˈtren(t)ʃt/", "meaning": "firmly established and difficult to change", "example": "Entrenched habits of imitation override careful planning."}, "herald": {"word": "herald", "ipa": "/ˈher.əld/", "meaning": "to announce or publicly signal the approach of something", "example": "Nobody tends to herald the quiet failure of a trend."}, "unquestioningly": {"word": "unquestioningly", "ipa": "/ʌnˈkwes.tʃən.ɪŋ.li/", "meaning": "without asking questions or expressing any doubt", "example": "The framework was adopted unquestioningly across the company."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["adopt"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["due diligence"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["unquestioningly"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["buzzword"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["have I seen"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["does he arrive"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["did"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["should you share"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["did we know", "did they know"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["does the board agree", "has the board agreed"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["Never", "I", "have", "seen", "such", "a", "disorganised", "handover", "before."], errorIndices: [1, 2], correction: "\"I have\" → \"have I\" (fronted \"never\" requires subject-auxiliary inversion)"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["Rarely", "he", "arrives", "before", "nine", "in", "the", "morning."], errorIndices: [1, 2], correction: "\"he arrives\" → \"does he arrive\" (needs \"does\" inversion, no existing auxiliary)"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["Under", "no", "circumstances", "you", "should", "share", "this", "data."], errorIndices: [3, 4], correction: "\"you should\" → \"should you\" (fronted negative phrase requires inversion)"
+  });
+  Course.renderBuilders('builders', [{"words": ["Never", "have", "I", "seen", "such", "a", "volatile", "market."]}, {"words": ["Not", "only", "did", "revenue", "rise,", "but", "profits", "doubled."]}, {"words": ["Under", "no", "circumstances", "should", "you", "forward", "this", "email."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Tell your group about something you have never experienced before at work, using 'Never have I...'", "Describe a rule at your workplace that should never be broken, using 'Under no circumstances...'", "Can you think of a situation where two impressive things happened at once? Describe it using 'Not only... but also...'"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Never before have I seen a company adopt something this fast without any real evaluation."}, {"speaker": "Tomasz", "line": "I know. Rarely does anyone here ask if a trend actually fits what we do."}, {"speaker": "Anna", "line": "Exactly. Not only did we adopt the new framework, but we also dropped the old one overnight."}, {"speaker": "Tomasz", "line": "Under no circumstances should we have skipped due diligence like that."}, {"speaker": "Anna", "line": "Seldom does management admit a trend failed once it's fashionable elsewhere."}, {"speaker": "Tomasz", "line": "True. Not once did anyone ask what happens once everyone else moves on to the next buzzword."}, {"speaker": "Anna", "line": "It's a classic bandwagon effect, if you ask me."}, {"speaker": "Tomasz", "line": "Completely. Let's hope we ask better questions next time."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

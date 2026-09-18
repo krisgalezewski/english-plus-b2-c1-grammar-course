@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Narrative Tenses in Extended Storytelling | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-aspect">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 1 of 20 · Aspect & Modality, Refined</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Narrative Tenses in Extended Storytelling</h1>
+    <p class="lesson-sub">Weaving past simple, continuous and perfect fluidly across a whole story.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">You already know past simple, past continuous and past perfect individually. Today is about weaving all three together across a longer stretch of narrative — the way real stories, reports and anecdotes actually work.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. In a story, the tense that carries the main sequence of events forward is usually…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">past simple</button><button class="opt" data-value="wrong">past continuous</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "It was raining when the meeting started" uses past continuous to describe…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">background scene-setting, already in progress</button><button class="opt" data-value="wrong">the next event in the sequence</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "By the time she arrived, everyone had left" uses past perfect because leaving happened…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">before the arrival, the reference point in the story</button><button class="opt" data-value="wrong">at exactly the same moment as the arrival</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Think of past simple as the story's spine, past continuous as its scenery, and past perfect as flashbacks — that's the whole lesson in one sentence.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. While the CEO ___ her speech, the lights suddenly went out.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">was giving</button><button class="opt" data-value="wrong">gave</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. By the time the investors arrived, the team ___ the whole presentation.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">had rehearsed</button><button class="opt" data-value="wrong">rehearsed</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. She opened the email, read it twice, then ___ her manager.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">called</button><button class="opt" data-value="wrong">was calling</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. He realised he ___ his badge at home, so he had to sign in as a visitor.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">had left</button><button class="opt" data-value="wrong">left</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Three tenses, three jobs in one story</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Past simple moves the story forward, event by event. Past continuous paints the background it happens against. Past perfect reaches back to something that was already finished before that point in the story. Browse each below, or test yourself with Quick check.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-simple">Past Simple</button><button class="pill" id="mode-w-continuous">Past Continuous</button><button class="pill" id="mode-w-perfect">Past Perfect</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Past Simple: <b>subject + verb-ed / irregular past</b> — moves the plot forward.</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Past Continuous: <b>subject + was/were + verb-ing</b> — sets the scene, or gets interrupted.</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Past Perfect: <b>subject + had + past participle</b> — a flashback to something already finished.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> past perfect is only needed when the order of two past events would otherwise be ambiguous or worth emphasising — not every earlier action needs it.<br><br>
+            ✅ "She left the office and went home." — simple sequence, order is obvious from word order alone, no past perfect needed.<br>
+            ✅ "She left the office because she had finished early." — past perfect clarifies that finishing happened <i>before</i> leaving, not as part of the same moment.<br><br>
+            Overusing past perfect ("had left, had gone, had arrived...") for a plain sequence makes a story sound clumsy — save it for genuine flashbacks or cause-before-effect.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Same events, different framing</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each version to see how the tense choice changes what the sentence emphasises.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Halo Effect in Performance Reviews</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Elena <span class="gram" data-gram="g1">had already formed</span> a strong impression of David long before his official review began. Back in spring, he <span class="gram" data-gram="g2">had delivered</span> a <span class="vocab" data-word="dazzling">dazzling</span> presentation to the board, and the memory of that single afternoon <span class="vocab" data-word="overshadowed">overshadowed</span> nearly everything that came after. While she <span class="gram" data-gram="g3">was flicking through</span> his file the night before the meeting, she realised she could barely recall a single other thing he had done since.</p><p>During the review itself, Elena <span class="gram" data-gram="g4">praised</span> David's "consistent excellence" and <span class="vocab" data-word="credited">credited</span> him with initiative he had barely shown that quarter. She <span class="vocab" data-word="glossed">glossed over</span> two missed deadlines, because by then that one dazzling afternoon <span class="gram" data-gram="g5">had already convinced</span> her he was reliable. Meanwhile, two desks away, a quieter colleague, Priya, <span class="gram" data-gram="g6">was quietly finishing</span> a <span class="vocab" data-word="meticulous">meticulous</span> project that would go on to save the department real money — work that barely earned a mention in her own review.</p><p>Psychologists have a name for what <span class="gram" data-gram="g7">happened</span> that afternoon: the halo effect, first described nearly a century ago by the psychologist Edward Thorndike, occurs when one striking quality <span class="vocab" data-word="skewed">skewed</span> judgement of everything else. David's rating that year came out noticeably <span class="vocab" data-word="inflated">inflated</span>, while Priya's looked oddly <span class="vocab" data-word="distorted">distorted</span> downward, for no clear reason at all. It was only when an external auditor compared the numbers months later that the mistake finally <span class="vocab" data-word="backfired">backfired</span>, forcing the company to rewrite its entire review process.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What had already happened before David's official review even began?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">He had delivered a dazzling presentation to the board months earlier.</button><button class="opt" data-value="wrong">He had already resigned from his position.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What was Priya doing while Elena was praising David?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">She was quietly finishing a meticulous project.</button><button class="opt" data-value="wrong">She was preparing a formal complaint to HR.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What finally exposed the problem with David's rating?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">An external auditor comparing the numbers months later.</button><button class="opt" data-value="wrong">David himself admitting he had exaggerated his work.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Dazzling" means…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">extremely impressive or attractive</button><button class="opt" data-value="wrong">quietly disappointing</button><button class="opt" data-value="wrong2">deliberately vague</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Meticulous" means…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">very careful and precise about details</button><button class="opt" data-value="wrong">careless and rushed</button><button class="opt" data-value="wrong2">loud and confident</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If judgement is "skewed", it is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">distorted or biased in a particular direction</button><button class="opt" data-value="wrong">completely fair and balanced</button><button class="opt" data-value="wrong2">based purely on statistics</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. A rating that is "inflated" is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">artificially increased beyond what's justified</button><button class="opt" data-value="wrong">unfairly reduced</button><button class="opt" data-value="wrong2">kept exactly accurate</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. If a plan "backfired", it…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">had the opposite effect to what was intended</button><button class="opt" data-value="wrong">worked exactly as intended</button><button class="opt" data-value="wrong2">was never actually attempted</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. That single afternoon <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> everything he did afterwards.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. She <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> him with initiative he had barely shown.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. She simply <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> two missed deadlines that quarter.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. Her rating looked oddly <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> downward for no clear reason.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — past simple, past continuous, or past perfect?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. While the technician <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (replace) the cable, the lights flickered twice.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. By the time the fire brigade arrived, the staff <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (already/evacuate) the building.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. She <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (read) the report twice before she finally understood it.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. He realised he <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (forget) his laptop charger at the hotel.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. They <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (still/discuss) the merger when the news broke publicly.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. The moment she <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (open) the door, everyone shouted "surprise!"</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Categorise the function</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Each sentence uses one of the three narrative tenses. Tap which job it's doing.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Tell a short story (real or invented) about something going wrong at work. Use at least one past simple event, one past continuous background detail, and one past perfect flashback.</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing a case study about the halo effect in performance reviews.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What had Elena already decided before evaluating any real evidence?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">That David was brilliant, based on one earlier presentation.</button><button class="opt" data-value="wrong">That David needed additional training.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What was Priya doing while David was being praised?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">She was doing meticulous work that went unnoticed.</button><button class="opt" data-value="wrong">She was leaving the company.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What eventually exposed the problem with the review?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">An auditor comparing the numbers months later.</button><button class="opt" data-value="wrong">David admitting to exaggeration.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. While she ___ the report, the printer jammed.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">was printing</button><button class="opt" data-value="wrong">printed</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. By the time we got there, the shop ___.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">had already closed</button><button class="opt" data-value="wrong">closed</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. He walked in, sat down, and ___ his laptop.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">opened</button><button class="opt" data-value="wrong">was opening</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. She was tired because she ___ all night.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">had worked</button><button class="opt" data-value="wrong">worked</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. It ___ heavily when the plane finally landed.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">was raining</button><button class="opt" data-value="wrong">rained</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-01-narrative-tenses";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-simple", "key": "simple"}, {"id": "mode-w-continuous", "key": "continuous"}, {"id": "mode-w-perfect", "key": "perfect"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"simple": [{"label": "the main sequence of events", "example": "She walked in, sat down, and opened her laptop."}, {"label": "a completed single action", "example": "He finished the report just before midnight."}], "continuous": [{"label": "background scene already in progress", "example": "Rain was falling steadily as the taxi pulled up."}, {"label": "an interrupted action", "example": "She was reviewing the contract when her phone rang."}], "perfect": [{"label": "something finished before the story's reference point", "example": "By the time he arrived, the client had already left."}, {"label": "the cause behind a later result in the story", "example": "She was exhausted because she had worked all weekend."}]},
+    quizLabels: {"simple": "Past Simple", "continuous": "Past Continuous", "perfect": "Past Perfect"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Plain sequence", "text": "She finished the call and left the building.", "explain": "Past simple + past simple: a straightforward sequence, one thing after another."}, {"key": "c2", "label": "With background", "text": "She was finishing the call when the fire alarm went off.", "explain": "Past continuous sets an in-progress scene that a past simple event interrupts."}, {"key": "c3", "label": "With flashback", "text": "She left the building because the alarm had gone off minutes earlier.", "explain": "Past perfect signals the alarm happened first, explaining the cause of what came after."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Past perfect — a mental state that had already formed before the story's main reference point (the review), used here as background flashback.", "g2": "Past perfect — a specific flashback event (the spring presentation) that explains the later bias; it happened before the story's main timeline.", "g3": "Past continuous — a background action in progress the night before the meeting, setting the scene for what she noticed.", "g4": "Past simple — the main spine event of the story: the review itself taking place.", "g5": "Past perfect — reaches back to explain why she dismissed the missed deadlines; the cause was already complete before the review.", "g6": "Past continuous — a parallel background action happening at the same time as the review, used for contrast.", "g7": "Past simple — the narrative resumes with the main sequence, moving toward the story's explanation and conclusion."});
+  Course.initVocab({"dazzling": {"word": "dazzling", "ipa": "/ˈdæz.lɪŋ/", "meaning": "extremely impressive or attractive", "example": "His dazzling presentation won over the entire board."}, "overshadowed": {"word": "overshadowed", "ipa": "/ˌəʊ.vəˈʃæd.əʊd/", "meaning": "made something else seem less important by comparison", "example": "That single afternoon overshadowed everything he did afterwards."}, "credited": {"word": "credited", "ipa": "/ˈkred.ɪ.tɪd/", "meaning": "given recognition or acknowledgement for something", "example": "She credited him with initiative he had barely shown."}, "glossed": {"word": "glossed over", "ipa": "/ɡlɒst ˈəʊ.vər/", "meaning": "dealt with something briefly or superficially to avoid discussing it properly", "example": "She glossed over two missed deadlines entirely."}, "meticulous": {"word": "meticulous", "ipa": "/məˈtɪk.jʊ.ləs/", "meaning": "very careful and precise about details", "example": "Priya's meticulous project saved the department real money."}, "skewed": {"word": "skewed", "ipa": "/skjuːd/", "meaning": "distorted or made biased in a particular direction", "example": "One striking quality skewed judgement of everything else."}, "inflated": {"word": "inflated", "ipa": "/ɪnˈfleɪ.tɪd/", "meaning": "artificially increased or exaggerated beyond what is justified", "example": "His rating that year came out noticeably inflated."}, "distorted": {"word": "distorted", "ipa": "/dɪˈstɔː.tɪd/", "meaning": "given a false or misleading impression", "example": "Her rating looked oddly distorted downward."}, "backfired": {"word": "backfired", "ipa": "/ˌbækˈfaɪəd/", "meaning": "had the opposite effect to what was intended, causing harm", "example": "The mistake finally backfired once an auditor compared the numbers."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["overshadowed"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["credited"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["glossed over"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["distorted"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["was replacing"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["had already evacuated"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["read"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["had forgotten"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["were still discussing"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["opened"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"The rain was hammering against the windows as the meeting began.\"", "correct": "Sets the background scene"}, {"prompt": "\"She grabbed her coat and ran for the last train.\"", "correct": "Moves the story forward"}, {"prompt": "\"He was exhausted because he had barely slept in two days.\"", "correct": "Flashback / earlier cause"}, {"prompt": "\"They had already signed the contract before the lawyers even arrived.\"", "correct": "Flashback / earlier cause"}], ["Moves the story forward", "Sets the background scene", "Flashback / earlier cause"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["By", "the", "time", "she", "arrived,", "the", "server", "had", "already", "crashed."]}, {"words": ["Rain", "was", "falling", "steadily", "when", "the", "taxi", "pulled", "up."]}, {"words": ["He", "opened", "the", "laptop", "and", "started", "typing", "immediately."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Describe a memorable emergency or crisis you witnessed at work or school — what was happening right before it, and what had already happened by the time it was resolved?", "Tell your group about a time you arrived somewhere and something had already happened without you.", "What's a story from your life where the order of events really mattered to understand what happened?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Did you read that case study about the halo effect? The one with the manager and her star employee?"}, {"speaker": "Tomasz", "line": "Yes — Elena, right? She'd already fallen for David's one dazzling presentation months before the actual review."}, {"speaker": "Anna", "line": "Exactly. By the time she sat down to write it, she'd basically decided he was brilliant before looking at any real evidence."}, {"speaker": "Tomasz", "line": "Meanwhile poor Priya was quietly doing all this meticulous work that nobody noticed."}, {"speaker": "Anna", "line": "That's what got me — her rating came out distorted downward for no real reason."}, {"speaker": "Tomasz", "line": "It only came out because an auditor happened to compare the numbers months later."}, {"speaker": "Anna", "line": "Which forced the whole company to rewrite how they do reviews."}, {"speaker": "Tomasz", "line": "A pretty expensive lesson for one dazzling afternoon."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

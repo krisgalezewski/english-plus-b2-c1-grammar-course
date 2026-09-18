@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hypothetical Meaning Without If | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-conditionals">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 9 of 20 · Sophisticated Conditionals</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Hypothetical Meaning Without If</h1>
+    <p class="lesson-sub">Otherwise, but for, without + gerund — conditional logic hiding inside ordinary connectors.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">You don't always need "if" to express a condition. Words like "otherwise", "but for" and "without + -ing" quietly carry the same hypothetical logic, often more compactly.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "We left early; otherwise, we would have missed the flight" means…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">if we hadn't left early, we would have missed it</button><button class="opt" data-value="wrong">we definitely missed the flight anyway</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "But for her quick thinking, the deal would have collapsed" means…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">if it hadn't been for her quick thinking, the deal would have collapsed</button><button class="opt" data-value="wrong">her quick thinking caused the deal to collapse</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Without checking the figures, he approved the budget" implies…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">if he had checked the figures, he might not have approved it</button><button class="opt" data-value="wrong">he checked the figures very carefully first</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">All three — otherwise, but for, without + -ing — smuggle a hidden "if...not" or "if it hadn't been for" into the sentence without ever using the word "if".</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. Book your ticket now; ___ the price will go up tomorrow.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">otherwise</button><button class="opt" data-value="wrong">but for</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ the investor's last-minute support, the startup would have folded.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">But for</button><button class="opt" data-value="wrong">Otherwise</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. She signed the contract ___ reading the fine print.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">without</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. We backed up the files first; ___ we would have lost everything.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">otherwise</button><button class="opt" data-value="wrong">without</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Hidden conditionals: otherwise, but for, without + gerund</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Each of these expresses a hypothetical outcome without ever saying "if". Learn to recognise the hidden condition inside each pattern.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-otherwise">Otherwise</button><button class="pill" id="mode-w-butfor">But for</button><button class="pill" id="mode-w-without">Without + -ing</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ [Real action], otherwise + would/will + base verb — states what really happened, then what would/will happen if it hadn't/doesn't.</div>
+          <div class="formula" style="border-left-color:var(--c-modal)">✅ But for + noun phrase, + would have + past participle — "if it hadn't been for X..."</div>
+          <div class="formula" style="border-left-color:var(--c-future);margin-bottom:20px">✅ Without + verb-ing, + subject + verb — compresses "if...hadn't" into a single phrase.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> "but for" is always followed by a noun phrase, never a full clause.<br><br>
+            ❌ "But for she helped us, we'd have failed." — ungrammatical.<br>
+            ✅ "But for her help, we'd have failed." — noun phrase only.<br><br>
+            Also, "otherwise" needs a real, stated action before it — it can't stand alone as the condition itself; it always contrasts with something that actually happened (or should happen).</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Three hidden conditionals, one underlying "if"</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see the full "if" sentence each one is quietly standing in for.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Mug You Already Own Is Worth More Than the One You Don't</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Ask someone to name a price for a mug they were just given, and they will typically ask for far more than they would ever pay to buy the very same mug new. This gap is known as the endowment effect: mere <span class="vocab" data-word="ownership">ownership</span> inflates perceived value. The pattern shows up constantly at the negotiating table. <span class="gram" data-gram="g1">But for</span> that psychological quirk, many deals that stall for weeks over a small gap in price would close in a single afternoon.</p><p>Negotiators who already possess something — a contract, a supplier relationship, a piece of equipment — consistently <span class="vocab" data-word="overvalue">overvalue</span> it compared with an outside <span class="vocab" data-word="counterpart">counterpart</span> assessing the very same item fresh. <span class="gram" data-gram="g2">Without recognising</span> this bias in themselves, sellers routinely reject offers that are, by any objective <span class="vocab" data-word="valuation">valuation</span>, entirely fair. The buyer, meanwhile, feels no such <span class="vocab" data-word="attachment">attachment</span> and anchors to a lower figure without ever suspecting the size of the gap.</p><p>Skilled negotiators learn to work around the effect rather than fight it directly. Reframe the deal as an exchange of two things owned, they advise, rather than a simple loss on one side; <span class="gram" data-gram="g3">otherwise</span>, the seller's sense of loss will dominate the entire conversation. It also helps to let a party "try before owning" — a short trial period during which nothing has technically been <span class="vocab" data-word="relinquished">relinquished</span> yet. <span class="gram" data-gram="g4">Without that intervening step</span>, an early sense of ownership can quietly harden into an inflated <span class="vocab" data-word="stake">stake</span> that no argument will move. "<span class="gram" data-gram="g5">But for</span> one clause allowing a thirty-day trial," one mediator recalled, "the whole partnership would have collapsed before it began." <span class="gram" data-gram="g6">Without deliberately correcting for the bias</span>, she added, negotiators on both sides simply overpay for their own attachments and underpay for everyone else's.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does the mug example in the passage illustrate?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">That merely owning something inflates how much a person thinks it's worth.</button><button class="opt" data-value="wrong">That buyers always pay more than sellers expect for identical items.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Why do sellers often reject offers that are objectively fair, according to the passage?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Because they overvalue what they already own compared with an outside assessor.</button><button class="opt" data-value="wrong">Because company policy requires them to negotiate for at least a week.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What is the purpose of a trial period, as described by the mediator?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">It delays the sense of ownership hardening into an inflated stake.</button><button class="opt" data-value="wrong">It guarantees both sides an equal share of any future profit.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. To "overvalue" something means to…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">judge it as worth more than it actually is</button><button class="opt" data-value="wrong">judge it with complete objectivity</button><button class="opt" data-value="wrong2">refuse to put any price on it</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. A negotiator's "counterpart" is…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">the person holding an equivalent position on the other side</button><button class="opt" data-value="wrong">a lawyer hired to draft the contract</button><button class="opt" data-value="wrong2">a junior assistant taking notes</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. A "valuation" is…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">an estimate of how much something is worth</button><button class="opt" data-value="wrong">a signed final agreement</button><button class="opt" data-value="wrong2">a legal penalty for breaking a deal</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. If someone feels "attachment" to an item, they feel…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">an emotional connection to it</button><button class="opt" data-value="wrong">complete indifference towards it</button><button class="opt" data-value="wrong2">an urge to sell it immediately</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. A "stake" in something is…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">a share or interest in it</button><button class="opt" data-value="wrong">a formal written complaint about it</button><button class="opt" data-value="wrong2">a temporary loan of it</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. During the trial, nothing had technically been <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> yet.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. The offer was fair by any objective <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> .</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Mere <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> inflates how valuable something feels.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. An early sense of ownership can harden into an inflated <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> .</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — otherwise / but for / without + gerund — pick the pattern that fits.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. Submit the form today; <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (otherwise) you'll lose your place on the list.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2.  <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (But for) her quick thinking, the whole deal would have collapsed.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. He signed the contract <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (without / read) the fine print.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. Back up your work now; <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (otherwise) you risk losing everything.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5.  <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (Without / check) the figures twice, she approved the invoice.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6.  <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (But for) the backup generator, the server room would have gone dark.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word in each sentence breaks the pattern. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a moment at work when one small factor made a huge difference, using "but for", "otherwise" and "without + -ing" at least once each.</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing why a supplier negotiation stalled for weeks.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Why does Tomasz think the supplier rejected a fair offer?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">They are overvaluing the contract simply because they already own it.</button><button class="opt" data-value="wrong">They found a cheaper alternative supplier.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does the thirty-day trial clause achieve, according to Anna?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">It softens the sense of loss because nothing has technically been given up yet.</button><button class="opt" data-value="wrong">It guarantees a lower final price for both sides.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Anna suggest doing to stop the supplier's attachment dominating the talks?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Reframing the deal as an exchange rather than a loss.</button><button class="opt" data-value="wrong">Ending the negotiation and finding a new supplier.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Leave now; ___ you'll be late for the meeting.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">otherwise</button><button class="opt" data-value="wrong">without</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ his colleague's warning, he would have signed the wrong document.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">But for</button><button class="opt" data-value="wrong">Otherwise</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. She left the office ___ telling anyone where she was going.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">without</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. Back up the files first; ___ we risk losing everything.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">otherwise</button><button class="opt" data-value="wrong">but for</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. ___ the extra funding, the project would have been cancelled.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">But for</button><button class="opt" data-value="wrong">Without to have</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-09-hypothetical-without-if";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-otherwise", "key": "otherwise"}, {"id": "mode-w-butfor", "key": "butfor"}, {"id": "mode-w-without", "key": "without"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"otherwise": [{"label": "states a real action first, then the unreal alternative", "example": "We left on time; otherwise, we'd have missed the connection."}, {"label": "a warning about a consequence if something doesn't change", "example": "Fix the leak today, otherwise it'll get much worse."}], "butfor": [{"label": "\"if it hadn't been for\" — credits one factor for preventing disaster", "example": "But for the backup generator, the whole server room would have gone dark."}, {"label": "a slightly formal, literary way to highlight a single decisive factor", "example": "But for her intervention, the negotiation would have collapsed."}], "without": [{"label": "\"if...didn't/hadn't\" compressed into without + gerund", "example": "Without double-checking the numbers, he sent the invoice."}, {"label": "implies a missing step that changed (or risked changing) the outcome", "example": "Without asking permission, she rescheduled the whole meeting."}]},
+    quizLabels: {"otherwise": "Otherwise", "butfor": "But for", "without": "Without + -ing"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "With otherwise", "text": "We backed up the files first; otherwise, we'd have lost everything.", "explain": "Hidden meaning: \"If we hadn't backed up the files first, we'd have lost everything.\""}, {"key": "c2", "label": "With but for", "text": "But for the backup, we'd have lost everything.", "explain": "Hidden meaning: \"If it hadn't been for the backup, we'd have lost everything.\""}, {"key": "c3", "label": "With without + gerund", "text": "Without backing up the files, we would have lost everything.", "explain": "Hidden meaning: \"If we hadn't backed up the files, we would have lost everything.\""}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"But for\" + noun phrase — highlights the single psychological factor (the endowment effect) that slows deals down.", "g2": "\"Without\" + gerund — compresses \"because they don't recognise\" into a single phrase.", "g3": "\"Otherwise\" — contrasts the recommended reframing with the unwanted alternative (the seller's sense of loss dominating).", "g4": "\"Without\" + noun phrase — a hidden \"if that intervening step didn't exist\", explaining what would happen instead.", "g5": "\"But for\" + noun phrase — credits one specific clause with preventing the partnership from collapsing.", "g6": "\"Without\" + gerund — compresses \"if they don't deliberately correct for it\" into a closing warning."});
+  Course.initVocab({"ownership": {"word": "ownership", "ipa": "/ˈəʊ.nə.ʃɪp/", "meaning": "the state of possessing something", "example": "Mere ownership inflates how valuable something feels."}, "overvalue": {"word": "overvalue", "ipa": "/ˌəʊ.vəˈvæl.juː/", "meaning": "to judge something as worth more than it actually is", "example": "Negotiators tend to overvalue what they already possess."}, "counterpart": {"word": "counterpart", "ipa": "/ˈkaʊn.tə.pɑːt/", "meaning": "a person holding an equivalent position on the other side", "example": "The seller's counterpart assessed the same item fresh."}, "valuation": {"word": "valuation", "ipa": "/ˌvæl.juˈeɪ.ʃən/", "meaning": "an estimate of how much something is worth", "example": "The offer was fair by any objective valuation."}, "attachment": {"word": "attachment", "ipa": "/əˈtætʃ.mənt/", "meaning": "an emotional connection to something", "example": "The buyer felt no such attachment to the item."}, "relinquished": {"word": "relinquished", "ipa": "/rɪˈlɪŋ.kwɪʃt/", "meaning": "given up or surrendered something", "example": "During the trial, nothing had technically been relinquished yet."}, "stake": {"word": "stake", "ipa": "/steɪk/", "meaning": "a share or interest in something, especially one that matters emotionally or financially", "example": "An early sense of ownership hardened into an inflated stake."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["relinquished"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["valuation"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["ownership"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["stake"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["otherwise"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["But for"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["without reading"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["otherwise"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["Without checking"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["But for"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["But", "for", "she", "helped", "us,", "the", "project", "would", "have", "failed."], errorIndices: [2, 3], correction: "\"she helped\" → \"her help\" (but for takes a noun phrase, never a full clause)"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["Fix", "the", "leak", "today,", "unless", "it", "will", "get", "much", "worse."], errorIndices: [4], correction: "\"unless\" → \"otherwise\" (this is a warning about a consequence, not an exception)"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["Without", "to", "check", "the", "numbers,", "he", "sent", "the", "invoice."], errorIndices: [1], correction: "\"to check\" → \"checking\" (without is followed by a gerund, not a to-infinitive)"
+  });
+  Course.renderBuilders('builders', [{"words": ["Book", "the", "ticket", "now,", "otherwise", "the", "price", "will", "rise."]}, {"words": ["But", "for", "her", "help,", "we", "would", "have", "missed", "the", "deadline."]}, {"words": ["He", "approved", "it", "without", "checking", "the", "figures", "first."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Tell your group about a time someone's help saved a project — try starting with \"But for...\".", "What's a rule at your workplace that exists because of something that once went wrong without it?", "Describe a mistake you've seen someone make by doing something \"without checking\" or \"without asking\" first."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "I still can't believe the supplier rejected our offer. It was fair by any objective valuation."}, {"speaker": "Tomasz", "line": "Classic endowment effect. Without recognising it, they're overvaluing the contract just because they already hold it."}, {"speaker": "Anna", "line": "That would explain it. Their counterpart on our side sees the exact same numbers completely differently."}, {"speaker": "Tomasz", "line": "But for that one clause allowing a thirty-day trial, I think this deal would have collapsed already."}, {"speaker": "Anna", "line": "Right, because nothing's technically been relinquished during the trial — it softens the sense of loss."}, {"speaker": "Tomasz", "line": "Exactly. Without that intervening step, their sense of ownership would have hardened into an inflated stake immediately."}, {"speaker": "Anna", "line": "We should reframe it as an exchange, not a loss on their side — otherwise their attachment will dominate the whole conversation."}, {"speaker": "Tomasz", "line": "Agreed. Without deliberately correcting for the bias, we'll just keep going in circles."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

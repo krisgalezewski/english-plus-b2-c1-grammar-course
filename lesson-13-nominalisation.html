@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nominalisation | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-passive">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 13 of 20 · Advanced Passive & Noun Phrases</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Nominalisation</h1>
+    <p class="lesson-sub">Turning verbs and adjectives into nouns for a more formal, impersonal, report-like style.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">Nominalisation means turning a verb or adjective into a noun — "they decided" becomes "the decision was made", "implement" becomes "implementation". It's one of the biggest markers of formal, academic and business writing.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "They decided to expand the team" nominalised becomes…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"A decision was made to expand the team."</button><button class="opt" data-value="wrong">"They will decide to expand the team."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Nominalisation tends to make writing sound more…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">formal and impersonal</button><button class="opt" data-value="wrong">casual and conversational</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. The noun form of "implement" (a verb) is…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">implementation</button><button class="opt" data-value="wrong">implementing-ness</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">If you can replace a verb or adjective with an -ion/-ment/-ness/-ity noun and add a supporting verb like "make", "reach" or "undergo", you're nominalising.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. "We will assess the risks" nominalised: "An assessment of the risks ___ conducted."</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">will be</button><button class="opt" data-value="wrong">will has</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. The noun form of "analyse" is…</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">analysis</button><button class="opt" data-value="wrong">analysement</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. The noun form of "significant" (adjective) is…</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">significance</button><button class="opt" data-value="wrong">significantness</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. "They failed to meet the deadline" nominalised: "There was a ___ to meet the deadline."</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">failure</button><button class="opt" data-value="wrong">failing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Verbs and adjectives packed into nouns</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Formal reports often turn actions and qualities into noun phrases, then attach a light supporting verb (make, reach, undergo, conduct, carry out). This shifts focus from who did what to the process or result itself.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-verb">Verb → Noun</button><button class="pill" id="mode-w-adj">Adjective → Noun</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Verb → noun: <b>-ion, -ment, -al, -ure</b> (decide→decision, implement→implementation, arrive→arrival, fail→failure).</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Adjective → noun: <b>-ity, -ness, -ance/-ence</b> (significant→significance, aware→awareness, efficient→efficiency).</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> nominalisation isn't just a vocabulary swap — it also changes the sentence's grammar, usually shifting from an active subject-verb-object to a passive or "there was/is a..." structure with a light verb.<br><br>
+            ✅ "They implemented the policy quickly." → "The implementation of the policy was swift." (subject shifts from "they" to the process itself)<br>
+            ✅ Overusing nominalisation makes writing feel dense and impersonal — perfect for a formal report, wrong for a friendly email.<br><br>
+            Use it deliberately: when you want to sound objective and process-focused, not when you're just trying to sound smart.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Active verb vs. nominalised noun phrase</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see the shift in focus and formality.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Peter Principle: Promoted Beyond Competence</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>In many organisations, an employee's <span class="gram" data-gram="g1">promotion</span> is treated as straightforward proof of merit: strong performance in one role is assumed to guarantee success in the next. The Peter Principle, first proposed decades ago, challenges that assumption directly. Following extended <span class="gram" data-gram="g2">observation</span> of <span class="vocab" data-word="hierarchical">hierarchical</span> companies, the theory concludes that employees tend to rise until they reach a position in which they are no longer competent, and then remain there indefinitely, since further advancement effectively stops.</p><p>The logic behind this pattern is simple, if uncomfortable. <span class="gram" data-gram="g3">Selection</span> for a new role is based almost entirely on <span class="vocab" data-word="proficiency">proficiency</span> in the current one, even though the two positions often demand entirely different skills. A brilliant <span class="vocab" data-word="technician">technician</span> may show excellent attention to detail, qualities that lead naturally to a move into management — a role that instead requires <span class="gram" data-gram="g4">delegation</span>, negotiation and <span class="vocab" data-word="interpersonal">interpersonal</span> judgement, skills the technician was never actually tested on. The <span class="gram" data-gram="g5">assessment</span> behind that move, in other words, measured entirely the wrong thing.</p><p>Once <span class="vocab" data-word="installed">installed</span> in a role beyond their competence, the newly promoted employee typically produces weaker results than before, yet organisations rarely reverse the <span class="gram" data-gram="g6">decision</span>. A formal <span class="vocab" data-word="demotion">demotion</span> is administratively awkward and can look like a public admission of failure, so the underperforming manager is usually left exactly where they are, contributing to a slow <span class="gram" data-gram="g7">stagnation</span> across the whole <span class="vocab" data-word="workforce">workforce</span>, as talented staff below them wait indefinitely for a vacancy that never opens. The <span class="vocab" data-word="incompetence">incompetence</span> the theory describes, then, is less an individual failing than a structural one, built into how promotions are decided in the first place.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the Peter Principle, what determines whether someone gets promoted?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">Performance in their current role, even if the new role needs different skills.</button><button class="opt" data-value="wrong">A formal test of the skills the new position actually requires.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Why does the passage say organisations rarely reverse a bad promotion?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">A formal demotion looks like a public admission of failure.</button><button class="opt" data-value="wrong">It is against the law to demote an employee once promoted.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does the passage say the resulting stagnation affects?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Talented staff below who wait indefinitely for a vacancy.</button><button class="opt" data-value="wrong">Only the company's overall profits.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. A "hierarchical" organisation is one that is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">organised into ranks or levels of authority</button><button class="opt" data-value="wrong">run entirely without any managers</button><button class="opt" data-value="wrong2">focused only on remote work</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Proficiency" means…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">a high level of skill or competence</button><button class="opt" data-value="wrong">a complete lack of experience</button><button class="opt" data-value="wrong2">a formal job title</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Interpersonal" skills relate to…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">relationships and interaction between people</button><button class="opt" data-value="wrong">technical knowledge of machinery</button><button class="opt" data-value="wrong2">financial planning and budgeting</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. A "demotion" is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">a move to a lower rank or position</button><button class="opt" data-value="wrong">a move to a higher rank or position</button><button class="opt" data-value="wrong2">a temporary period of leave</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Incompetence" means…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">a lack of the skill needed to do something well</button><button class="opt" data-value="wrong">an unusually high level of skill</button><button class="opt" data-value="wrong2">a formal complaint procedure</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. The promotion was based purely on his <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> in the previous role.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. A skilled <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> was promoted into a management role he wasn't suited for.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Talented staff across the <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> waited years for a vacancy.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. Once <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> in the role, he was rarely moved again.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — nominalisation — turn the verb/adjective in brackets into its noun form.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. The <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (analyse) of the data took nearly a week.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. The board reached a <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (decide) by Friday afternoon.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. The <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (significant) of the results was discussed at length.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (implement) of the new policy begins next month. (Capitalised noun)</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. There has been a noticeable improvement in <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (efficient) since the changes.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. The company's <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (fail) to meet the deadline caused real concern.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Verb-based or adjective-based nominalisation?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Decide whether each noun in bold comes from a verb or from an adjective.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a recent decision or change at your workplace or school using at least three nominalised nouns (e.g. decision, implementation, assessment, significance, awareness).</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing a colleague's promotion over lunch.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What was the new team lead's promotion based on, according to Anna?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">How good he was as a technician, not as a manager.</button><button class="opt" data-value="wrong">His interpersonal and delegation skills.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. Why does Tomasz say the company won't reverse the decision?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">A formal demotion would look bad for the company.</button><button class="opt" data-value="wrong">It would be illegal to demote him.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Anna say is happening to the workforce underneath him?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">They are waiting for a vacancy that never opens.</button><button class="opt" data-value="wrong">They are all being promoted ahead of schedule.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. The noun form of "decide" is…</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">decision</button><button class="opt" data-value="wrong">decidement</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The noun form of "aware" is…</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">awareness</button><button class="opt" data-value="wrong">awarement</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "They implemented the plan quickly" nominalised: "___ of the plan was swift."</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">Implementation</button><button class="opt" data-value="wrong">Implement</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. The noun form of "significant" is…</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">significance</button><button class="opt" data-value="wrong">significantness</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "They failed to deliver on time" nominalised: "There was a ___ to deliver on time."</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">failure</button><button class="opt" data-value="wrong">failing</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-13-nominalisation";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-verb", "key": "verb"}, {"id": "mode-w-adj", "key": "adj"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"verb": [{"label": "decide → decision", "example": "A decision was reached after three hours of debate."}, {"label": "implement → implementation", "example": "Implementation of the new system began in April."}, {"label": "analyse → analysis", "example": "A detailed analysis of the figures followed."}], "adj": [{"label": "significant → significance", "example": "The significance of the finding was discussed at length."}, {"label": "efficient → efficiency", "example": "Efficiency improved noticeably after the restructuring."}, {"label": "aware → awareness", "example": "Awareness of the new policy is now widespread."}]},
+    quizLabels: {"verb": "Verb → noun", "adj": "Adjective → noun"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Active, personal", "text": "The board decided to approve the merger.", "explain": "Direct, active, names the agent (\"the board\") clearly."}, {"key": "c2", "label": "Nominalised, formal", "text": "The decision to approve the merger was made by the board.", "explain": "The noun phrase \"the decision\" becomes the focus; more formal, slightly more distant."}, {"key": "c3", "label": "Fully impersonal", "text": "A decision was made to approve the merger.", "explain": "The agent disappears entirely — common in minutes, reports and official statements."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Nominalisation of \"promote\" → \"promotion\" — shifts focus from an active decision-maker to the process/event itself, typical of report-register writing.", "g2": "Nominalisation of \"observe\" → \"observation\" — turns the act of observing into an abstract noun, paired with \"following\".", "g3": "Nominalisation of \"select\" → \"selection\" — heads the sentence as an abstract process, removing any named decision-maker.", "g4": "Nominalisation of \"delegate\" → \"delegation\" — a formal noun naming a required skill, instead of describing someone delegating.", "g5": "Nominalisation of \"assess\" → \"assessment\" — the evaluative act becomes a noun that itself \"measured\" something, a hallmark of impersonal report style.", "g6": "Nominalisation of \"decide\" → \"decision\", paired with the light verb \"reverse\" — a noun standing in for an active choice.", "g7": "Nominalisation of \"stagnate\" → \"stagnation\" — turns a gradual process into an abstract noun functioning as the sentence's object."});
+  Course.initVocab({"hierarchical": {"word": "hierarchical", "ipa": "/ˌhaɪ.əˈrɑː.kɪ.kəl/", "meaning": "organised into ranks or levels of authority", "example": "The theory was developed by observing hierarchical companies."}, "proficiency": {"word": "proficiency", "ipa": "/prəˈfɪʃ.ən.si/", "meaning": "a high level of skill or competence", "example": "Selection is based almost entirely on proficiency in the current role."}, "technician": {"word": "technician", "ipa": "/tekˈnɪʃ.ən/", "meaning": "someone skilled in the practical or mechanical side of a job", "example": "A brilliant technician may struggle in a management role."}, "interpersonal": {"word": "interpersonal", "ipa": "/ˌɪn.təˈpɜː.sən.əl/", "meaning": "relating to relationships and interaction between people", "example": "Management requires delegation and interpersonal judgement."}, "installed": {"word": "installed", "ipa": "/ɪnˈstɔːld/", "meaning": "placed or fixed into a position", "example": "Once installed in the role, results usually got worse."}, "demotion": {"word": "demotion", "ipa": "/dɪˈməʊ.ʃən/", "meaning": "a move to a lower rank or position", "example": "A formal demotion is administratively awkward."}, "workforce": {"word": "workforce", "ipa": "/ˈwɜːk.fɔːs/", "meaning": "all the people who work for an organisation", "example": "Stagnation spreads slowly across the whole workforce."}, "incompetence": {"word": "incompetence", "ipa": "/ɪnˈkɒm.pɪ.təns/", "meaning": "lack of the skill needed to do something well", "example": "The incompetence the theory describes is structural, not personal."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["proficiency"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["technician"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["workforce"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["installed"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["analysis"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["decision"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["significance"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["Implementation"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["efficiency"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["failure"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"The **implementation** of the plan began in April.\"", "correct": "From a verb"}, {"prompt": "\"The **significance** of the finding surprised everyone.\"", "correct": "From an adjective"}, {"prompt": "\"A thorough **assessment** was carried out by the board.\"", "correct": "From a verb"}, {"prompt": "\"There is growing **awareness** of the issue among staff.\"", "correct": "From an adjective"}], ["From a verb", "From an adjective"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["A", "decision", "was", "made", "to", "approve", "the", "merger."]}, {"words": ["Implementation", "of", "the", "policy", "begins", "next", "month."]}, {"words": ["The", "significance", "of", "the", "results", "was", "emphasised."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Why might a company prefer to write \"a decision was made\" rather than \"we decided\" in an official report?", "Describe a restructuring, reorganisation or major change you've experienced or heard about.", "Do you think overly formal, nominalised writing makes a report sound more trustworthy, or just harder to read? Discuss."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Have you heard of the Peter Principle? I think it explains exactly what happened with our new team lead."}, {"speaker": "Tomasz", "line": "The idea that people get promoted until they're no longer competent? Yeah, I've read about it."}, {"speaker": "Anna", "line": "Exactly. His promotion was based entirely on how good he was as a technician, not as a manager."}, {"speaker": "Tomasz", "line": "Right, and delegation and interpersonal skills weren't even part of the assessment."}, {"speaker": "Anna", "line": "Now the whole team is struggling because he's clearly out of his depth."}, {"speaker": "Tomasz", "line": "But a formal demotion would look terrible for the company, so nobody wants to reverse the decision."}, {"speaker": "Anna", "line": "Meanwhile the workforce underneath him just sits there, waiting for a vacancy that never opens."}, {"speaker": "Tomasz", "line": "It's a slow stagnation, exactly like the theory describes."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

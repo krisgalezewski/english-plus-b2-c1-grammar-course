@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impersonal Passive & Get-Passive Together | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-passive">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 12 of 20 · Advanced Passive & Noun Phrases</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Impersonal Passive & Get-Passive Together</h1>
+    <p class="lesson-sub">"It is said that...", "he is believed to have...", and when "get" beats "be" in the passive.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">The impersonal passive ("it is said that...", "he is believed to have...") lets us report opinions or rumours without naming who holds them. The get-passive ("got fired", "got promoted") is a more informal alternative to "be", often used for sudden or unwelcome changes.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "It is believed that the merger will go ahead" avoids naming…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">who exactly believes this</button><button class="opt" data-value="wrong">what the merger involves</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "He is thought to have resigned voluntarily" is a more formal way of saying…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">people think he resigned voluntarily</button><button class="opt" data-value="wrong">he definitely resigned voluntarily</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "She got promoted last month" sounds more…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">informal and conversational than "was promoted"</button><button class="opt" data-value="wrong">official and legally binding than "was promoted"</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Impersonal passive = formal, source hidden on purpose. Get-passive = informal, often for changes of state, especially unwelcome or sudden ones.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ that the company is planning layoffs.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">It is rumoured</button><button class="opt" data-value="wrong">It rumours</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. The manager ___ have approved the request without checking the budget.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">is thought to</button><button class="opt" data-value="wrong">is thinking to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. He ___ fired after the scandal broke.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">got</button><button class="opt" data-value="wrong">got to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ that the negotiations collapsed over pricing, not delivery.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">It is understood</button><button class="opt" data-value="wrong">It understands</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Hiding the source vs. choosing an informal tone</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">The impersonal passive reports beliefs, rumours or claims without naming a source — useful in news and formal writing. The get-passive is an informal alternative to "be + p.p.", often implying something sudden, unexpected, or affecting the subject personally.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-impersonal">Impersonal Passive</button><button class="pill" id="mode-w-get">Get-Passive</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Impersonal passive: <b>It is + p.p. + that...</b> or <b>subject + is/are + p.p. + to-infinitive</b> — reports a claim, belief or rumour with no named source.</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Get-passive: <b>get/got + past participle</b> — an informal alternative to "be", often for sudden, unwelcome or dynamic changes.</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> get-passive doesn't work with every verb, and it sounds distinctly informal — never use it in a formal report or academic writing.<br><br>
+            ✅ "She got promoted." — natural, informal, common in spoken English.<br>
+            ✅ "She was promoted." — the neutral, formal equivalent, used in reports and official announcements.<br>
+            ❌ "It is got said that..." — get-passive never combines with impersonal "it" constructions; those stay strictly with "be".<br><br>
+            Rule of thumb: reach for "get" in casual speech about personal change, and "be" (plain or impersonal) everywhere formal.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Formal claim vs. informal change</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see the difference in register and meaning.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Confirmation Bias in Hiring Decisions</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p><span class="gram" data-gram="g1">It is widely believed</span> that hiring decisions are the product of careful, objective comparison, but researchers who study interviews describe something far less rational. An interviewer typically forms a strong <span class="vocab" data-word="impression">impression</span> of a candidate within the first few minutes, often <span class="vocab" data-word="unconsciously">unconsciously</span>, and everything that follows tends to be read through that initial <span class="vocab" data-word="lens">lens</span>.</p><p>This pattern is known as confirmation bias, and once it takes hold, the rest of the interview quietly becomes a search for evidence supporting the first impression rather than a genuine test of it. A candidate who built early <span class="vocab" data-word="rapport">rapport</span> with the interviewer <span class="gram" data-gram="g2">is said to</span> handle pressure well and think on their feet, even when the actual answers are fairly ordinary. A candidate who struck the interviewer badly, by contrast, <span class="gram" data-gram="g3">is believed to have</span> performed poorly overall, regardless of how strong the individual answers actually were. Small, ambiguous moments in the conversation — a pause, a nervous laugh — <span class="gram" data-gram="g4">get interpreted</span> in whichever direction the first impression has already <span class="vocab" data-word="skewed">skewed</span> the interviewer's judgement.</p><p>A related phenomenon, the <span class="vocab" data-word="halo">halo</span> effect, makes the bias even stronger: an interviewer who is impressed by one strong quality — confidence, a firm handshake, a shared hobby — tends to assume every other quality is equally impressive. As a result, some genuinely strong candidates <span class="gram" data-gram="g5">get overlooked</span> simply because they made a flat first impression, while a confident but underqualified candidate sometimes <span class="gram" data-gram="g6">gets hired</span> instead. <span class="gram" data-gram="g7">It is now recommended</span> by most hiring specialists that interviewers use structured scoring sheets and delay their overall judgement until every candidate's <span class="vocab" data-word="credentials">credentials</span> have been reviewed side by side, precisely to stop the first few minutes from <span class="vocab" data-word="overshadowing">overshadowing</span> everything that comes after.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to researchers described in the passage, what actually drives many interview decisions, despite common belief?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">An early, often unconscious first impression that later evidence is read through.</button><button class="opt" data-value="wrong">A completely objective, checklist-based comparison of every candidate.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What tends to happen to a candidate who makes a strong early impression, according to the passage?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Their ordinary answers tend to get reinterpreted more favourably.</button><button class="opt" data-value="wrong">Their application is automatically rejected without review.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do hiring specialists now recommend, according to the final paragraph?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Using structured scoring sheets and delaying overall judgement.</button><button class="opt" data-value="wrong">Relying more heavily on a candidate's handshake and confidence.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Rapport" refers to…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">a friendly relationship built on mutual understanding</button><button class="opt" data-value="wrong">a formal written contract</button><button class="opt" data-value="wrong2">a scheduled follow-up interview</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The "halo" effect describes how…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">one positive quality can make someone assume everything else about a person is also positive</button><button class="opt" data-value="wrong">a bad first impression is always accurate</button><button class="opt" data-value="wrong2">interviews are recorded for staff training</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Credentials" are…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">qualifications or experience that prove someone is suitable</button><button class="opt" data-value="wrong">personal opinions with no evidence behind them</button><button class="opt" data-value="wrong2">informal notes taken during a meeting</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. If one factor is "overshadowing" everything else, it is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">making everything else seem less important by comparison</button><button class="opt" data-value="wrong">being completely ignored by everyone</button><button class="opt" data-value="wrong2">being carefully measured and scored</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. If a judgement has been "skewed", it has been…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">distorted or pulled in a particular direction</button><button class="opt" data-value="wrong">checked and confirmed as accurate</button><button class="opt" data-value="wrong2">delayed until more evidence arrives</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. The interviewer formed a strong <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> within the first two minutes.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Most interviewers do this completely <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> , without even realising it.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Everything afterward gets read through that same <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:80px"> .</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. A firm handshake ended up <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> the rest of the interview.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — impersonal passive or get-passive?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1.  <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (believe) that the company will announce layoffs soon. (It...)</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. She <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (get/fire) without any warning at all.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. The director <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (think) to have known about the plan for months.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. He <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (get/promote) twice in a single year.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5.  <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (understand) that the talks broke down over pricing. (It...)</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. The whole team <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (get/reorganise) after the merger.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Impersonal passive or get-passive?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Decide which pattern each sentence uses.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a rumour or piece of office gossip you've heard (real or invented), using at least one impersonal passive construction ("it is said/believed/rumoured that...") and one get-passive.</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are comparing notes after sitting in on the same round of job interviews.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What does Tomasz say happened to the candidate interviewed before the one everyone loved?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">He got overlooked, even though his answers were arguably stronger.</button><button class="opt" data-value="wrong">He was hired immediately after his interview.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to Anna, how did the panel interpret the successful candidate's awkward pauses?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">As thoughtfulness rather than nerves.</button><button class="opt" data-value="wrong">As a clear sign she wasn't prepared.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Anna suggest doing differently next time?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Using a proper scoring sheet instead of relying on gut feeling.</button><button class="opt" data-value="wrong">Interviewing every candidate twice.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ that the merger will be announced next week.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">It is rumoured</button><button class="opt" data-value="wrong">It rumours</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. The manager ___ have known about the leak beforehand.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">is thought to</button><button class="opt" data-value="wrong">is thinking to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. She ___ promoted twice within a year.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">got</button><button class="opt" data-value="wrong">got to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ that the two companies will merge by autumn.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">It is understood</button><button class="opt" data-value="wrong">It understands</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. He ___ fired after the audit revealed the errors.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">got</button><button class="opt" data-value="wrong">was got</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-12-impersonal-get-passive";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-impersonal", "key": "impersonal"}, {"id": "mode-w-get", "key": "get"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"impersonal": [{"label": "it is + past participle + that-clause", "example": "It is understood that talks will resume next week."}, {"label": "subject + is/are + past participle + to-infinitive", "example": "The CEO is said to be considering early retirement."}], "get": [{"label": "an informal, often sudden change of state", "example": "Two managers got promoted in the same week."}, {"label": "something unwelcome happening to the subject", "example": "The whole department got restructured overnight."}]},
+    quizLabels: {"impersonal": "Impersonal passive", "get": "Get-passive"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Impersonal passive", "text": "It is believed that the CFO will step down by June.", "explain": "Formal, source deliberately unnamed — typical of news reporting."}, {"key": "c2", "label": "Be-passive (neutral)", "text": "The proposal was rejected by the board.", "explain": "Neutral, standard passive — no particular emotional colouring."}, {"key": "c3", "label": "Get-passive (informal)", "text": "The proposal got rejected by the board.", "explain": "Same event, but more informal and conversational, sometimes implying frustration or surprise."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "Impersonal passive — \"It is widely believed that...\" reports a common assumption without naming who holds it.", "g2": "Impersonal passive — \"subject + is said to + infinitive\" reports an assumed quality without naming a source.", "g3": "Impersonal passive — \"subject + is believed to have + p.p.\" reports a belief about something in the past.", "g4": "Get-passive — informal, dynamic, highlights the moment ambiguous behaviour gets (mis)read.", "g5": "Get-passive — informal, implies an unwelcome, often unfair outcome for strong candidates.", "g6": "Get-passive — informal, parallel to \"get overlooked\", showing the flip side of the same bias.", "g7": "Impersonal passive — \"It is now recommended that...\" reports a shared professional recommendation with no single named source."});
+  Course.initVocab({"impression": {"word": "impression", "ipa": "/ɪmˈpreʃ.ən/", "meaning": "an idea or opinion formed quickly about someone", "example": "The interviewer formed a strong impression within minutes."}, "unconsciously": {"word": "unconsciously", "ipa": "/ʌnˈkɒn.ʃəs.li/", "meaning": "without being aware of it", "example": "Most interviewers do this completely unconsciously."}, "lens": {"word": "lens", "ipa": "/lenz/", "meaning": "a particular way of viewing or interpreting something", "example": "Everything afterward is read through that same lens."}, "rapport": {"word": "rapport", "ipa": "/ræˈpɔːr/", "meaning": "a friendly relationship built on mutual understanding", "example": "The candidate built early rapport with the interviewer."}, "skewed": {"word": "skewed", "ipa": "/skjuːd/", "meaning": "distorted or biased in a particular direction", "example": "The first impression had already skewed the interviewer's judgement."}, "halo": {"word": "halo", "ipa": "/ˈheɪ.ləʊ/", "meaning": "(in \"the halo effect\") a tendency for one positive quality to influence overall judgement", "example": "The halo effect makes the bias even stronger."}, "credentials": {"word": "credentials", "ipa": "/krɪˈden.ʃəlz/", "meaning": "qualifications or experience that prove someone's suitability", "example": "Every candidate's credentials should be reviewed side by side."}, "overshadowing": {"word": "overshadowing", "ipa": "/ˌəʊ.vəˈʃæd.əʊ.ɪŋ/", "meaning": "making something seem less important by comparison", "example": "Structured scoring stops the first minutes from overshadowing everything else."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["impression"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["unconsciously"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["lens"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["overshadowing"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["It is believed"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["got fired"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["is thought"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["got promoted"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["It is understood"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["got reorganised"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"It is said that the CEO will resign by summer.\"", "correct": "Impersonal passive (formal, hides the source)"}, {"prompt": "\"He got moved to a completely different team overnight.\"", "correct": "Get-passive (informal, dynamic change)"}, {"prompt": "\"She is believed to have leaked the information.\"", "correct": "Impersonal passive (formal, hides the source)"}, {"prompt": "\"The whole office got soaked when the pipe burst.\"", "correct": "Get-passive (informal, dynamic change)"}], ["Impersonal passive (formal, hides the source)", "Get-passive (informal, dynamic change)"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["It", "is", "rumoured", "that", "layoffs", "are", "coming."]}, {"words": ["He", "is", "believed", "to", "have", "resigned", "voluntarily."]}, {"words": ["She", "got", "promoted", "twice", "in", "one", "year."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Have you ever heard a workplace rumour that turned out to be true? What was it?", "Tell your group about someone who \"got promoted\" or \"got moved\" unexpectedly.", "Why might a company prefer to say \"it is believed that...\" rather than naming exactly who believes something?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "So what did you think of the candidate this morning? Everyone in the room seemed to love her instantly."}, {"speaker": "Tomasz", "line": "Yeah, it's said that first impressions form within the first few minutes, and honestly that's exactly what happened."}, {"speaker": "Anna", "line": "True. After that, every slightly awkward pause got interpreted as thoughtfulness instead of nerves."}, {"speaker": "Tomasz", "line": "Meanwhile the candidate before her got overlooked completely, even though his answers were arguably stronger."}, {"speaker": "Anna", "line": "He's believed to have frozen a little at the start, and nobody really recovered from that impression of him."}, {"speaker": "Tomasz", "line": "It's a textbook halo effect, isn't it? One good moment and suddenly everything else looks impressive too."}, {"speaker": "Anna", "line": "It is now recommended we use a proper scoring sheet next time, so it's less about gut feeling."}, {"speaker": "Tomasz", "line": "Agreed. Otherwise a strong candidate keeps getting hired for the wrong reasons, or not hired at all."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

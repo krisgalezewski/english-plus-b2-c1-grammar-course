@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test 2: Sophisticated Conditionals | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-conditionals">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Test 2 of 4</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Test 2: Sophisticated Conditionals</h1>
+    <p class="lesson-sub">Part 1 covers Lessons 7-10; Part 2 reviews Lessons 1-10 cumulatively.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-part1">
+    <div class="section-label"><span class="num">1</span> Part 1 — Sophisticated Conditionals</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Review inversion in conditionals, conditional alternatives to if, hypothetical meaning without if, and advanced wish / if only.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ we consulted legal sooner, the whole dispute could have been avoided.</p>
+        <div id="p1-q1">
+          <button class="opt" data-value="right">Had</button><button class="opt" data-value="wrong">Have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ the board reject the proposal, we would need to present an alternative by Friday.</p>
+        <div id="p1-q2">
+          <button class="opt" data-value="right">Should</button><button class="opt" data-value="wrong">Would</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3.  <input type="text" id="p1-g3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:150px"> (If I were you), I'd escalate this straight to the director.</p>
+        <button class="btn btn-sm" id="p1-g3-check">Check</button>
+        <div id="p1-g3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="p1-g4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (If you should need) any further documents, contact HR directly.</p>
+        <button class="btn btn-sm" id="p1-g4-check">Check</button>
+        <div id="p1-g4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">5. We won't extend the contract ___ the delivery times improve significantly.</p>
+        <div id="p1-q5">
+          <button class="opt" data-value="right">unless</button><button class="opt" data-value="wrong">provided that</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">6. The vendor accepted our terms, ___ we paid a deposit upfront.</p>
+        <div id="p1-q6">
+          <button class="opt" data-value="right">on condition that</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">7. You can leave early today, <input type="text" id="p1-g7-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:140px"> (as long as) you finish the handover notes first.</p>
+        <button class="btn btn-sm" id="p1-g7-check">Check</button>
+        <div id="p1-g7-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">8.  <input type="text" id="p1-g8-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> (Suppose) the funding falls through at the last minute — what's our backup plan?</p>
+        <button class="btn btn-sm" id="p1-g8-check">Check</button>
+        <div id="p1-g8-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">9. Submit the form today; ___ you'll lose your place on the shortlist.</p>
+        <div id="p1-q9">
+          <button class="opt" data-value="right">otherwise</button><button class="opt" data-value="wrong">but for</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">10. ___ her colleague's timely warning, she would have sent the invoice to the wrong client.</p>
+        <div id="p1-q10">
+          <button class="opt" data-value="right">But for</button><button class="opt" data-value="wrong">Otherwise</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">11. He approved the budget <input type="text" id="p1-g11-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (without/double-check) the figures first.</p>
+        <button class="btn btn-sm" id="p1-g11-check">Check</button>
+        <div id="p1-g11-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">12. Back up the files now; <input type="text" id="p1-g12-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> (otherwise) we risk losing everything overnight.</p>
+        <button class="btn btn-sm" id="p1-g12-check">Check</button>
+        <div id="p1-g12-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">13. I wish I ___ the contract more carefully before signing it.</p>
+        <div id="p1-q13">
+          <button class="opt" data-value="right">had read</button><button class="opt" data-value="wrong">would read</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">14. I wish he ___ interrupting every single client call.</p>
+        <div id="p1-q14">
+          <button class="opt" data-value="right">would stop</button><button class="opt" data-value="wrong">stopped</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">15. If only we <input type="text" id="p1-g15-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:140px"> (escalate) it sooner, we could have kept the client.</p>
+        <button class="btn btn-sm" id="p1-g15-check">Check</button>
+        <div id="p1-g15-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">16. I wish I'd flagged the risk, because if I had, we <input type="text" id="p1-g16-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (not/lose) the account.</p>
+        <button class="btn btn-sm" id="p1-g16-check">Check</button>
+        <div id="p1-g16-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-part2">
+    <div class="section-label"><span class="num">2</span> Part 2 — Cumulative Review: Sections 1 & 2</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">A balanced mix across all ten lessons covered so far — aspect, modality and conditionals together.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. By the time she arrived at the office, the whole team ___ for over an hour.</p>
+        <div id="p2-q1">
+          <button class="opt" data-value="right">had already been meeting</button><button class="opt" data-value="wrong">already met</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. Every summer, the interns ___ a farewell party on their last day.</p>
+        <div id="p2-q2">
+          <button class="opt" data-value="right">would organise</button><button class="opt" data-value="wrong">are organising</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. We <input type="text" id="p2-g3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (go) ahead with the launch in March, but the funding fell through.</p>
+        <button class="btn btn-sm" id="p2-g3-check">Check</button>
+        <div id="p2-g3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. The new packaging ___ reduce shipping costs by roughly ten percent.</p>
+        <div id="p2-q4">
+          <button class="opt" data-value="right">appears to</button><button class="opt" data-value="wrong">is appearing to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">5. She ___ cancelled the meeting — everyone had already read the memo.</p>
+        <div id="p2-q5">
+          <button class="opt" data-value="right">needn't have</button><button class="opt" data-value="wrong">didn't need to</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. He's out of breath — he <input type="text" id="p2-g6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (must/run) to catch the train.</p>
+        <button class="btn btn-sm" id="p2-g6-check">Check</button>
+        <div id="p2-g6-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">7. ___ the board approved the merger sooner, the deal wouldn't have collapsed.</p>
+        <div id="p2-q7">
+          <button class="opt" data-value="right">Had</button><button class="opt" data-value="wrong">Have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">8. We'll approve the plan ___ the budget stays under control.</p>
+        <div id="p2-q8">
+          <button class="opt" data-value="right">provided that</button><button class="opt" data-value="wrong">unless</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">9.  <input type="text" id="p2-g9-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> (But for) the backup generator, the entire server room would have gone dark.</p>
+        <button class="btn btn-sm" id="p2-g9-check">Check</button>
+        <div id="p2-g9-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">10. I wish she ___ complaining about every small change to the schedule.</p>
+        <div id="p2-q10">
+          <button class="opt" data-value="right">would stop</button><button class="opt" data-value="wrong">stops</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">11. By the time we land, I <input type="text" id="p2-g11-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (wait) at the gate for over an hour.</p>
+        <button class="btn btn-sm" id="p2-g11-check">Check</button>
+        <div id="p2-g11-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">12. He ___ terrified of public speaking as a teenager. (a past state)</p>
+        <div id="p2-q12">
+          <button class="opt" data-value="right">used to be</button><button class="opt" data-value="wrong">would be</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">13. ___ the deadline move again, please notify every department immediately.</p>
+        <div id="p2-q13">
+          <button class="opt" data-value="right">Should</button><button class="opt" data-value="wrong">Would</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">14. She signed the lease <input type="text" id="p2-g14-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (without/read) the small print at all.</p>
+        <button class="btn btn-sm" id="p2-g14-check">Check</button>
+        <div id="p2-g14-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">15. If only he ___ us about the delay earlier, we could have rearranged the schedule.</p>
+        <div id="p2-q15">
+          <button class="opt" data-value="right">had told</button><button class="opt" data-value="wrong">told</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">16. They <input type="text" id="p2-g16-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:190px"> (not need/book) early — plenty of seats were still free.</p>
+        <button class="btn btn-sm" id="p2-g16-check">Check</button>
+        <div id="p2-g16-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">2</span> Your results</div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Test summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the test to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish test &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-test-02";
+Course.initPageChrome({lessonId: LESSON_ID, isTest: true});
+
+(async function initTest(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  /* ---------------- part 1 ---------------- */
+  Course.initMCQ('p1-q1', {lessonId: LESSON_ID, sectionId: 'p1-1', correctValue: "right", restoreAnswer: (sectionMap['p1-1']||{}).answer_given});
+  Course.initMCQ('p1-q2', {lessonId: LESSON_ID, sectionId: 'p1-2', correctValue: "right", restoreAnswer: (sectionMap['p1-2']||{}).answer_given});
+  Course.initGapFill('p1-g3-input','p1-g3-check','p1-g3-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-3', correctAnswers: Course.withContractions(["Were I you"]), restore: sectionMap['p1-gap-3'] ? {answerGiven: sectionMap['p1-gap-3'].answer_given, isCorrect: sectionMap['p1-gap-3'].override_correct ?? sectionMap['p1-gap-3'].is_correct} : null});
+  Course.initGapFill('p1-g4-input','p1-g4-check','p1-g4-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-4', correctAnswers: Course.withContractions(["Should you need"]), restore: sectionMap['p1-gap-4'] ? {answerGiven: sectionMap['p1-gap-4'].answer_given, isCorrect: sectionMap['p1-gap-4'].override_correct ?? sectionMap['p1-gap-4'].is_correct} : null});
+  Course.initMCQ('p1-q5', {lessonId: LESSON_ID, sectionId: 'p1-5', correctValue: "right", restoreAnswer: (sectionMap['p1-5']||{}).answer_given});
+  Course.initMCQ('p1-q6', {lessonId: LESSON_ID, sectionId: 'p1-6', correctValue: "right", restoreAnswer: (sectionMap['p1-6']||{}).answer_given});
+  Course.initGapFill('p1-g7-input','p1-g7-check','p1-g7-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-7', correctAnswers: Course.withContractions(["as long as"]), restore: sectionMap['p1-gap-7'] ? {answerGiven: sectionMap['p1-gap-7'].answer_given, isCorrect: sectionMap['p1-gap-7'].override_correct ?? sectionMap['p1-gap-7'].is_correct} : null});
+  Course.initGapFill('p1-g8-input','p1-g8-check','p1-g8-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-8', correctAnswers: Course.withContractions(["Suppose"]), restore: sectionMap['p1-gap-8'] ? {answerGiven: sectionMap['p1-gap-8'].answer_given, isCorrect: sectionMap['p1-gap-8'].override_correct ?? sectionMap['p1-gap-8'].is_correct} : null});
+  Course.initMCQ('p1-q9', {lessonId: LESSON_ID, sectionId: 'p1-9', correctValue: "right", restoreAnswer: (sectionMap['p1-9']||{}).answer_given});
+  Course.initMCQ('p1-q10', {lessonId: LESSON_ID, sectionId: 'p1-10', correctValue: "right", restoreAnswer: (sectionMap['p1-10']||{}).answer_given});
+  Course.initGapFill('p1-g11-input','p1-g11-check','p1-g11-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-11', correctAnswers: Course.withContractions(["without double-checking"]), restore: sectionMap['p1-gap-11'] ? {answerGiven: sectionMap['p1-gap-11'].answer_given, isCorrect: sectionMap['p1-gap-11'].override_correct ?? sectionMap['p1-gap-11'].is_correct} : null});
+  Course.initGapFill('p1-g12-input','p1-g12-check','p1-g12-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-12', correctAnswers: Course.withContractions(["otherwise"]), restore: sectionMap['p1-gap-12'] ? {answerGiven: sectionMap['p1-gap-12'].answer_given, isCorrect: sectionMap['p1-gap-12'].override_correct ?? sectionMap['p1-gap-12'].is_correct} : null});
+  Course.initMCQ('p1-q13', {lessonId: LESSON_ID, sectionId: 'p1-13', correctValue: "right", restoreAnswer: (sectionMap['p1-13']||{}).answer_given});
+  Course.initMCQ('p1-q14', {lessonId: LESSON_ID, sectionId: 'p1-14', correctValue: "right", restoreAnswer: (sectionMap['p1-14']||{}).answer_given});
+  Course.initGapFill('p1-g15-input','p1-g15-check','p1-g15-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-15', correctAnswers: Course.withContractions(["had escalated"]), restore: sectionMap['p1-gap-15'] ? {answerGiven: sectionMap['p1-gap-15'].answer_given, isCorrect: sectionMap['p1-gap-15'].override_correct ?? sectionMap['p1-gap-15'].is_correct} : null});
+  Course.initGapFill('p1-g16-input','p1-g16-check','p1-g16-fb', {lessonId: LESSON_ID, sectionId: 'p1-gap-16', correctAnswers: Course.withContractions(["wouldn't have lost", "would not have lost"]), restore: sectionMap['p1-gap-16'] ? {answerGiven: sectionMap['p1-gap-16'].answer_given, isCorrect: sectionMap['p1-gap-16'].override_correct ?? sectionMap['p1-gap-16'].is_correct} : null});
+
+  /* ---------------- part 2 ---------------- */
+  Course.initMCQ('p2-q1', {lessonId: LESSON_ID, sectionId: 'p2-1', correctValue: "right", restoreAnswer: (sectionMap['p2-1']||{}).answer_given});
+  Course.initMCQ('p2-q2', {lessonId: LESSON_ID, sectionId: 'p2-2', correctValue: "right", restoreAnswer: (sectionMap['p2-2']||{}).answer_given});
+  Course.initGapFill('p2-g3-input','p2-g3-check','p2-g3-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-3', correctAnswers: Course.withContractions(["were going to go"]), restore: sectionMap['p2-gap-3'] ? {answerGiven: sectionMap['p2-gap-3'].answer_given, isCorrect: sectionMap['p2-gap-3'].override_correct ?? sectionMap['p2-gap-3'].is_correct} : null});
+  Course.initMCQ('p2-q4', {lessonId: LESSON_ID, sectionId: 'p2-4', correctValue: "right", restoreAnswer: (sectionMap['p2-4']||{}).answer_given});
+  Course.initMCQ('p2-q5', {lessonId: LESSON_ID, sectionId: 'p2-5', correctValue: "right", restoreAnswer: (sectionMap['p2-5']||{}).answer_given});
+  Course.initGapFill('p2-g6-input','p2-g6-check','p2-g6-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-6', correctAnswers: Course.withContractions(["must have been running"]), restore: sectionMap['p2-gap-6'] ? {answerGiven: sectionMap['p2-gap-6'].answer_given, isCorrect: sectionMap['p2-gap-6'].override_correct ?? sectionMap['p2-gap-6'].is_correct} : null});
+  Course.initMCQ('p2-q7', {lessonId: LESSON_ID, sectionId: 'p2-7', correctValue: "right", restoreAnswer: (sectionMap['p2-7']||{}).answer_given});
+  Course.initMCQ('p2-q8', {lessonId: LESSON_ID, sectionId: 'p2-8', correctValue: "right", restoreAnswer: (sectionMap['p2-8']||{}).answer_given});
+  Course.initGapFill('p2-g9-input','p2-g9-check','p2-g9-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-9', correctAnswers: Course.withContractions(["But for"]), restore: sectionMap['p2-gap-9'] ? {answerGiven: sectionMap['p2-gap-9'].answer_given, isCorrect: sectionMap['p2-gap-9'].override_correct ?? sectionMap['p2-gap-9'].is_correct} : null});
+  Course.initMCQ('p2-q10', {lessonId: LESSON_ID, sectionId: 'p2-10', correctValue: "right", restoreAnswer: (sectionMap['p2-10']||{}).answer_given});
+  Course.initGapFill('p2-g11-input','p2-g11-check','p2-g11-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-11', correctAnswers: Course.withContractions(["will have been waiting"]), restore: sectionMap['p2-gap-11'] ? {answerGiven: sectionMap['p2-gap-11'].answer_given, isCorrect: sectionMap['p2-gap-11'].override_correct ?? sectionMap['p2-gap-11'].is_correct} : null});
+  Course.initMCQ('p2-q12', {lessonId: LESSON_ID, sectionId: 'p2-12', correctValue: "right", restoreAnswer: (sectionMap['p2-12']||{}).answer_given});
+  Course.initMCQ('p2-q13', {lessonId: LESSON_ID, sectionId: 'p2-13', correctValue: "right", restoreAnswer: (sectionMap['p2-13']||{}).answer_given});
+  Course.initGapFill('p2-g14-input','p2-g14-check','p2-g14-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-14', correctAnswers: Course.withContractions(["without reading"]), restore: sectionMap['p2-gap-14'] ? {answerGiven: sectionMap['p2-gap-14'].answer_given, isCorrect: sectionMap['p2-gap-14'].override_correct ?? sectionMap['p2-gap-14'].is_correct} : null});
+  Course.initMCQ('p2-q15', {lessonId: LESSON_ID, sectionId: 'p2-15', correctValue: "right", restoreAnswer: (sectionMap['p2-15']||{}).answer_given});
+  Course.initGapFill('p2-g16-input','p2-g16-check','p2-g16-fb', {lessonId: LESSON_ID, sectionId: 'p2-gap-16', correctAnswers: Course.withContractions(["didn't need to book"]), restore: sectionMap['p2-gap-16'] ? {answerGiven: sectionMap['p2-gap-16'].answer_given, isCorrect: sectionMap['p2-gap-16'].override_correct ?? sectionMap['p2-gap-16'].is_correct} : null});
+
+  /* ---------------- results ---------------- */
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 32});
+})();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deduction With Continuous Aspect | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-aspect">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 6 of 20 · Aspect & Modality, Refined</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Deduction With Continuous Aspect</h1>
+    <p class="lesson-sub">Must have been working, can't have been sleeping — adding continuous aspect sharpens a deduction about an ongoing past action.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">You already know must have / can't have / might have for deductions about the past. Adding continuous aspect lets you deduce about an action that was IN PROGRESS at a specific moment, not simply completed.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "He must have been sleeping when we called" suggests…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">sleeping was in progress at that moment</button><button class="opt" data-value="wrong">he slept once, at some point, and finished</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "She can't have finished the report" (no continuous) focuses on…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">a completed action, not an ongoing one</button><button class="opt" data-value="wrong">an action in progress at a specific moment</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. Continuous deduction forms are built with…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">modal + have been + -ing</button><button class="opt" data-value="wrong">modal + being + past participle</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Ask yourself: am I deducing about a finished action, or about something that was happening at a particular moment? That decides whether you need the continuous form.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. The lights were on — someone ___ working late.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must be</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. He's out of breath — he ___ running.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. She can't have been sleeping — the light was still on and music was playing.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">correct as written</button><button class="opt" data-value="wrong">should be "can't sleep"</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. They ___ arguing — I could hear raised voices through the wall.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must have</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Simple deduction vs. continuous deduction</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Modal + have + past participle deduces about a completed action. Modal + have been + -ing deduces about an action that was in progress at a specific past moment.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-simple">Simple: modal + have + V3</button><button class="pill" id="mode-w-continuous">Continuous: modal + have been + -ing</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--accent)">✅ Must/can't/might + have + past participle — deduction about a completed action: "She must have left already."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous);margin-bottom:20px">✅ Must/can't/might + have been + -ing — deduction about an action in progress at a specific moment: "She must have been leaving when you called."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> stative verbs (know, believe, want, seem, own) resist the continuous form here too — just as they resist ordinary continuous tenses.<br><br>
+            ✅ "He must have known about the change." — correct; "know" is stative.<br>
+            ❌ "He must have been knowing about the change." — wrong; stative verbs don't take continuous forms, even in deductions.<br>
+            ✅ "They must have been discussing the plan for hours." — correct; "discuss" is a normal action verb.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Completed action vs. action in progress</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover to see what each deduction actually claims.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Hindsight Bias: "I Knew It All Along"</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>When the startup's <span class="vocab" data-word="flagship">flagship</span> app collapsed within a month of launch, everyone suddenly had a theory. The investors <span class="gram" data-gram="g1">must have been ignoring</span> clear warning signs, some said; the marketing team <span class="gram" data-gram="g2">can't have been testing</span> the onboarding flow properly, others insisted, pointing to the flood of one-star reviews.</p><p>In reality, the team had <span class="vocab" data-word="internally">internally</span> flagged the same risks for weeks. Engineers <span class="gram" data-gram="g3">must have been raising</span> concerns for months — internal messages later showed dozens of warnings about server capacity that leadership <span class="vocab" data-word="brushed">brushed</span> aside. Whoever approved the final launch date <span class="gram" data-gram="g4">can't have been reading</span> those messages carefully, critics <span class="vocab" data-word="concluded">concluded</span>, though in truth several executives had read every single one.</p><p>This is hindsight bias at work: once an outcome is known, people <span class="vocab" data-word="reconstruct">reconstruct</span> the past so that failure looks <span class="vocab" data-word="inevitable">inevitable</span> and their own foresight looks sharper than it really was. Psychologists who study the <span class="vocab" data-word="phenomenon">phenomenon</span> note that almost everyone, after the fact, insists they <span class="gram" data-gram="g5">must have been suspecting</span> trouble all along, even when contemporary records show they <span class="vocab" data-word="endorsed">endorsed</span> the launch enthusiastically at the time. The comforting phrase "I knew it all along" is, more often than not, a <span class="vocab" data-word="retrospective">retrospective</span> illusion rather than an honest memory.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What did some people initially claim about the investors?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">That they must have been ignoring clear warning signs.</button><button class="opt" data-value="wrong">That they had personally caused the server outage.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What did internal messages actually reveal about the engineers?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">They had been raising concerns about server capacity for months.</button><button class="opt" data-value="wrong">They had never mentioned any risks at all.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. According to the passage, what does hindsight bias make people believe about themselves?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">That they must have been suspecting trouble all along.</button><button class="opt" data-value="wrong">That they were solely responsible for the failure.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. A company's "flagship" product is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">its most important product or example</button><button class="opt" data-value="wrong">its cheapest, entry-level product</button><button class="opt" data-value="wrong2">a discontinued old product</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. A "phenomenon" is…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">a fact or occurrence that is observed to happen</button><button class="opt" data-value="wrong">a proven mathematical formula</button><button class="opt" data-value="wrong2">a type of legal document</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. To "reconstruct" the past means to…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">build up a picture of it again in the mind</button><button class="opt" data-value="wrong">destroy all evidence of it</button><button class="opt" data-value="wrong2">predict what will happen next</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. Something "inevitable" is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">certain to happen, impossible to avoid</button><button class="opt" data-value="wrong">extremely unlikely to happen</button><button class="opt" data-value="wrong2">already cancelled</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. A "retrospective" view is one that…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">looks back on past events</button><button class="opt" data-value="wrong">predicts distant future events</button><button class="opt" data-value="wrong2">ignores time altogether</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Leadership simply <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> the warnings aside without discussion.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Critics <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> that nobody had read the messages carefully.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. Several executives had <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> the launch enthusiastically at the time.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. The risks had been flagged <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> for weeks before launch.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — modal + have been + -ing, or modal + have + past participle?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1. The lights were on all night — someone <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (must / work) late.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. She's covered in paint — she <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (must / paint) the fence.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. He <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (can't / finish) already — he only started ten minutes ago.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4. They <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (must / argue) — I heard raised voices through the wall.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. The report <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (must / send) by now — the deadline passed hours ago.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. She <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (can't / sleep) — the light was on and music was playing.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Completed or in-progress?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Decide whether each deduction is about a completed action or one in progress at a specific moment.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a small mystery from your own life (a strange noise, a missing item, a message you couldn't explain) and offer two competing deductions using "must have been -ing" and "can't have been -ing".</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are discussing a failed app launch and the hindsight bias surrounding it.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What did some people claim about the investors after the app failed?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">That they must have been ignoring clear warning signs.</button><button class="opt" data-value="wrong">That they had secretly sabotaged the launch.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What did the internal messages actually show about the engineers?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">They had been raising concerns for months.</button><button class="opt" data-value="wrong">They had personally approved the launch.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Tomasz say about people's claims after the fact?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">They insist they must have been suspecting trouble all along.</button><button class="opt" data-value="wrong">They admit they were completely blindsided.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. The kitchen's a mess — someone ___ cooking.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must be</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. She can't ___ studying all night — she looks well-rested.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">have been</button><button class="opt" data-value="wrong">been</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. He's soaking wet — he ___ caught in the rain.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. They ___ arguing — the neighbours heard shouting.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">must have been</button><button class="opt" data-value="wrong">must been</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. He ___ known — he never mentioned it once. (stative verb)</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">can't have</button><button class="opt" data-value="wrong">can't have been</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-06-deduction-continuous";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-simple", "key": "simple"}, {"id": "mode-w-continuous", "key": "continuous"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"simple": [{"label": "a deduction about a completed action", "example": "She must have finished the report by now."}, {"label": "focuses on the result, not the process", "example": "He can't have eaten yet — the food's still here."}], "continuous": [{"label": "a deduction about an action in progress at a moment", "example": "They must have been arguing when I walked in."}, {"label": "focuses on the ongoing process, not the result", "example": "She must have been driving when he called — she didn't pick up."}]},
+    quizLabels: {"simple": "Simple: modal + have + V3", "continuous": "Continuous: modal + have been + -ing"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Simple deduction", "text": "He must have cooked dinner.", "explain": "A deduction that the cooking is finished — the result (dinner) exists."}, {"key": "c2", "label": "Continuous deduction", "text": "He must have been cooking when the fire alarm went off.", "explain": "A deduction about what was happening at that specific moment — the process, not the result."}, {"key": "c3", "label": "Negative simple", "text": "She can't have called — my phone shows no missed calls.", "explain": "A deduction that a completed action (the call) did not happen."}, {"key": "c4", "label": "Negative continuous", "text": "She can't have been calling — the line was busy with someone else.", "explain": "A deduction that an ongoing action wasn't happening at that moment."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Must have been ignoring\" — a continuous deduction about an action assumed to be ongoing (ignoring warnings) at the relevant time.", "g2": "\"Can't have been testing\" — a negative continuous deduction, doubting that an ongoing process (testing) actually happened properly.", "g3": "\"Must have been raising\" — a continuous deduction about an extended, ongoing action (raising concerns over months), later confirmed as fact.", "g4": "\"Can't have been reading\" — a negative continuous deduction that, ironically, turns out to be wrong once the truth comes out.", "g5": "\"Must have been suspecting\" — a continuous deduction about an ongoing mental state, used here to show how hindsight bias distorts memory of what people actually believed at the time."});
+  Course.initVocab({"flagship": {"word": "flagship", "ipa": "/ˈflæg.ʃɪp/", "meaning": "the most important product or example of a company's work", "example": "The company's flagship app collapsed within a month."}, "internally": {"word": "internally", "ipa": "/ɪnˈtɜː.nəl.i/", "meaning": "within an organisation, not publicly", "example": "The risks had been flagged internally for weeks."}, "brushed": {"word": "brushed", "ipa": "/brʌʃt/", "meaning": "dismissed something without proper consideration", "example": "Leadership brushed the warnings aside."}, "concluded": {"word": "concluded", "ipa": "/kənˈkluː.dɪd/", "meaning": "decided something after considering the evidence", "example": "Critics concluded that nobody had read the warnings."}, "reconstruct": {"word": "reconstruct", "ipa": "/ˌriː.kənˈstrʌkt/", "meaning": "to build up a picture of past events again in the mind", "example": "People reconstruct the past once the outcome is known."}, "inevitable": {"word": "inevitable", "ipa": "/ɪˈnev.ɪ.tə.bəl/", "meaning": "certain to happen, impossible to avoid", "example": "In hindsight, the failure looks entirely inevitable."}, "phenomenon": {"word": "phenomenon", "ipa": "/fəˈnɒm.ɪ.nən/", "meaning": "a fact or occurrence that is observed to happen", "example": "Psychologists have studied this phenomenon for decades."}, "endorsed": {"word": "endorsed", "ipa": "/ɪnˈdɔːsd/", "meaning": "publicly supported or approved of something", "example": "Several executives had endorsed the launch enthusiastically."}, "retrospective": {"word": "retrospective", "ipa": "/ˌret.rəˈspek.tɪv/", "meaning": "looking back on past events, from a later point in time", "example": "That certainty is often just a retrospective illusion."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["brushed"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["concluded"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["endorsed"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["internally"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["must have been working"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["must have been painting"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["can't have finished"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["must have been arguing"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["must have been sent"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["can't have been sleeping"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"He must have left already — his coat is gone.\"", "correct": "Completed action"}, {"prompt": "\"They must have been discussing the merger for hours.\"", "correct": "Action in progress"}, {"prompt": "\"She can't have been driving — she doesn't have a licence.\"", "correct": "Action in progress"}, {"prompt": "\"The parcel must have arrived yesterday.\"", "correct": "Completed action"}], ["Completed action", "Action in progress"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["Someone", "must", "have", "been", "working", "late", "last", "night."]}, {"words": ["She", "can't", "have", "been", "sleeping", "with", "the", "music", "on."]}, {"words": ["They", "must", "have", "been", "arguing", "about", "the", "budget."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Look around the room (or think of your workplace) — what evidence would let you deduce what someone \"must have been doing\" recently?", "Discuss a time you misjudged a situation because your deduction turned out to be wrong.", "Practise making a deduction about a friend's mood or behaviour using continuous aspect: \"She must have been feeling...\""]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Did you hear everyone suddenly has a theory about why the flagship app failed?"}, {"speaker": "Tomasz", "line": "Yeah, someone told me the investors must have been ignoring obvious warning signs."}, {"speaker": "Anna", "line": "Turns out the engineers must have been raising concerns for months. It was all in the internal messages."}, {"speaker": "Tomasz", "line": "So whoever approved the launch date can't have been reading those messages carefully?"}, {"speaker": "Anna", "line": "Apparently they did read them — several executives had, actually."}, {"speaker": "Tomasz", "line": "That's classic hindsight bias, isn't it? Everyone now insists they must have been suspecting trouble all along."}, {"speaker": "Anna", "line": "Exactly, even though most of them enthusiastically endorsed the launch at the time."}, {"speaker": "Tomasz", "line": "\"I knew it all along\" is a pretty comforting phrase to reach for after the fact."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>

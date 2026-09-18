@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Participle Clauses | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 15 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Participle Clauses</h1>
+    <p class="lesson-sub">Using -ing, -ed and having + past participle clauses to write tighter, more fluent sentences.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">Participle clauses let you fold a relative or adverbial clause into a shorter, more economical structure — very common in reports, emails and formal writing, where wordiness reads as sloppy.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Having reviewed the proposal, she approved it" replaces which longer structure?</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">"After she had reviewed the proposal, she approved it."</button><button class="opt" data-value="wrong">"She reviews the proposal and approves it."</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "Concerned about the delay, the client called twice" explains the client's reason by using…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">a past participle clause (concerned = being concerned)</button><button class="opt" data-value="wrong">a present participle clause showing an ongoing action</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "The report, written by three departments, took months" uses a participle clause instead of…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">"which was written by three departments"</button><button class="opt" data-value="wrong">"because it was written by three departments"</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Present participle (-ing) = active/ongoing; past participle (-ed/3rd form) = passive/completed; "having + past participle" = completed before the main action.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ the budget twice, the finance team still found an error.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">Having checked</button><button class="opt" data-value="wrong">Having check</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ by the sudden resignation, the board called an emergency meeting.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">Alarmed</button><button class="opt" data-value="wrong">Alarming</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. The candidate ___ the strongest interview got the offer.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">giving</button><button class="opt" data-value="wrong">given</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ overnight, the server updates caused no disruption at all.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">Installed</button><button class="opt" data-value="wrong">Installing</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Three participle forms, three jobs</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Present participle clauses (-ing) usually show an active or simultaneous action. Past participle clauses (-ed/irregular) show a passive meaning or a state. "Having + past participle" shows something completed before the main clause's action.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-present">-ing clauses</button><button class="pill" id="mode-w-past">-ed clauses</button><button class="pill" id="mode-w-having">Having + p.p.</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Present participle: <b>verb-ing</b> — active, ongoing, or simultaneous with the main verb. "Feeling exhausted, she left early."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Past participle: <b>verb-ed / 3rd form</b> — passive meaning or a resulting state. "Written in haste, the memo contained several errors."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Having + past participle: <b>having + verb-ed/3rd form</b> — completed clearly before the main action. "Having signed the contract, they shook hands."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> the subject of the participle clause must be the same as the subject of the main clause — otherwise you get a "dangling participle", a classic C1 error.<br><br>
+            ❌ "Walking into the office, the lights were off." (the lights weren't walking)<br>
+            ✅ "Walking into the office, she noticed the lights were off."<br><br>
+            Also remember: participle clauses only work when the two actions/subjects genuinely belong together — don't force one in just to sound formal.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Same idea, three participle forms</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see why that particular form was chosen.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — The Number That Anchors Everything</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p>Salary negotiations rarely unfold as rationally as we like to imagine. <span class="gram" data-gram="g1">Having anchored on the first figure mentioned</span>, both sides tend to judge every subsequent number in relation to it, rather than on its own merits. Psychologists call this the anchoring effect: once a number enters the room, it quietly reshapes what counts as reasonable, <span class="vocab" data-word="disproportionately">disproportionately</span> favouring whoever names it first. A <span class="vocab" data-word="candidate">candidate</span>, <span class="gram" data-gram="g2">concerned about seeming unreasonable</span>, will often accept a <span class="vocab" data-word="lowball">lowball</span> offer far sooner than the market would justify, while a <span class="vocab" data-word="recruiter">recruiter</span> gains real <span class="vocab" data-word="leverage">leverage</span> simply by speaking first.</p><p><span class="gram" data-gram="g3">Framed as a routine opening figure</span>, the initial number rarely feels like a tactic at all — yet <span class="vocab" data-word="benchmark">benchmark</span> studies show that candidates who receive a high opening figure end up with significantly higher final salaries than those who don't, regardless of qualifications. <span class="gram" data-gram="g4">Once presented with a number</span>, most people struggle to move far from it, even when they know, intellectually, that the figure was essentially arbitrary.</p><p><span class="gram" data-gram="g5">Realising how powerful anchors can be</span>, some negotiation coaches now teach candidates to prepare a <span class="vocab" data-word="counteroffer">counteroffer</span> in advance, rather than reacting to the anchor in the moment. <span class="gram" data-gram="g6">Trained to recognise the bias</span>, an experienced negotiator can consciously discount the anchor and argue instead from independent salary data. <span class="gram" data-gram="g7">Having rehearsed their position beforehand</span>, a candidate is far less likely to <span class="vocab" data-word="undervalue">undervalue</span> their own worth simply because the other side spoke first.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to the passage, why does the first number mentioned matter so much?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">It reshapes what both sides judge to be a reasonable range afterwards.</button><button class="opt" data-value="wrong">It is always legally binding once it has been spoken aloud.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What do the benchmark studies mentioned in the passage show?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">Candidates who open with a high figure end up earning more overall.</button><button class="opt" data-value="wrong">Opening figures make no real difference to final salaries.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What do some negotiation coaches now recommend?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">Preparing a counteroffer in advance rather than reacting in the moment.</button><button class="opt" data-value="wrong">Always waiting for the employer to name a number first.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. If an outcome is shaped "disproportionately" by one factor, that factor…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">has an unfairly large effect relative to its actual importance</button><button class="opt" data-value="wrong">has almost no measurable effect at all</button><button class="opt" data-value="wrong2">is applied equally and fairly to everyone</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. A "lowball" offer is one that is…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">deliberately set well below what something is worth</button><button class="opt" data-value="wrong">generous and above the market rate</button><button class="opt" data-value="wrong2">identical to the market benchmark</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "Leverage" in a negotiation refers to…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">power or influence that gives you an advantage</button><button class="opt" data-value="wrong">a legal document signed by both parties</button><button class="opt" data-value="wrong2">the final agreed salary figure</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. A "benchmark" is…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">a standard used as a point of comparison</button><button class="opt" data-value="wrong">a one-off, unrepeatable exception</button><button class="opt" data-value="wrong2">a formal written apology</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. To "undervalue" something means to…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">underestimate its true worth</button><button class="opt" data-value="wrong">pay far more for it than necessary</button><button class="opt" data-value="wrong2">advertise it aggressively</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. She almost accepted the <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> offer out of nerves.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. The <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> asked about salary expectations early on.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. The <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:110px"> accepted the offer without much hesitation.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4. She had a <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:130px"> ready before the call even began.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — present, past, or 'having + past participle' clause?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1.  <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (check) the figures twice, the accountant found the discrepancy.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2.  <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (exhaust) after the long flight, she went straight to bed.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. The employees <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (work) overtime received a bonus.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (finish) the report, he emailed it to the whole team.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. The email, <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (send) late on Friday, went unnoticed until Monday.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6.  <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (worry) about the deadline, she stayed late every night that week.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Spot the mistake</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">One word is wrong in each sentence. Tap it, then check the correction.</p>
+      
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary)">Sentence 1</div>
+      <div id="err1" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 2</div>
+      <div id="err2" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+      <div style="margin-bottom:8px;font-size:12px;font-weight:650;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);padding-top:16px;border-top:1px solid var(--border)">Sentence 3</div>
+      <div id="err3" style="font-size:15px;line-height:1.9;margin-bottom:20px"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a decision you made at work or in life, using at least one -ing participle clause, one -ed participle clause, and one 'having + past participle' clause.</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are chatting after Anna's salary review, having both just read about anchoring bias.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. According to Anna, why do recruiters often ask for expected salary first?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">Whoever names a number first sets the anchor for the conversation.</button><button class="opt" data-value="wrong">It is required by employment law in most companies.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. What does Tomasz say helps you resist an anchor?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">Being trained to recognise the bias.</button><button class="opt" data-value="wrong">Refusing to discuss salary at all.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What does Tomasz decide to do in his next negotiation?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">Speak first and name a figure himself.</button><button class="opt" data-value="wrong">Let the other side make every offer.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ the report twice, she finally sent it to the client.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">Having checked</button><button class="opt" data-value="wrong">Having check</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ about the budget, the manager called an urgent meeting.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">Worried</button><button class="opt" data-value="wrong">Worrying</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. The staff ___ overtime were given extra leave.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">working</button><button class="opt" data-value="wrong">worked</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. The memo, ___ in a hurry, contained two errors.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">written</button><button class="opt" data-value="wrong">writing</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. ___ every detail, they finally signed the agreement.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">Having agreed on</button><button class="opt" data-value="wrong">Having agree on</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-15-participle-clauses";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-present", "key": "present"}, {"id": "mode-w-past", "key": "past"}, {"id": "mode-w-having", "key": "having"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"present": [{"label": "an active action happening at the same time", "example": "Checking her inbox, she noticed the client's reply."}, {"label": "replacing a defining relative clause", "example": "Employees working remotely must log in by nine."}], "past": [{"label": "a passive meaning (something done to the subject)", "example": "Delayed by the traffic, the courier missed the deadline."}, {"label": "replacing a passive relative clause", "example": "The documents left on the desk were confidential."}], "having": [{"label": "an action completed before the main clause", "example": "Having finished the audit, she submitted her report."}, {"label": "a reason rooted in something already done", "example": "Having worked there for a decade, he knew every shortcut."}]},
+    quizLabels: {"present": "-ing (active/simultaneous)", "past": "-ed (passive/state)", "having": "Having + past participle (completed before)"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Present participle", "text": "Reviewing the contract carefully, she spotted a missing clause.", "explain": "An active action happening at the same time as the main verb — she is the one reviewing."}, {"key": "c2", "label": "Past participle", "text": "Confused by the wording, several clients called the helpline.", "explain": "A passive meaning: the clients were confused (something was done to them) by the wording."}, {"key": "c3", "label": "Having + past participle", "text": "Having reviewed the contract twice, she finally signed it.", "explain": "The reviewing was completed clearly before the signing — sequence matters here."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Having + past participle\" — the anchoring is completed before both sides start evaluating every later number in relation to it.", "g2": "Past participle clause (from \"being concerned\") — a state, not an action, describing the candidate.", "g3": "Past participle clause — passive meaning: the number is framed by the situation, replacing \"which is framed...\".", "g4": "Reduced past participle clause with \"once\" — replacing \"once they are presented with a number\".", "g5": "Present participle clause showing the reason, simultaneous with coaches changing their advice.", "g6": "Past participle clause — passive meaning: the negotiator has been trained, replacing \"who has been trained...\".", "g7": "\"Having + past participle\" — the rehearsing is completed before the negotiation itself takes place."});
+  Course.initVocab({"disproportionately": {"word": "disproportionately", "ipa": "/ˌdɪs.prəˈpɔː.ʃən.ət.li/", "meaning": "to an extent that is too large or too small in relation to something else", "example": "The first number named disproportionately shapes the final outcome."}, "candidate": {"word": "candidate", "ipa": "/ˈkæn.dɪ.dət/", "meaning": "a person applying for a job or position", "example": "The candidate accepted the offer without much hesitation."}, "lowball": {"word": "lowball", "ipa": "/ˈləʊ.bɔːl/", "meaning": "an offer deliberately set well below what something is actually worth", "example": "She almost accepted the lowball offer out of nerves."}, "recruiter": {"word": "recruiter", "ipa": "/rɪˈkruː.tər/", "meaning": "a person whose job is to find and hire suitable candidates", "example": "The recruiter asked about salary expectations early on."}, "leverage": {"word": "leverage", "ipa": "/ˈliː.vər.ɪdʒ/", "meaning": "power or influence used to gain an advantage in a negotiation", "example": "Speaking first gave the recruiter unexpected leverage."}, "benchmark": {"word": "benchmark", "ipa": "/ˈbentʃ.mɑːk/", "meaning": "a standard or point of reference used for comparison", "example": "Benchmark studies compared candidates with similar qualifications."}, "counteroffer": {"word": "counteroffer", "ipa": "/ˈkaʊn.tərˌɒf.ər/", "meaning": "an alternative offer made in response to one already proposed", "example": "She had a counteroffer ready before the call even began."}, "undervalue": {"word": "undervalue", "ipa": "/ˌʌn.dəˈvæl.juː/", "meaning": "to underestimate the true worth of something or someone", "example": "It's easy to undervalue your own experience under pressure."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["lowball"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["recruiter"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["candidate"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["counteroffer"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["Having checked"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["Exhausted"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["working"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["Having finished"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["sent"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["Worried"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+  Course.initErrorSpot('err1', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-1',
+    words: ["Having", "checked", "the", "figures", "twice,", "the", "error", "still", "slip", "through."], errorIndices: [8], correction: "\"slip\" → \"slipped\" (a completed past action, not base form)"
+  });
+  Course.initErrorSpot('err2', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-2',
+    words: ["Concerning", "about", "the", "delay,", "the", "client", "called", "the", "office", "twice."], errorIndices: [0], correction: "\"Concerning\" → \"Concerned\" (a past participle showing a state, not present participle)"
+  });
+  Course.initErrorSpot('err3', {
+    lessonId: LESSON_ID, sectionId: 'practice-err-3',
+    words: ["The", "report", "writing", "by", "three", "departments", "took", "months", "to", "finish."], errorIndices: [2], correction: "\"writing\" → \"written\" (passive meaning needs the past participle)"
+  });
+  Course.renderBuilders('builders', [{"words": ["Having", "reviewed", "the", "proposal,", "she", "approved", "it", "at", "once."]}, {"words": ["Concerned", "about", "the", "delay,", "the", "client", "called", "twice."]}, {"words": ["The", "documents", "left", "on", "the", "desk", "were", "confidential."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Tell your group about a document, contract or agreement you once had to review very carefully. What happened once you'd finished checking it?", "Describe a situation where you felt concerned, worried or alarmed about something at work — what did you do next?", "Can you think of a rule or clause at your workplace that was rewritten after causing a problem?"]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Having just read about anchoring bias, I finally understand why recruiters always ask your expected salary first."}, {"speaker": "Tomasz", "line": "Right, whoever names a number first sets the anchor for the whole conversation."}, {"speaker": "Anna", "line": "Exactly. Concerned about seeming unreasonable, most candidates just accept whatever range comes up first."}, {"speaker": "Tomasz", "line": "Trained to recognise the bias, though, you can consciously push back against it."}, {"speaker": "Anna", "line": "Having rehearsed a counteroffer beforehand definitely helps — you don't end up anchoring on their number instead."}, {"speaker": "Tomasz", "line": "I read that candidates who mention a high figure first end up earning disproportionately more, even with identical qualifications."}, {"speaker": "Anna", "line": "That benchmark data is honestly a bit alarming."}, {"speaker": "Tomasz", "line": "It is. Next negotiation, I'm speaking first."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 39});
+})();
+
+</script>
+</body>
+</html>

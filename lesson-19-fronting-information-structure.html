@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fronting & Information Structure | English+</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/theme.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="shared/supabase-config.js"></script>
+</head>
+<body class="theme-discourse">
+
+<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+<div class="shell">
+  <header class="lesson-header">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
+      <div class="lesson-eyebrow">Lesson 19 of 20 · Discourse & Complex Sentences</div>
+      <div style="display:flex;gap:8px">
+      <a id="all-lessons-link" href="index-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>
+      <a id="glossary-link" href="glossary-standalone.html" class="pill" style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>
+    </div>
+    </div>
+    <h1 class="lesson-title">Fronting & Information Structure</h1>
+    <p class="lesson-sub">Moving an object, complement or adverbial to the front of a sentence to control emphasis and cohesion.</p>
+    <div class="pb-track" style="margin-top:16px"><div class="pb-fill" id="overall-progress" style="width:0%"></div></div>
+    <div id="sync-status" style="font-size:11.5px;color:var(--text-tertiary);margin-top:8px"></div>
+  </header>
+
+  <section class="section" id="sec-warmup">
+    <div class="section-label"><span class="num">1</span> Warm-up</div>
+    <div class="card">
+      <p style="margin-bottom:14px;font-size:14.5px;color:var(--text-secondary)">English word order is normally fixed (subject-verb-object), but writers often move an element to the front to emphasise it or link it smoothly to the previous sentence — a technique called fronting.</p>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. "Such was the demand that tickets sold out in minutes" emphasises…</p>
+        <div id="warm-q1">
+          <button class="opt" data-value="right">the extreme scale of the demand</button><button class="opt" data-value="wrong">the exact time the tickets went on sale</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. "A particularly thorny issue is client confidentiality" fronts the complement to…</p>
+        <div id="warm-q2">
+          <button class="opt" data-value="right">highlight the topic before naming it precisely</button><button class="opt" data-value="wrong">avoid mentioning who raised the issue</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. "This report, we cannot publish without legal review" fronts the object mainly to…</p>
+        <div id="warm-q3">
+          <button class="opt" data-value="right">connect back to something already mentioned, for cohesion</button><button class="opt" data-value="wrong">make the sentence grammatically necessary</button>
+        </div>
+      </div>
+      <div class="tip-box">💡 <span style="flex:1;min-width:0">Fronting is optional, not required by grammar rules — writers choose it purely for emphasis or to link ideas smoothly across sentences.</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-diagnostic">
+    <div class="section-label"><span class="num">2</span> Quick check — before we explain anything</div>
+    <div class="card">
+      <p style="margin-bottom:16px;font-size:14.5px;color:var(--text-secondary)">Four quick questions. This isn't graded harshly — it just shows us where to focus.</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ was the level of interest that the event had to be moved to a bigger venue.</p>
+        <div id="diag-q1">
+          <button class="opt" data-value="right">Such</button><button class="opt" data-value="wrong">So</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">2. ___ still unresolved is the question of funding.</p>
+        <div id="diag-q2">
+          <button class="opt" data-value="right">Also</button><button class="opt" data-value="wrong">There</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">3. This particular clause, the lawyers ___ flagged as high-risk.</p>
+        <div id="diag-q3">
+          <button class="opt" data-value="right">have already</button><button class="opt" data-value="wrong">already have</button>
+        </div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px;font-weight:550">4. A key challenge ___ maintaining morale during the restructuring.</p>
+        <div id="diag-q4">
+          <button class="opt" data-value="right">is</button><button class="opt" data-value="wrong">are</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-concept">
+    <div class="section-label"><span class="num">3</span> The concept</div>
+
+    <div class="card">
+      <h3 style="margin-bottom:10px">Fronting an object, complement, or adverbial</h3>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:14px">Fronting moves something other than the subject to the front of the sentence, for emphasis or to connect smoothly with what came before. "Such/so" fronting with an inverted clause is a particularly formal variant.</p>
+      <div class="mode-toggle mode-toggle-outline" style="flex-wrap:wrap;gap:8px">
+        <button class="pill on" id="mode-w-object">Fronted object</button><button class="pill" id="mode-w-complement">Fronted complement</button><button class="pill" id="mode-w-suchso">Such/So + inversion</button><button class="pill" id="mode-w-quiz">Quick check</button>
+      </div>
+      <div id="widget-area" style="margin-top:14px;padding:18px;border-radius:var(--radius-md);background:var(--surface-alt);border:1px solid var(--border)"></div>
+      <p id="widget-hint" style="font-size:12.5px;color:var(--text-tertiary);margin-top:8px">— Click either cell to see another example.</p>
+
+      <button class="pill" id="rules-toggle" style="margin-top:16px">📖 Show the full rules</button>
+      <div class="expand-content" id="rules-content">
+        <div style="margin-top:16px">
+          
+          <div class="formula" style="border-left-color:var(--c-past)">✅ Fronted object: <b>object + subject + verb</b> — "This report, we cannot publish yet."</div>
+          <div class="formula" style="border-left-color:var(--c-continuous)">✅ Fronted complement: <b>complement + be + subject</b> — "A major concern is data security."</div>
+          <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Such/So + inversion: <b>Such + be + subject + that...</b> or <b>So + adjective + be + subject + that...</b> — "Such was the demand that we sold out in an hour."</div>
+          <div class="warn-box">
+            <span>🎯</span>
+            <span style="flex:1;min-width:0"><b>The tricky part:</b> fronting a complement with "be" often requires subject-verb inversion too, because the complement is now doing the job a subject normally does at the front of the sentence.<br><br>
+            ✅ "A recurring problem is staff turnover." (complement fronted, "is" stays before the real subject "staff turnover")<br>
+            ✅ "Such was the demand that tickets sold out." — inversion after "such" is fixed and non-negotiable in this pattern.<br><br>
+            Fronting an object rarely needs inversion — the subject and verb usually keep their normal order after the fronted object.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Normal order vs. fronted for emphasis</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Hover over each to see what fronting achieves here.</p>
+      <div id="compare-card" style="font-size:14.5px;line-height:1.9"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-reading">
+    <div class="section-label"><span class="num">4</span> Reading — Why We Love What We Build Ourselves</div>
+    <div class="card">
+      <button class="pill" id="gram-toggle">🔍 Show grammar in this text</button>
+      <div class="passage" id="passage" style="margin-top:14px"><p><span class="gram" data-gram="g1">Such was the appeal</span> of self-assembled furniture that one Swedish retailer built an entire empire on it. Researchers studying the phenomenon found something curious: people who <span class="vocab" data-word="assemble">assemble</span> a piece of furniture themselves consistently rate it as more valuable than an identical, pre-built version — even when the finished product looks objectively worse. <span class="gram" data-gram="g2">A particularly striking finding</span> was that this effect held even for <span class="vocab" data-word="laborious">laborious</span> tasks that most participants openly disliked while doing them.</p><p><span class="gram" data-gram="g3">This attachment</span>, psychologists suspect, has little to do with the object itself and everything to do with effort. <span class="gram" data-gram="g4">So strong is the pull of one's own labour</span> that people will <span class="vocab" data-word="overvalue">overvalue</span> a wobbly, imperfect shelf simply because they built it themselves. <span class="gram" data-gram="g5">Also documented</span> is a matching effect in cooking, gardening and even spreadsheets: people rate a recipe, a garden, or a file as better once they have invested real effort building it.</p><p><span class="gram" data-gram="g6">This flawed final product</span>, participants rarely blame; instead, they grow quietly <span class="vocab" data-word="sentimental">sentimental</span> about the very screws and brackets that gave them so much trouble. <span class="gram" data-gram="g7">A key implication</span> for <span class="vocab" data-word="flat-pack">flat-pack</span> retailers, and for anyone designing a product, is that a little <span class="vocab" data-word="friction">friction</span>, a chance to <span class="vocab" data-word="tinker">tinker</span> — deliberately included — can build stronger loyalty than a flawless, ready-made version ever could. Marketers now sometimes call this <span class="vocab" data-word="effort-justification">effort justification</span>: we justify our effort, after the fact, by inflating the value of what that effort produced.</p></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">Tap a highlighted word for pronunciation, meaning and an example. With grammar highlighting on, tap a highlighted phrase to see why that form was used.</p>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:12px">Did you follow it? Quick comprehension check</h3>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. What did researchers find about people who assemble furniture themselves?</p>
+        <div id="comp-q1">
+          <button class="opt" data-value="right">They rate it as more valuable than an identical pre-built version.</button><button class="opt" data-value="wrong">They consistently rate it as worse than a pre-built version.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to psychologists, what does the extra attachment mainly depend on?</p>
+        <div id="comp-q2">
+          <button class="opt" data-value="right">The effort invested, rather than the object itself.</button><button class="opt" data-value="wrong">The original price of the materials used.</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What implication does the passage draw for product design?</p>
+        <div id="comp-q3">
+          <button class="opt" data-value="right">A little deliberate friction or assembly can build stronger loyalty.</button><button class="opt" data-value="wrong">Products should always arrive fully assembled to maximise loyalty.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-vocab">
+    <div class="section-label"><span class="num">5</span> Vocabulary check</div>
+    <div class="card">
+      <p style="font-size:14.5px;margin-bottom:16px">All nine words from the text — mixed formats.</p>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px">Match the meaning</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. If a task is "laborious", it is…</p>
+        <div id="vocab-q1">
+          <button class="opt" data-value="right">requiring a lot of time and effort</button><button class="opt" data-value="wrong">quick and effortless</button><button class="opt" data-value="wrong2">impossible to complete</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. To "overvalue" something means to…</p>
+        <div id="vocab-q2">
+          <button class="opt" data-value="right">judge it as worth more than it actually is</button><button class="opt" data-value="wrong">judge it as worth less than it actually is</button><button class="opt" data-value="wrong2">ignore its value entirely</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. If someone feels "sentimental" about an object, they…</p>
+        <div id="vocab-q3">
+          <button class="opt" data-value="right">have an emotional attachment to it beyond its practical worth</button><button class="opt" data-value="wrong">have no feelings about it whatsoever</button><button class="opt" data-value="wrong2">want to sell it immediately</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. "Flat-pack" furniture is sold…</p>
+        <div id="vocab-q4">
+          <button class="opt" data-value="right">unassembled, to be built by the buyer</button><button class="opt" data-value="wrong">fully built and ready to use</button><button class="opt" data-value="wrong2">only as digital design plans</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. "Effort justification" describes the tendency to…</p>
+        <div id="vocab-q5">
+          <button class="opt" data-value="right">inflate the value of an outcome to justify the effort spent</button><button class="opt" data-value="wrong">avoid effort of any kind whenever possible</button><button class="opt" data-value="wrong2">always underestimate one's own effort</button>
+        </div>
+      </div>
+      <h4 style="font-size:13px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:12px;padding-top:6px;border-top:1px solid var(--border)">Complete the sentence — vocabulary focus</h4>
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">1. Most customers <input type="text" id="vgap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> the furniture themselves at home.</p>
+        <button class="btn btn-sm" id="vgap1-check">Check</button>
+        <div id="vgap1-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">2. Letting customers <input type="text" id="vgap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:90px"> with the design increased satisfaction.</p>
+        <button class="btn btn-sm" id="vgap2-check">Check</button>
+        <div id="vgap2-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">3. A little <input type="text" id="vgap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> in the process can actually build loyalty.</p>
+        <button class="btn btn-sm" id="vgap3-check">Check</button>
+        <div id="vgap3-fb"></div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="vgap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:100px"> retailers rely heavily on this effect.</p>
+        <button class="btn btn-sm" id="vgap4-check">Check</button>
+        <div id="vgap4-fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-practice">
+    <div class="section-label"><span class="num">6</span> Practice</div>
+    <div class="card">
+      <h3 style="margin-bottom:2px">Gap-fill</h3>
+      <p style="font-size:12.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--text-tertiary);margin-bottom:16px">Grammar focus — fronted object, fronted complement, or such/so + inversion?</p>
+      
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">1.  <input type="text" id="gap1-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (such/demand) that the servers crashed within minutes.</p>
+        <button class="btn btn-sm" id="gap1-check">Check</button>
+        <div id="gap1-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">2. This particular clause, <input type="text" id="gap2-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (the lawyers/already/flag) as high-risk.</p>
+        <button class="btn btn-sm" id="gap2-check">Check</button>
+        <div id="gap2-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">3. A recurring problem <input type="text" id="gap3-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (be) staff turnover in the sales team.</p>
+        <button class="btn btn-sm" id="gap3-check">Check</button>
+        <div id="gap3-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">4.  <input type="text" id="gap4-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (so/severe/backlog) that new orders were suspended.</p>
+        <button class="btn btn-sm" id="gap4-check">Check</button>
+        <div id="gap4-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">5. The original plan, <input type="text" id="gap5-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (in hindsight/we/should/test) more thoroughly.</p>
+        <button class="btn btn-sm" id="gap5-check">Check</button>
+        <div id="gap5-fb"></div>
+      </div>
+      <div style="margin-bottom:18px">
+        <p style="margin-bottom:8px">6. Far more concerning <input type="text" id="gap6-input" placeholder="type here" style="border:1px solid var(--border-strong);border-radius:8px;padding:6px 10px;font-family:inherit;width:170px"> (be) the drop in customer satisfaction.</p>
+        <button class="btn btn-sm" id="gap6-check">Check</button>
+        <div id="gap6-fb"></div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h3 style="margin-bottom:6px">Fronted object, complement, or such/so + inversion?</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:16px">Tap the category that matches each sentence's fronted element.</p>
+      <div id="cat-root"></div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:6px">Sentence builder</h3>
+      <p style="font-size:13.5px;color:var(--text-secondary);margin-bottom:14px">Tap the chips in the right order. Three rounds.</p>
+      <div id="builders"></div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-speaking">
+    <div class="section-label"><span class="num">7</span> Speaking task</div>
+    <div class="mode-toggle">
+      <button class="pill on" id="mode-solo">👤 Solo</button>
+      <button class="pill" id="mode-group">👥 Group (2–4)</button>
+    </div>
+    <div class="task-card" id="speak-solo">
+      <div class="kicker">60-second task</div>
+      <p style="font-size:14.5px;line-height:1.7">Describe a challenge or crisis at work using at least one fronted complement ('A key issue is...') and one 'such/so + inversion' structure ('Such was the pressure that...').</p>
+      <button class="btn btn-sm" id="solo-done-btn" style="margin-top:14px">✓ I've done this</button>
+    </div>
+    <div class="task-card" id="speak-group" style="display:none">
+      <div class="kicker">Discussion — pick 1–2 questions to answer out loud</div>
+      <p style="font-size:14.5px;line-height:1.7;margin-bottom:12px">Tap the question(s) you'll answer. Your teacher will see your pick and mark it after you speak.</p>
+      <div id="discuss-questions" style="display:flex;flex-direction:column;gap:8px"></div>
+      <p style="font-size:12.5px;color:var(--text-tertiary);margin-top:10px">You can select up to 2 questions.</p>
+    </div>
+  </section>
+
+  <section class="section" id="sec-listening">
+    <div class="section-label"><span class="num">8</span> Listening</div>
+    <div class="card">
+      <p style="font-size:14px;color:var(--text-secondary);margin-bottom:12px">Anna and Tomasz are comparing notes on furniture they built themselves.</p>
+      <audio id="dialogue-audio" preload="none" style="display:none"></audio>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="play-dialogue">▶ Play dialogue</button>
+        <button class="btn btn-ghost btn-sm" id="stop-dialogue">⏹ Stop</button>
+        <button class="btn btn-ghost btn-sm" id="show-transcript">Show full transcript</button>
+      </div>
+      <div id="transcript"></div>
+      
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. Why did Anna refuse to throw out her wobbly bookshelf?</p>
+        <div id="listen-q1">
+          <button class="opt" data-value="right">She had built it herself and grew attached to it.</button><button class="opt" data-value="wrong">It was the most expensive item she owned.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. According to Tomasz, what is the striking finding about self-built furniture?</p>
+        <div id="listen-q2">
+          <button class="opt" data-value="right">People rate it higher even when it looks worse.</button><button class="opt" data-value="wrong">People always rate it lower than pre-built furniture.</button>
+        </div>
+      </div>
+      <div style="margin-top:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. What implication does Anna draw for companies?</p>
+        <div id="listen-q3">
+          <button class="opt" data-value="right">They could deliberately build in a little friction.</button><button class="opt" data-value="wrong">They should remove all effort from the customer experience.</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sec-wrapup">
+    <div class="section-label"><span class="num">9</span> Wrap-up — exit check</div>
+    <div class="card">
+      
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">1. ___ that tickets sold out within minutes.</p>
+        <div id="exit-q1">
+          <button class="opt" data-value="right">Such was the demand</button><button class="opt" data-value="wrong">Demand was such</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">2. A recurring problem ___ staff turnover.</p>
+        <div id="exit-q2">
+          <button class="opt" data-value="right">is</button><button class="opt" data-value="wrong">are</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">3. This proposal, the board ___ outright.</p>
+        <div id="exit-q3">
+          <button class="opt" data-value="right">rejected</button><button class="opt" data-value="wrong">did rejected</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">4. ___ that two managers resigned that same week.</p>
+        <div id="exit-q4">
+          <button class="opt" data-value="right">So severe was the pressure</button><button class="opt" data-value="wrong">The pressure was so severe</button>
+        </div>
+      </div>
+      <div style="margin-bottom:16px">
+        <p style="margin-bottom:8px;font-weight:550">5. Far more concerning ___ the drop in morale.</p>
+        <div id="exit-q5">
+          <button class="opt" data-value="right">is</button><button class="opt" data-value="wrong">does</button>
+        </div>
+      </div>
+    </div>
+    <div class="card" id="summary-card">
+      <h3 style="margin-bottom:14px">Your lesson summary</h3>
+      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px" id="summary-ring-row">
+        <div id="score-ring-holder"></div>
+        <div>
+          <div style="font-weight:600" id="summary-name">—</div>
+          <div style="font-size:13px;margin-top:4px" id="summary-completion"></div>
+          <div style="font-size:13px;color:var(--text-secondary);margin-top:4px" id="summary-weak">Finish the lesson to see your results.</div>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
+      <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
+    </div>
+  </section>
+</div>
+
+<script src="shared/course-engine.js"></script>
+<script>
+
+const LESSON_ID = "b2c1-lesson-19-fronting-information-structure";
+Course.initPageChrome({lessonId: LESSON_ID});
+
+(async function initLesson(){
+  await Course.initSyncStatus(LESSON_ID);
+  const sectionMap = Course.getSectionMap(LESSON_ID);
+
+  Course.initMCQ('warm-q1', {lessonId: LESSON_ID, sectionId: 'warmup-1', correctValue: "right", restoreAnswer: (sectionMap['warmup-1']||{}).answer_given});
+  Course.initMCQ('warm-q2', {lessonId: LESSON_ID, sectionId: 'warmup-2', correctValue: "right", restoreAnswer: (sectionMap['warmup-2']||{}).answer_given});
+  Course.initMCQ('warm-q3', {lessonId: LESSON_ID, sectionId: 'warmup-3', correctValue: "right", restoreAnswer: (sectionMap['warmup-3']||{}).answer_given});
+  Course.initMCQ('diag-q1', {lessonId: LESSON_ID, sectionId: 'diagnostic-1', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-1']||{}).answer_given});
+  Course.initMCQ('diag-q2', {lessonId: LESSON_ID, sectionId: 'diagnostic-2', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-2']||{}).answer_given});
+  Course.initMCQ('diag-q3', {lessonId: LESSON_ID, sectionId: 'diagnostic-3', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-3']||{}).answer_given});
+  Course.initMCQ('diag-q4', {lessonId: LESSON_ID, sectionId: 'diagnostic-4', correctValue: "right", restoreAnswer: (sectionMap['diagnostic-4']||{}).answer_given});
+
+  /* ---------------- concept widget ---------------- */
+  Course.renderConceptWidget({
+    areaId: 'widget-area', hintId: 'widget-hint',
+    tabIds: [{"id": "mode-w-object", "key": "object"}, {"id": "mode-w-complement", "key": "complement"}, {"id": "mode-w-suchso", "key": "suchso"}, {"id": "mode-w-quiz", "key": "quiz"}],
+    categories: {"object": [{"label": "connecting back to something already mentioned", "example": "This proposal, the board rejected outright."}, {"label": "contrasting one thing with another already discussed", "example": "The first draft, everyone liked; the second, nobody did."}], "complement": [{"label": "introducing a topic before naming the subject", "example": "A recurring problem is staff turnover."}, {"label": "emphasising an evaluation before the subject", "example": "Far more concerning is the drop in customer satisfaction."}], "suchso": [{"label": "'such' + be + subject + that-clause, showing extreme degree", "example": "Such was the chaos that the launch was postponed."}, {"label": "'so' + adjective + be + subject, similar emphatic effect", "example": "So great was the pressure that two managers resigned."}]},
+    quizLabels: {"object": "Fronted object", "complement": "Fronted complement", "suchso": "Such/So + inversion"},
+    rulesToggleId: 'rules-toggle'
+  });
+  Course.renderCompareCard('compare-card', [{"key": "c1", "label": "Normal order", "text": "We cannot publish this report without legal review.", "explain": "Standard SVO order — neutral, no special emphasis."}, {"key": "c2", "label": "Fronted object", "text": "This report, we cannot publish without legal review.", "explain": "Fronting \"this report\" links back to something already under discussion and highlights it as the topic."}, {"key": "c3", "label": "Normal order", "text": "Staff turnover is a recurring problem.", "explain": "Standard order, subject first."}, {"key": "c4", "label": "Fronted complement", "text": "A recurring problem is staff turnover.", "explain": "Fronting the complement introduces the topic (\"a recurring problem\") before revealing exactly what it is."}]);
+
+  /* ---------------- reading ---------------- */
+  Course.initGramToggle();
+  Course.wireGramSpans({"g1": "\"Such was the appeal\" — fronted \"such\" with inversion, showing an extreme degree, followed by a \"that\"-clause.", "g2": "Fronted complement — \"a particularly striking finding\" introduced before naming exactly what it was.", "g3": "Fronted object — \"this attachment\" links back to the idea just introduced, for cohesion.", "g4": "\"So strong is the pull\" — fronted \"so + adjective\" with inversion, showing extreme degree, followed by \"that\".", "g5": "Fronted complement with inversion — \"also documented\" introduces the topic before the real subject \"a matching effect\".", "g6": "Fronted object — \"this flawed final product\" links back to the previous idea and sets up the contrast that follows.", "g7": "Fronted complement — \"a key implication\" introduces the topic before revealing what it actually is."});
+  Course.initVocab({"assemble": {"word": "assemble", "ipa": "/əˈsem.bəl/", "meaning": "to fit parts together in order to build a complete object", "example": "Most customers assemble the furniture themselves at home."}, "laborious": {"word": "laborious", "ipa": "/ləˈbɔː.ri.əs/", "meaning": "requiring a lot of time and effort; tedious", "example": "The task was laborious, yet people still valued the result."}, "overvalue": {"word": "overvalue", "ipa": "/ˌəʊ.vəˈvæl.juː/", "meaning": "to judge something as worth more than it actually is", "example": "People tend to overvalue things they built themselves."}, "sentimental": {"word": "sentimental", "ipa": "/ˌsen.tɪˈmen.təl/", "meaning": "feeling emotional attachment to something beyond its practical worth", "example": "She grew sentimental about the wonky shelf she'd built."}, "flat-pack": {"word": "flat-pack", "ipa": "/ˈflæt.pæk/", "meaning": "(furniture) sold unassembled in a flat box, to be built by the buyer", "example": "Flat-pack retailers rely heavily on this psychological effect."}, "friction": {"word": "friction", "ipa": "/ˈfrɪk.ʃən/", "meaning": "a small amount of difficulty or resistance built into a process", "example": "A little friction in the process can actually build loyalty."}, "tinker": {"word": "tinker", "ipa": "/ˈtɪŋ.kər/", "meaning": "to make small adjustments or attempts to fix or improve something", "example": "Letting customers tinker with the design increased satisfaction."}, "effort-justification": {"word": "effort justification", "ipa": "/ˈef.ət ˌdʒʌs.tɪ.fɪˈkeɪ.ʃən/", "meaning": "the tendency to inflate the value of an outcome to justify the effort spent achieving it", "example": "Marketers call this pattern effort justification."}}, LESSON_ID);
+  Course.initMCQ('comp-q1', {lessonId: LESSON_ID, sectionId: 'reading-comp-1', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-1']||{}).answer_given});
+  Course.initMCQ('comp-q2', {lessonId: LESSON_ID, sectionId: 'reading-comp-2', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-2']||{}).answer_given});
+  Course.initMCQ('comp-q3', {lessonId: LESSON_ID, sectionId: 'reading-comp-3', correctValue: "right", restoreAnswer: (sectionMap['reading-comp-3']||{}).answer_given});
+
+  /* ---------------- vocab check ---------------- */
+  Course.initMCQ('vocab-q1', {lessonId: LESSON_ID, sectionId: 'vocab-1', correctValue: "right", restoreAnswer: (sectionMap['vocab-1']||{}).answer_given});
+  Course.initMCQ('vocab-q2', {lessonId: LESSON_ID, sectionId: 'vocab-2', correctValue: "right", restoreAnswer: (sectionMap['vocab-2']||{}).answer_given});
+  Course.initMCQ('vocab-q3', {lessonId: LESSON_ID, sectionId: 'vocab-3', correctValue: "right", restoreAnswer: (sectionMap['vocab-3']||{}).answer_given});
+  Course.initMCQ('vocab-q4', {lessonId: LESSON_ID, sectionId: 'vocab-4', correctValue: "right", restoreAnswer: (sectionMap['vocab-4']||{}).answer_given});
+  Course.initMCQ('vocab-q5', {lessonId: LESSON_ID, sectionId: 'vocab-5', correctValue: "right", restoreAnswer: (sectionMap['vocab-5']||{}).answer_given});
+    Course.initGapFill('vgap1-input','vgap1-check','vgap1-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-1', correctAnswers:["assemble"], restore: sectionMap['vocab-gap-1'] ? {answerGiven: sectionMap['vocab-gap-1'].answer_given, isCorrect: sectionMap['vocab-gap-1'].override_correct ?? sectionMap['vocab-gap-1'].is_correct} : null});
+  Course.initGapFill('vgap2-input','vgap2-check','vgap2-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-2', correctAnswers:["tinker"], restore: sectionMap['vocab-gap-2'] ? {answerGiven: sectionMap['vocab-gap-2'].answer_given, isCorrect: sectionMap['vocab-gap-2'].override_correct ?? sectionMap['vocab-gap-2'].is_correct} : null});
+  Course.initGapFill('vgap3-input','vgap3-check','vgap3-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-3', correctAnswers:["friction"], restore: sectionMap['vocab-gap-3'] ? {answerGiven: sectionMap['vocab-gap-3'].answer_given, isCorrect: sectionMap['vocab-gap-3'].override_correct ?? sectionMap['vocab-gap-3'].is_correct} : null});
+  Course.initGapFill('vgap4-input','vgap4-check','vgap4-fb',{lessonId:LESSON_ID, sectionId:'vocab-gap-4', correctAnswers:["Flat-pack"], restore: sectionMap['vocab-gap-4'] ? {answerGiven: sectionMap['vocab-gap-4'].answer_given, isCorrect: sectionMap['vocab-gap-4'].override_correct ?? sectionMap['vocab-gap-4'].is_correct} : null});
+
+  /* ---------------- practice ---------------- */
+    Course.initGapFill('gap1-input','gap1-check','gap1-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-1', correctAnswers:Course.withContractions(["Such was the demand"]), restore: sectionMap['practice-gap-1'] ? {answerGiven: sectionMap['practice-gap-1'].answer_given, isCorrect: sectionMap['practice-gap-1'].override_correct ?? sectionMap['practice-gap-1'].is_correct} : null});
+  Course.initGapFill('gap2-input','gap2-check','gap2-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-2', correctAnswers:Course.withContractions(["the lawyers had already flagged", "the lawyers have already flagged"]), restore: sectionMap['practice-gap-2'] ? {answerGiven: sectionMap['practice-gap-2'].answer_given, isCorrect: sectionMap['practice-gap-2'].override_correct ?? sectionMap['practice-gap-2'].is_correct} : null});
+  Course.initGapFill('gap3-input','gap3-check','gap3-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-3', correctAnswers:Course.withContractions(["is"]), restore: sectionMap['practice-gap-3'] ? {answerGiven: sectionMap['practice-gap-3'].answer_given, isCorrect: sectionMap['practice-gap-3'].override_correct ?? sectionMap['practice-gap-3'].is_correct} : null});
+  Course.initGapFill('gap4-input','gap4-check','gap4-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-4', correctAnswers:Course.withContractions(["So severe was the backlog"]), restore: sectionMap['practice-gap-4'] ? {answerGiven: sectionMap['practice-gap-4'].answer_given, isCorrect: sectionMap['practice-gap-4'].override_correct ?? sectionMap['practice-gap-4'].is_correct} : null});
+  Course.initGapFill('gap5-input','gap5-check','gap5-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-5', correctAnswers:Course.withContractions(["we should have tested"]), restore: sectionMap['practice-gap-5'] ? {answerGiven: sectionMap['practice-gap-5'].answer_given, isCorrect: sectionMap['practice-gap-5'].override_correct ?? sectionMap['practice-gap-5'].is_correct} : null});
+  Course.initGapFill('gap6-input','gap6-check','gap6-fb',{lessonId:LESSON_ID, sectionId:'practice-gap-6', correctAnswers:Course.withContractions(["is"]), restore: sectionMap['practice-gap-6'] ? {answerGiven: sectionMap['practice-gap-6'].answer_given, isCorrect: sectionMap['practice-gap-6'].override_correct ?? sectionMap['practice-gap-6'].is_correct} : null});
+
+  Course.renderCategorise('cat-root', [{"prompt": "\"This proposal, the board rejected outright.\"", "correct": "Fronted object"}, {"prompt": "\"A key challenge is maintaining morale.\"", "correct": "Fronted complement"}, {"prompt": "\"Such was the pressure that two managers resigned.\"", "correct": "Such/So + inversion"}, {"prompt": "\"The first draft, everyone liked immediately.\"", "correct": "Fronted object"}], ["Fronted object", "Fronted complement", "Such/So + inversion"], {lessonId: LESSON_ID, sectionPrefix: 'practice-cat'});
+  Course.renderBuilders('builders', [{"words": ["Such", "was", "the", "demand", "that", "tickets", "sold", "out", "instantly."]}, {"words": ["A", "recurring", "problem", "is", "staff", "turnover."]}, {"words": ["This", "report,", "we", "cannot", "publish", "without", "review."]}], {lessonId: LESSON_ID, sectionPrefix: 'practice-builder'});
+
+  /* ---------------- speaking ---------------- */
+  Course.initSpeaking({max: 2});
+  Course.renderDiscussQuestions('discuss-questions', ["Describe something so popular or in such demand that it caused problems. Use 'Such was the demand that...'", "What's a recurring problem at your workplace? Try describing it with a fronted complement ('A recurring problem is...').", "Tell your group about a decision or document that was strongly rejected or debated, fronting it as the object ('This proposal, they rejected...')."]);
+  document.querySelectorAll('.discuss-q').forEach(b => b.addEventListener('click', () => {}));
+
+  /* ---------------- listening ---------------- */
+  Course.initListening({dialogue: [{"speaker": "Anna", "line": "Such was my attachment to that wobbly bookshelf I built that I refused to throw it out for years."}, {"speaker": "Tomasz", "line": "Ha, classic IKEA effect. A particularly striking finding is that people rate self-built furniture higher, even when it looks worse."}, {"speaker": "Anna", "line": "This attachment, apparently, has nothing to do with the object itself — it's all about the effort."}, {"speaker": "Tomasz", "line": "So strong is the pull of your own labour that you'll defend a crooked shelf to the death."}, {"speaker": "Anna", "line": "Also documented is the exact same effect in cooking and gardening, funnily enough."}, {"speaker": "Tomasz", "line": "This flawed final product thing explains so much about my garden, honestly."}, {"speaker": "Anna", "line": "A key implication is that companies could build in a little friction on purpose."}, {"speaker": "Tomasz", "line": "Smart. Let people tinker a bit, and they'll love the result even more."}], speakerA: 'Anna', speakerB: 'Tomasz'});
+  Course.initMCQ('listen-q1', {lessonId: LESSON_ID, sectionId: 'listening-1', correctValue: "right", restoreAnswer: (sectionMap['listening-1']||{}).answer_given});
+  Course.initMCQ('listen-q2', {lessonId: LESSON_ID, sectionId: 'listening-2', correctValue: "right", restoreAnswer: (sectionMap['listening-2']||{}).answer_given});
+  Course.initMCQ('listen-q3', {lessonId: LESSON_ID, sectionId: 'listening-3', correctValue: "right", restoreAnswer: (sectionMap['listening-3']||{}).answer_given});
+
+  /* ---------------- wrap-up ---------------- */
+  Course.initMCQ('exit-q1', {lessonId: LESSON_ID, sectionId: 'exit-1', correctValue: "right", restoreAnswer: (sectionMap['exit-1']||{}).answer_given});
+  Course.initMCQ('exit-q2', {lessonId: LESSON_ID, sectionId: 'exit-2', correctValue: "right", restoreAnswer: (sectionMap['exit-2']||{}).answer_given});
+  Course.initMCQ('exit-q3', {lessonId: LESSON_ID, sectionId: 'exit-3', correctValue: "right", restoreAnswer: (sectionMap['exit-3']||{}).answer_given});
+  Course.initMCQ('exit-q4', {lessonId: LESSON_ID, sectionId: 'exit-4', correctValue: "right", restoreAnswer: (sectionMap['exit-4']||{}).answer_given});
+  Course.initMCQ('exit-q5', {lessonId: LESSON_ID, sectionId: 'exit-5', correctValue: "right", restoreAnswer: (sectionMap['exit-5']||{}).answer_given});
+  Course.initSummary({lessonId: LESSON_ID, totalExercises: 40});
+})();
+
+</script>
+</body>
+</html>
