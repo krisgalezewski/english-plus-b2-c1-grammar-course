@@ -213,11 +213,10 @@ LESSONS.append({
     ],
     "widget": {
         "heading": "Repeated actions vs. states",
-        "intro": "\"Used to\" covers both repeated actions and past states. \"Would\" only works for repeated actions — never for states like feelings, beliefs, possessions or ongoing conditions.",
+        "intro": "For repeated past actions, \"used to\" and \"would\" are interchangeable — either one works, and the choice is mostly stylistic (\"would\" often adds a storytelling feel). The real dividing line is states: \"would\" simply can't describe a past state (a feeling, belief, possession or ongoing condition) — only \"used to\" can.",
         "tabs": [{"key": "usedto", "label": "Used to"}, {"key": "would", "label": "Would"}, {"key": "quiz", "label": "Quick check"}],
         "categories": {
             "usedto": [
-                {"label": "a repeated past action", "example": "I used to cycle to work every day."},
                 {"label": "a past state (feeling, belief, possession)", "example": "She used to be terrified of public speaking."},
                 {"label": "a past state that no longer holds", "example": "We used to own a much smaller flat."},
             ],
@@ -226,7 +225,7 @@ LESSONS.append({
                 {"label": "a routine within a specific remembered period", "example": "During his internship, he would arrive an hour early."},
             ],
         },
-        "quiz_labels": {"usedto": "Used to (works for states too)", "would": "Would (actions only)"},
+        "quiz_labels": {"usedto": "Used to (states — \"would\" can't do this)", "would": "Would (storytelling flavour)"},
         "rules_html": '''
           <div class="formula" style="border-left-color:var(--c-past)">✅ Used to: <b>used to + base verb</b> — repeated actions AND states. "I used to smoke." / "I used to hate coffee."</div>
           <div class="formula" style="border-left-color:var(--c-modal);margin-bottom:20px">✅ Would: <b>would + base verb</b> — repeated actions only, never states. "I would smoke a pack a day." ❌ "I would hate coffee."</div>
@@ -235,16 +234,17 @@ LESSONS.append({
             <span style="flex:1;min-width:0"><b>The tricky part:</b> stative verbs (believe, hate, own, know, be, live as a state, want) simply block "would" — no exceptions.<br><br>
             ✅ "I used to own a motorbike." — a past state (possession). <b>Only "used to" works.</b><br>
             ❌ "I would own a motorbike." — ungrammatical; ownership isn't a repeated event, it's a continuous state.<br><br>
-            When in doubt, ask: is this something that happened repeatedly and separately (would OK), or a continuous condition (would blocked, used to only)?</span>
+            When in doubt, ask: is this something that happened repeatedly and separately (would OK), or a continuous condition (would blocked, used to only)?<br><br>
+            For a plain repeated action like "I used to cycle to work every day," either form works — "I would cycle to work every day" is just as correct. "Would" is simply the more common choice when you're narrating a story about the past, rather than just stating the fact.</span>
           </div>'''
     },
     "compare": {
         "title": "Compare: repeated action vs. state",
         "instruction": "Hover to see why one allows \"would\" and the other doesn't.",
         "items": [
-            {"key": "c1", "label": "Repeated action", "text": "We would play cards after dinner every night.", "explain": "A distinct, repeatable event — \"would\" works fine here."},
+            {"key": "c1", "label": "Repeated action", "text": "We would play cards after dinner every night.", "explain": "A distinct, repeatable event — \"would\" works fine here. So does \"used to\" (\"We used to play cards after dinner every night\") — for a plain repeated action either one is correct; \"would\" is just preferred when you want that storytelling feel."},
             {"key": "c2", "label": "Past state", "text": "We used to live three streets away from the office.", "explain": "A continuous condition, not a repeatable event — \"would\" is blocked; only \"used to\" works."},
-            {"key": "c3", "label": "Repeated action", "text": "She would call her sister every Sunday without fail.", "explain": "A habitual, separately-occurring action — \"would\" is natural here."},
+            {"key": "c3", "label": "Repeated action", "text": "She would call her sister every Sunday without fail.", "explain": "A habitual, separately-occurring action — \"would\" is natural here. \"Used to\" works too (\"She used to call her sister every Sunday without fail\"); \"would\" is simply the more typical pick for narrating it as a story."},
             {"key": "c4", "label": "Past state", "text": "She used to be quite shy around new people.", "explain": "A state (a personality trait at the time), not a repeated action — only \"used to\" works."},
         ]
     },
