@@ -2323,20 +2323,6 @@ const Course = (() => {
       if (groupParam) href += `&group=${encodeURIComponent(groupParam)}`;
       glossaryLink.href = href;
     }
-    if (!isTest){
-      const resetBtn = document.createElement('button');
-      resetBtn.className = 'btn btn-sm btn-ghost';
-      resetBtn.textContent = '↺ Reset my progress for this lesson';
-      resetBtn.style.cssText = 'margin-top:8px;font-size:12px;padding:5px 12px';
-      resetBtn.addEventListener('click', () => {
-        if (confirm('Clear all saved answers for this lesson on this device? (Does not affect Supabase.)')){
-          resetLocalProgress(lessonId);
-          location.reload();
-        }
-      });
-      const syncStatusEl = document.getElementById('sync-status');
-      if (syncStatusEl) syncStatusEl.insertAdjacentElement('afterend', resetBtn);
-    }
   }
 
   async function initSyncStatus(lessonId){
