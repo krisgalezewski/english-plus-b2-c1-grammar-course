@@ -398,6 +398,9 @@ function standaloneFilename(id){{
 /* ---------- Progress ---------- */
 function lessonProgress(id){{
   let attempted = 0;
+  // No name yet: nothing to read, and asking the engine would trigger its
+  // own name prompt on top of this page's name field.
+  if (!localStorage.getItem(STUDENT_NAME_KEY)) return {{ attempted: 0, total: totalFor(id), pct: 0, done: false }};
   try {{
     attempted = Course.getCurrentRows(id).filter(r => r.exercise_type === 'auto_graded').length;
   }} catch (e){{ attempted = 0; }}
@@ -551,6 +554,8 @@ if (existingName){{
     if (!val) return;
     localStorage.setItem(STUDENT_NAME_KEY, val);
     showWelcomeBack(val);
+    renderLessonIndex();
+    syncIndexFromSupabase();
   }});
 }}
 
@@ -559,12 +564,20 @@ renderLessonIndex();
 // Pull this student's rows down from Supabase (if connected) so the ticks
 // and percentages reflect work done on other devices too, then re-render
 // once. Never blocks first paint; a failure just leaves local numbers.
-if (existingName && Course.isConnected()){{
+function syncIndexFromSupabase(){{
+  if (!localStorage.getItem(STUDENT_NAME_KEY) || !Course.isConnected()) return;
   (async () => {{
     for (const l of LESSONS){{ await Course.syncFromSupabase(l.id); }}
     renderLessonIndex();
   }})();
 }}
+syncIndexFromSupabase();
+
+// Coming back with the browser's Back button can show a cached copy of
+// this page; refresh the numbers whenever it is shown again, and when
+// another tab records progress.
+window.addEventListener('pageshow', (e) => {{ if (e.persisted){{ renderLessonIndex(); syncIndexFromSupabase(); }} }});
+window.addEventListener('storage', () => renderLessonIndex());
 '''
 
     html = light_page_shell(title="English+ B2+/C1 Companion Course", body_html=body_html, extra_head=extra_head, page_script=page_script)
