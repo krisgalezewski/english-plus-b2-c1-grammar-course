@@ -96,6 +96,9 @@ def light_page_shell(*, title, body_html, extra_head="", page_script=""):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} | English+</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
 {FONT_LINK}
 <link rel="stylesheet" href="shared/theme.css">
 {extra_head}
@@ -286,6 +289,9 @@ def build_index(lesson_totals):
     display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;
   }
 
+  .hero-graphic{display:block;width:100%;height:auto;margin-top:auto}
+  .hero-graphic.compact{width:56%;max-width:260px;margin:10px 0 0;opacity:.9}
+
   @media (max-width:820px){
     .intro-grid{grid-template-columns:minmax(0,1fr)}
     .intro-hero h1{font-size:31px}
@@ -302,6 +308,7 @@ def build_index(lesson_totals):
         <input type="text" id="name-input" class="name-input" placeholder="Your name" autocomplete="off">
         <button type="submit" class="btn btn-primary">Start</button>
       </form>
+      <img class="hero-graphic compact" id="hero-graphic" src="assets/welcome-graphic.png" alt="">
     </div>
 
     <div class="intro-side">
@@ -542,6 +549,8 @@ function showWelcomeBack(name){{
     localStorage.removeItem(STUDENT_NAME_KEY);
     location.reload();
   }});
+  const graphic = document.getElementById('hero-graphic');
+  if (graphic) graphic.classList.remove('compact');
 }}
 
 const existingName = localStorage.getItem(STUDENT_NAME_KEY);

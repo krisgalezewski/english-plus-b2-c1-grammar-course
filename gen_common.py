@@ -68,6 +68,9 @@ def page_shell(*, title, theme_class, body_html, extra_head="", page_script=""):
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} | English+</title>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/favicon-180.png">
 {FONT_LINK}
 <link rel="stylesheet" href="shared/theme.css">
 {extra_head}
