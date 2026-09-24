@@ -693,7 +693,8 @@ def build_glossary():
 def build_teacher_dashboard(index_entries):
     extra_head = '''<style>
   .shell{max-width:920px}
-</style>'''
+</style>
+<script src="/teacher-login.js"></script>'''
 
     body_html = '''  <header class="lesson-header">
     <div class="lesson-eyebrow">\U0001f469‍\U0001f3eb Teacher view</div>
@@ -791,6 +792,8 @@ let supabaseClient = null;
 try {{
   if (window.supabase && window.SUPABASE_URL && window.SUPABASE_ANON_KEY){{
     supabaseClient = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+    // Teacher-only page: sign in first (see /teacher-login.js)
+    if (window.EVTeacherGate) EVTeacherGate(supabaseClient);
   }}
 }} catch(e){{ console.error(e); }}
 
