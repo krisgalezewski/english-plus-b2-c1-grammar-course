@@ -22,13 +22,7 @@ import re
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SHARED = os.path.join(ROOT, "shared")
 
-FONT_LINK = (
-    '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-    '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-    '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700'
-    '&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500'
-    '&display=swap" rel="stylesheet">'
-)
+FONT_LINK = '<link rel="stylesheet" href="/fonts/fonts.css">'  # self-hosted, see /fonts/fonts.css on englishvoiced.com
 SUPABASE_CDN = '<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>'
 
 
