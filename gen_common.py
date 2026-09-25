@@ -31,7 +31,7 @@ def j(data):
     return json.dumps(data, ensure_ascii=False)
 
 
-def nav_header(eyebrow, title, sub, is_test=False):
+def nav_header(eyebrow, title, sub, is_test=False, extra_links=""):
     links = (
         '<a id="all-lessons-link" href="index-standalone.html" class="pill" '
         'style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📚 All Lessons</a>'
@@ -41,10 +41,13 @@ def nav_header(eyebrow, title, sub, is_test=False):
             '\n      <a id="glossary-link" href="glossary-standalone.html" class="pill" '
             'style="text-decoration:none;font-size:12.5px;border-radius:var(--radius-sm)">📖 My Glossary</a>'
         )
+    links += extra_links  # e.g. the lesson-quiz pill, see lesson_quizzes.py
+    # With a third pill the row no longer fits a phone screen, so let it wrap
+    pills_style = "display:flex;gap:8px;flex-wrap:wrap" if extra_links else "display:flex;gap:8px"
     return f'''  <header class="lesson-header">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap">
       <div class="lesson-eyebrow">{eyebrow}</div>
-      <div style="display:flex;gap:8px">
+      <div style="{pills_style}">
       {links}
     </div>
     </div>

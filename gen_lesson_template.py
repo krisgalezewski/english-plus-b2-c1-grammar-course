@@ -10,6 +10,7 @@ grammar highlighting) -> vocabulary check -> grammar practice
 check + score summary.
 """
 from gen_common import nav_header, j
+import lesson_quizzes
 
 
 def vocab(key, text):
@@ -23,7 +24,8 @@ def gram(key, text):
 def render_lesson(d):
     lesson_id = d["id"]
     eyebrow = f'Lesson {d["num"]} of 20 · {d["section_name"]}'
-    header = nav_header(eyebrow, d["title"], d["subtitle"])
+    quiz_id, quiz_name = lesson_quizzes.QUIZZES[d["num"]]
+    header = nav_header(eyebrow, d["title"], d["subtitle"], extra_links=lesson_quizzes.quiz_pill(quiz_id))
 
     # ---------- warm-up ----------
     warmup_qs = "".join(
@@ -269,7 +271,7 @@ def render_lesson(d):
       </div>
       <button class="btn btn-primary" id="finish-btn">Finish lesson &amp; see results</button>
       <button class="btn" id="export-btn" style="margin-left:8px;display:none">⬇ Export PDF report</button>
-    </div>
+    </div>{lesson_quizzes.quiz_card(quiz_id, quiz_name)}
   </section>'''
 
     body = "\n".join([
