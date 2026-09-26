@@ -51,6 +51,11 @@ SECTION_META = [
      "expect": "You'll combine short sentences into single complex ones, cut repetition with ellipsis and substitution, and move information around to change what a sentence emphasises. The capstone asks you to edit a whole text using everything from the course."},
 ]
 
+# 2026 redesign: the handoff's companion-course palette (main / deep per section).
+import redesign_config as _R
+for _m, _c in zip(SECTION_META, _R.SECTION_COLORS):
+    _m["color"], _m["accent"], _m["deep"] = _c["color"], _c["color"], _c["deep"]
+
 
 def slugify(text):
     text = text.lower()
@@ -172,431 +177,47 @@ def build_tests():
 
 
 # ==================================================================
-# INDEX PAGE
-# Bento layout designed in Claude Design (see design/README.md handoff):
-# a wide intro block (hero + progress ring w/ per-section mini bars +
-# stats/"Up next"), then one full-width expandable box per section with
-# a description, what students will be asked to do, a progress bar, and
-# (expanded) the lesson grid with a green tick at 100%. Neutral graphite
-# chrome; the four section colours appear only inside the section boxes.
-# ==================================================================
+# INDEX PAGE — course overview (see overview.py)
 def build_index(lesson_totals):
-    extra_head = '''<style>
+    """Course overview (2026 redesign). Layout, styles and script live in
+    overview.py (shared by every English+ course); this passes the data."""
+    import overview
+    import redesign_config as R
 
-  /* ---------- Index bento layout ---------- */
-  /* The index isn't inside any one section, so it stays clear of the
-     four section colours; it uses a neutral graphite accent instead, so
-     the coloured boxes below are the only colour signal on the page. */
-  body{--accent:#2F343C;--accent-dark:#1B2430;--accent-soft:#EDEFF2;--accent-soft-border:#C2C8D0;--bg:#F5F6F7}
-  .shell{max-width:1060px}
-
-  .intro-grid{
-    display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:12px;margin-bottom:12px;
-  }
-  .bx{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg)}
-
-  .intro-hero{padding:34px 34px 30px;display:flex;flex-direction:column;gap:16px}
-  .intro-eyebrow{
-    font-size:11.5px;font-weight:650;letter-spacing:.12em;text-transform:uppercase;color:var(--text-tertiary);
-  }
-  .intro-hero h1{
-    font-family:var(--font-serif);font-weight:600;font-size:40px;line-height:1.08;
-    letter-spacing:-0.02em;color:#1B2430;text-wrap:pretty;
-  }
-  .intro-hero p{font-size:14.5px;line-height:1.65;color:var(--text-secondary);max-width:52ch}
-  .intro-hero .name-form{justify-content:flex-start;margin:0;max-width:420px}
-  .intro-side{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;align-content:stretch}
-
-  .ring-cell{min-width:0;padding:22px 24px;display:flex;flex-direction:column;justify-content:center;gap:18px}
-  .ring-top{display:flex;align-items:center;gap:18px}
-  .mini-list{display:flex;flex-direction:column;gap:9px}
-  .mini{display:flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;min-width:0}
-  .mini-idx{font-family:var(--font-mono);font-size:10.5px;opacity:.7;flex-shrink:0}
-  .mini-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .mini-bar{width:74px;height:4px;border-radius:999px;background:rgba(27,36,48,.10);overflow:hidden;flex-shrink:0}
-  .mini-bar > i{display:block;height:100%;border-radius:999px}
-  .mini-pct{font-family:var(--font-mono);font-size:10.5px;color:var(--text-tertiary);width:30px;text-align:right;flex-shrink:0}
-  .ring{
-    width:88px;height:88px;border-radius:50%;flex-shrink:0;
-    display:flex;align-items:center;justify-content:center;
-    background:conic-gradient(var(--accent) var(--pct,0%), var(--surface-alt) 0);
-  }
-  .ring > span{
-    width:66px;height:66px;border-radius:50%;background:var(--surface);
-    display:flex;align-items:center;justify-content:center;
-    font-size:17px;font-weight:650;letter-spacing:-0.02em;
-  }
-  .ring-label{font-size:13px;line-height:1.5;color:var(--text-secondary)}
-  .ring-label b{display:block;font-size:14.5px;color:var(--text);margin-bottom:2px}
-
-  .stat-cell{min-width:0;padding:20px 24px;display:flex;flex-direction:column;justify-content:center;gap:18px}
-  .stat-row{display:flex;gap:26px;flex-wrap:wrap}
-  .stat-row > div{min-width:0}
-  .next-up{
-    display:flex;flex-direction:column;gap:5px;text-decoration:none;
-    border-top:1px solid var(--border);padding-top:15px;
-  }
-  .next-title{font-size:14px;font-weight:600;line-height:1.4;color:var(--text);text-wrap:pretty}
-  .next-go{font-size:12px;font-weight:650;color:var(--accent)}
-  .next-up:hover .next-go{text-decoration:underline}
-  .stat-n{font-family:var(--font-serif);font-size:26px;font-weight:600;line-height:1;letter-spacing:-0.02em;color:var(--text)}
-  .stat-l{font-size:11px;font-weight:650;letter-spacing:.08em;text-transform:uppercase;color:var(--text-tertiary);margin-top:5px}
-
-  /* ---------- Section boxes ---------- */
-  .bento-sections{display:flex;flex-direction:column;gap:12px}
-  .sec-box{
-    border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;
-    display:flex;flex-direction:column;transition:box-shadow .18s;
-  }
-  .sec-head{
-    width:100%;text-align:left;font-family:inherit;border:none;cursor:pointer;background:none;
-    padding:24px 26px;display:flex;flex-direction:column;gap:12px;color:inherit;
-  }
-  .sec-top{display:flex;align-items:flex-start;gap:14px}
-  .sec-idx{
-    font-family:var(--font-mono);font-size:11.5px;letter-spacing:.06em;padding-top:5px;opacity:.65;flex-shrink:0;
-  }
-  .sec-title{font-size:20px;font-weight:650;letter-spacing:-0.015em;line-height:1.25;flex:1;min-width:0}
-  .sec-chev{font-size:20px;line-height:1;flex-shrink:0;padding-top:2px;transition:transform .2s}
-  .sec-toggle{
-    display:inline-flex;align-items:center;padding:3px 10px;border-radius:999px;
-    border:1px solid;font-size:11.5px;font-weight:650;letter-spacing:.02em;white-space:nowrap;
-  }
-  .sec-box.open .sec-chev{transform:rotate(180deg)}
-  .sec-desc{font-size:14.5px;line-height:1.6;color:var(--text-secondary);text-wrap:pretty;max-width:88ch}
-  .sec-expect{font-size:13px;line-height:1.65;color:var(--text-secondary);text-wrap:pretty;max-width:88ch}
-  .sec-foot{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.02em}
-  .sec-bar{flex:1;height:5px;border-radius:999px;background:rgba(27,36,48,.10);overflow:hidden;min-width:60px}
-  .sec-bar > i{display:block;height:100%;border-radius:999px;transition:width .4s}
-  .sec-done{
-    display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:999px;
-    background:var(--ok-bg);border:1px solid var(--ok-border);color:var(--ok);font-size:11.5px;font-weight:650;
-  }
-
-  .sec-body{display:none;padding:0 14px 14px}
-  .sec-box.open .sec-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:6px}
-  .lx{
-    display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:var(--radius-md);
-    text-decoration:none;font-size:14px;background:var(--surface);border:1px solid var(--border);transition:all .12s;
-  }
-  .lx:hover{transform:translateY(-1px)}
-  .lx-num{
-    flex-shrink:0;width:25px;height:25px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-    font-size:11.5px;font-weight:650;
-  }
-  .lx-title{flex:1;min-width:0;font-weight:550;line-height:1.35}
-  .lx-state{flex-shrink:0;font-family:var(--font-mono);font-size:11px;color:var(--text-tertiary)}
-  .lx-tick{
-    flex-shrink:0;width:19px;height:19px;border-radius:50%;background:var(--ok);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;
-  }
-
-  .hero-graphic{display:block;width:100%;height:auto;margin-top:auto}
-  .hero-graphic.compact{width:56%;max-width:260px;margin:10px 0 0;opacity:.9}
-
-  @media (max-width:820px){
-    .intro-grid{grid-template-columns:minmax(0,1fr)}
-    .intro-hero h1{font-size:31px}
-  }
-
-</style>'''
-
-    body_html = '''  <div class="intro-grid">
-    <div class="bx intro-hero" id="welcome-card">
-      <div class="intro-eyebrow">English+ &middot; B2+/C1 Companion Course</div>
-      <h1 id="welcome-heading">Welcome to English+ B2+/C1 with Kris</h1>
-      <p id="welcome-copy">This is the <b>B2+/C1 Companion Course</b> &mdash; the sequel to the original English+ B1+/B2 grammar course, picking up where that one left off with more nuanced aspect, sophisticated conditionals, advanced passive structures and discourse-level grammar.<br>Add your name, so that you can track your progress throughout the course.</p>
-      <form class="name-form" id="name-form">
-        <input type="text" id="name-input" class="name-input" placeholder="Your name" autocomplete="off">
-        <button type="submit" class="btn btn-primary">Start</button>
-      </form>
-      <img class="hero-graphic compact" id="hero-graphic" src="assets/welcome-graphic.png" alt="">
-    </div>
-
-    <div class="intro-side">
-      <div class="bx ring-cell">
-        <div class="ring-top">
-          <div class="ring" id="overall-ring"><span id="overall-pct">0%</span></div>
-          <div class="ring-label"><b id="overall-title">Nothing attempted yet</b><span id="overall-sub">Your progress across all 24 items.</span></div>
-        </div>
-        <div class="mini-list" id="mini-progress"></div>
-      </div>
-      <div class="bx stat-cell">
-        <div class="stat-row">
-          <div><div class="stat-n">4</div><div class="stat-l">Sections</div></div>
-          <div><div class="stat-n">20</div><div class="stat-l">Lessons</div></div>
-          <div><div class="stat-n">4</div><div class="stat-l">Tests</div></div>
-        </div>
-        <a class="next-up" id="next-up" href="#">
-          <span class="stat-l" style="margin:0">Up next</span>
-          <span class="next-title" id="next-title">Lesson 1 — Narrative Tenses in Extended Storytelling</span>
-          <span class="next-go">Open lesson &rarr;</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div id="lesson-index" class="bento-sections"></div>'''
-
-    # Build the LESSONS array (id + title + isTest) directly from the
-    # authored data so the index page can never drift from the actual
-    # lessons_section*.py / tests_data.py content.
     entries = []
-    for mod in SECTION_MODULES:
+    for section_idx, mod in enumerate(SECTION_MODULES):
         for l in mod.LESSONS:
-            entries.append({"id": l["id"], "title": f'Lesson {l["num"]} — {l["title"]}', "isTest": False})
+            entries.append({"id": l["id"], "title": f'Lesson {l["num"]} — {l["title"]}', "isTest": False,
+                            "chips": R.LESSON_CHIPS.get(l["num"], [])})
         # the test that closes this section comes right after its lessons
-        section_idx = SECTION_MODULES.index(mod)
         test = ALL_TESTS[section_idx]
-        entries.append({"id": test["id"], "title": test["title"], "isTest": True})
+        entries.append({"id": test["id"], "title": test["title"], "isTest": True, "chips": []})
 
-    groups_js = [{"title": m["name"], "color": m["color"], "accent": m["accent"], "desc": m["desc"], "expect": m["expect"]} for m in SECTION_META]
-    section_sizes = [len(mod.LESSONS) + 1 for mod in SECTION_MODULES]  # +1 for the trailing test
+    groups = [{"title": m["name"], "color": m["color"], "deep": m["deep"],
+               "desc": m["desc"], "expect": m["expect"], "size": len(mod.LESSONS) + 1}
+              for m, mod in zip(SECTION_META, SECTION_MODULES)]
 
-    # Real per-item exercise totals, extracted from each generated
-    # lesson/test's own `totalExercises` value — never hand-maintained,
-    # so it can't drift out of sync with the actual content.
-    lessons_js = j(entries)
-    groups_meta_js = j(groups_js)
-    lesson_totals_js = j(lesson_totals)
-
-    page_script = f'''
-const LESSONS = {lessons_js};
-const GROUP_META = {groups_meta_js};
-const SECTION_SIZES = {j(section_sizes)};
-
-/* ------------------------------------------------------------------
-   Per-lesson exercise totals — the same number each lesson/test file
-   passes as `totalExercises` to Course.initSummary(). A lesson counts
-   as 100% complete (and gets its green tick) once this many auto-graded
-   exercises have been attempted. Extracted directly from the generated
-   lesson/test files at build time (see build.py), so it's always in
-   sync with the actual content.
-   ------------------------------------------------------------------ */
-const DEFAULT_TOTAL = 12;
-const LESSON_TOTALS = {lesson_totals_js};
-function totalFor(id){{ return LESSON_TOTALS[id] || DEFAULT_TOTAL; }}
-
-// Build the [start, end) ranges from SECTION_SIZES so this never has to
-// be hand-kept in sync with LESSONS.length.
-const GROUPS = (() => {{
-  let start = 0;
-  return GROUP_META.map((g, i) => {{
-    const end = start + SECTION_SIZES[i];
-    const range = [start, end];
-    start = end;
-    return {{ ...g, range }};
-  }});
-}})();
-
-const STUDENT_NAME_KEY = 'englishplus_b2c1_student_name';
-const OPEN_KEY = 'englishplus_b2c1_index_open';
-
-const groupParam = new URLSearchParams(window.location.search).get('group');
-function withGroup(href){{
-  return groupParam ? `${{href}}?group=${{encodeURIComponent(groupParam)}}` : href;
-}}
-function standaloneFilename(id){{
-  // Standalone files are named with just the short prefix (lesson-01,
-  // test-01), never the full descriptive id.
-  const match = id.match(/^b2c1-(lesson-\\d+|test-\\d+)/);
-  const prefix = match ? match[1] : id;
-  return `${{prefix}}-preview-standalone.html`;
-}}
-
-/* ---------- Progress ---------- */
-function lessonProgress(id){{
-  let attempted = 0;
-  // No name yet: nothing to read, and asking the engine would trigger its
-  // own name prompt on top of this page's name field.
-  if (!localStorage.getItem(STUDENT_NAME_KEY)) return {{ attempted: 0, total: totalFor(id), pct: 0, done: false }};
-  try {{
-    attempted = Course.getCurrentRows(id).filter(r => r.exercise_type === 'auto_graded').length;
-  }} catch (e){{ attempted = 0; }}
-  const total = totalFor(id);
-  const pct = total ? Math.min(100, Math.round((attempted / total) * 100)) : 0;
-  return {{ attempted, total, pct, done: pct >= 100 }};
-}}
-
-function readOpen(){{
-  try {{ return new Set(JSON.parse(localStorage.getItem(OPEN_KEY)) || []); }}
-  catch (e){{ return new Set(); }}
-}}
-function writeOpen(set){{
-  localStorage.setItem(OPEN_KEY, JSON.stringify([...set]));
-}}
-
-function shortTitle(l){{
-  // "Lesson 4 — Academic Hedging: ..." → "Academic Hedging: ..." (the
-  // number already lives in the numbered badge beside it). Tests keep
-  // their full label.
-  return l.isTest ? l.title : l.title.replace(/^Lesson\\s+\\d+\\s+[—-]\\s*/, '');
-}}
-
-function renderLessonIndex(){{
-  const root = document.getElementById('lesson-index');
-  const open = readOpen();
-  root.innerHTML = '';
-
-  GROUPS.forEach((g, gi) => {{
-    const items = LESSONS.slice(g.range[0], g.range[1]);
-    const progress = items.map(l => lessonProgress(l.id));
-    const doneCount = progress.filter(p => p.done).length;
-    const pct = Math.round(progress.reduce((s, p) => s + p.pct, 0) / items.length);
-    const lessonCount = items.filter(l => !l.isTest).length;
-    const testCount = items.length - lessonCount;
-    const isOpen = open.has(gi);
-
-    const rows = items.map((l, i) => {{
-      const p = progress[i];
-      const testNo = LESSONS.slice(0, g.range[0] + i + 1).filter(x => x.isTest).length;
-      const num = l.isTest ? 'T' + testNo : (g.range[0] + i + 1 - LESSONS.slice(0, g.range[0] + i).filter(x => x.isTest).length);
-      const state = p.done
-        ? '<span class="lx-tick" title="Completed">✓</span>'
-        : `<span class="lx-state">${{p.attempted ? p.pct + '%' : ''}}</span>`;
-      return `
-        <a class="lx" href="${{withGroup(standaloneFilename(l.id))}}"
-           style="border-color:${{g.color}}26;background:${{l.isTest ? g.color + '0F' : 'var(--surface)'}}"
-           onmouseover="this.style.background='${{g.color}}1A'"
-           onmouseout="this.style.background='${{l.isTest ? g.color + '0F' : '#fff'}}'">
-          <span class="lx-num" style="${{l.isTest ? 'background:' + g.color + ';color:#fff' : 'background:' + g.color + '1F;color:' + g.color}}">${{num}}</span>
-          <span class="lx-title" style="color:${{g.color}}">${{shortTitle(l)}}</span>
-          ${{state}}
-        </a>`;
-    }}).join('');
-
-    const box = document.createElement('div');
-    box.className = 'sec-box' + (isOpen ? ' open' : '');
-    box.style.background = g.color + '0A';
-    box.style.borderColor = g.color + '33';
-    box.innerHTML = `
-      <button class="sec-head" aria-expanded="${{isOpen}}">
-        <div class="sec-top">
-          <span class="sec-idx" style="color:${{g.color}}">0${{gi + 1}}</span>
-          <span class="sec-title" style="color:${{g.color}}">${{g.title}}</span>
-          <span class="sec-chev" style="color:${{g.color}}">&#9662;</span>
-        </div>
-        <div class="sec-desc">${{g.desc}}</div>
-        <div class="sec-expect">${{g.expect}}</div>
-        <div class="sec-foot" style="color:${{g.color}}">
-          <span>${{lessonCount}} lessons · ${{testCount}} test${{testCount === 1 ? '' : 's'}}</span>
-          <span class="sec-bar"><i style="width:${{pct}}%;background:${{g.accent}}"></i></span>
-          <span class="sec-toggle" style="border-color:${{g.color}}40;color:${{g.color}}">${{isOpen ? 'Hide lessons' : 'Show lessons'}}</span>
-          ${{doneCount === items.length
-            ? '<span class="sec-done">✓ Section complete</span>'
-            : `<span>${{doneCount}}/${{items.length}} done</span>`}}
-        </div>
-      </button>
-      <div class="sec-body">${{rows}}</div>`;
-
-    box.querySelector('.sec-head').addEventListener('click', () => {{
-      const set = readOpen();
-      if (set.has(gi)) set.delete(gi); else set.add(gi);
-      writeOpen(set);
-      const nowOpen = set.has(gi);
-      box.classList.toggle('open', nowOpen);
-      box.querySelector('.sec-head').setAttribute('aria-expanded', String(nowOpen));
-      box.querySelector('.sec-toggle').textContent = nowOpen ? 'Hide lessons' : 'Show lessons';
-    }});
-
-    root.appendChild(box);
-  }});
-
-  renderOverall();
-}}
-
-function renderOverall(){{
-  const all = LESSONS.map(l => lessonProgress(l.id));
-  const pct = Math.round(all.reduce((s, p) => s + p.pct, 0) / all.length);
-  const done = all.filter(p => p.done).length;
-  const ring = document.getElementById('overall-ring');
-  ring.style.setProperty('--pct', pct + '%');
-  document.getElementById('overall-pct').textContent = pct + '%';
-  document.getElementById('overall-title').textContent = done
-    ? `${{done}} of ${{all.length}} finished`
-    : (pct ? 'In progress' : 'Nothing attempted yet');
-  document.getElementById('overall-sub').textContent = 'Your progress across all ' + all.length + ' items.';
-
-  // Per-section mini bars, so the cell says which part of the course is
-  // moving rather than just the single overall number.
-  document.getElementById('mini-progress').innerHTML = GROUPS.map((g, gi) => {{
-    const items = LESSONS.slice(g.range[0], g.range[1]).map(l => lessonProgress(l.id));
-    const p = Math.round(items.reduce((s, x) => s + x.pct, 0) / items.length);
-    return `<div class="mini">
-      <span class="mini-idx" style="color:${{g.color}}">0${{gi + 1}}</span>
-      <span class="mini-name" style="color:${{g.color}}">${{g.title}}</span>
-      <span class="mini-bar"><i style="width:${{p}}%;background:${{g.accent}}"></i></span>
-      <span class="mini-pct">${{p}}%</span>
-    </div>`;
-  }}).join('');
-
-  // Up next: first item that isn't finished.
-  const nextIdx = all.findIndex(p => !p.done);
-  const next = LESSONS[nextIdx === -1 ? LESSONS.length - 1 : nextIdx];
-  const nextEl = document.getElementById('next-up');
-  nextEl.href = withGroup(standaloneFilename(next.id));
-  document.getElementById('next-title').textContent = next.title;
-  nextEl.querySelector('.next-go').textContent = nextIdx === -1
-    ? 'Course complete — revisit →'
-    : (all[nextIdx].attempted ? 'Continue →' : 'Open →');
-}}
-
-function showWelcomeBack(name){{
-  document.getElementById('welcome-heading').textContent = 'Welcome back, ' + name + '.';
-  document.getElementById('welcome-copy').innerHTML =
-    'Continuing the <b>B2+/C1 Companion Course</b> — the sequel to the original English+ B1+/B2 grammar course, picking up where that one left off with more nuanced aspect, sophisticated conditionals, advanced passive structures and discourse-level grammar.';
-  const form = document.getElementById('name-form');
-  form.outerHTML = '<button class="change-name-link" id="change-name-btn" style="align-self:flex-start;margin:0">Not you? Change name</button>';
-  document.getElementById('change-name-btn').addEventListener('click', () => {{
-    localStorage.removeItem(STUDENT_NAME_KEY);
-    location.reload();
-  }});
-  const graphic = document.getElementById('hero-graphic');
-  if (graphic) graphic.classList.remove('compact');
-}}
-
-const existingName = localStorage.getItem(STUDENT_NAME_KEY);
-if (existingName){{
-  showWelcomeBack(existingName);
-}} else {{
-  document.getElementById('name-form').addEventListener('submit', (e) => {{
-    e.preventDefault();
-    const val = document.getElementById('name-input').value.trim();
-    if (!val) return;
-    localStorage.setItem(STUDENT_NAME_KEY, val);
-    showWelcomeBack(val);
-    renderLessonIndex();
-    syncIndexFromSupabase();
-  }});
-}}
-
-renderLessonIndex();
-
-// Pull this student's rows down from Supabase (if connected) so the ticks
-// and percentages reflect work done on other devices too, then re-render
-// once. Never blocks first paint; a failure just leaves local numbers.
-function syncIndexFromSupabase(){{
-  if (!localStorage.getItem(STUDENT_NAME_KEY) || !Course.isConnected()) return;
-  (async () => {{
-    for (const l of LESSONS){{ await Course.syncFromSupabase(l.id); }}
-    renderLessonIndex();
-  }})();
-}}
-syncIndexFromSupabase();
-
-// Coming back with the browser's Back button can show a cached copy of
-// this page; refresh the numbers whenever it is shown again, and when
-// another tab records progress.
-window.addEventListener('pageshow', (e) => {{ if (e.persisted){{ renderLessonIndex(); syncIndexFromSupabase(); }} }});
-window.addEventListener('storage', () => renderLessonIndex());
-'''
+    extra_head, body_html, page_script = overview.render({
+        "top_line": R.OVERVIEW_TOP,
+        "labels": R.OVERVIEW_LABELS,
+        "heading": R.INDEX_HEADING,
+        "intro": R.WELCOME_COPY,
+        "hero_art": R.OVERVIEW_ART,
+        "entries": entries,
+        "groups": groups,
+        "lesson_totals": lesson_totals,
+        "name_key": "englishplus_b2c1_student_name",
+        "closed_key": "englishplus_b2c1_index_closed",
+        "file_prefix_re": r"(lesson-\\d+|test-\\d+)",
+        "id_prefix": "b2c1-",
+    })
 
     html = light_page_shell(title="English+ B2+/C1 Companion Course", body_html=body_html, extra_head=extra_head, page_script=page_script)
     src_path = os.path.join(ROOT, "index.html")
     with open(src_path, "w", encoding="utf-8") as f:
         f.write(html)
     rebuild_standalone(src_path, os.path.join(ROOT, "index-standalone.html"))
-    return entries
+    return [{"id": e["id"], "title": e["title"], "isTest": e["isTest"]} for e in entries]
 
 
 # ==================================================================

@@ -1,17 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex">
-<script defer src="/analytics.js"></script>
-<title>English+ B2+/C1 Companion Course | English+</title>
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
-<link rel="apple-touch-icon" href="assets/favicon-180.png">
-<link rel="stylesheet" href="/fonts/fonts.css">
-<link rel="stylesheet" href="shared/theme.css">
-<style>
+"""
+English+ course overview page (index) — 2026 redesign.
+
+Shared by every English+ course: build.py (or build_index.py) passes the
+course's own data and gets back the three pieces its page shell needs:
+
+    extra_head, body_html, page_script = overview.render(cfg)
+
+cfg keys
+  top_line        mono line at the very top ("English+ … · by Kris Galezewski")
+  labels          [solid chip, outlined chip, level chip] e.g. ["English+", "Function Words I", "B1+/B2"]
+  heading         hero H1
+  intro           hero paragraph (HTML allowed)
+  hero_art        decorative word-chip cluster (HTML), or ""
+  entries         [{id, title, isTest, chips:[[text, kind]]}] in course order; kind: s/o/x/d
+  groups          [{title, color, deep, desc, expect, size}] — size = items in the section
+  lesson_totals   {id: auto-graded exercises}  (a lesson is 100% once this many are attempted)
+  name_key        localStorage key for the student's name (keep the course's existing key!)
+  closed_key      localStorage key for collapsed sections
+  file_prefix_re  JS regex source matching the short file prefix, e.g. "(lesson-\\d+|test-\\d+)"
+  id_prefix       optional id prefix stripped before matching (e.g. "fw1-")
+"""
+import json
+
+
+def _j(x):
+    return json.dumps(x, ensure_ascii=False)
+
+
+EXTRA_HEAD = '''<style>
   /* ---------- Course overview (2026 redesign) ---------- */
   body .shell{max-width:none !important;padding:0 !important}
   .course-attribution{display:none !important}
@@ -100,25 +116,19 @@
     .ov-sec-row h2{font-size:26px}
     .ov-card{padding:20px}
   }
-</style>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
-<script src="shared/supabase-config.js"></script>
-</head>
-<body>
+</style>'''
 
-<div class="course-attribution">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
-<div class="shell">
-<div class="ov">
+BODY = '''<div class="ov">
   <div class="ov-hero">
     <div class="ov-top">
-      <div class="ov-topline">English+ B2+/C1 Companion Course · by Kris Galezewski</div>
+      <div class="ov-topline">__TOP__</div>
       <a class="rd-pill" id="glossary-link" href="glossary-standalone.html">My glossary&nbsp;·&nbsp;<span id="glossary-count">0</span></a>
     </div>
     <div class="ov-hero-grid">
       <div class="ov-left">
-        <div class="ov-labels"><span class="ov-label s">English+</span><span class="ov-label o">Companion Course</span><span class="ov-label">B2+/C1</span></div>
-        <h1 id="welcome-heading">Welcome to English+ B2+/C1 with Kris</h1>
-        <p class="ov-intro" id="welcome-copy">This is the <b>B2+/C1 Companion Course</b> — the sequel to the original English+ B1+/B2 grammar course, picking up where that one left off with more nuanced aspect, sophisticated conditionals, advanced passive structures and discourse-level grammar.</p>
+        <div class="ov-labels">__LABELS__</div>
+        <h1 id="welcome-heading">__HEADING__</h1>
+        <p class="ov-intro" id="welcome-copy">__INTRO__</p>
         <div class="ov-start" id="welcome-start">
           <div class="ov-start-note">Add your name, so that you can track your progress throughout the course.</div>
           <form class="name-form" id="name-form">
@@ -128,24 +138,19 @@
         </div>
       </div>
       <div class="ov-right">
-        <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;font-family:'Archivo';font-weight:800">
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end"><span style="padding:5px 12px;border-radius:9px;background:#F6EEDD;color:#5C2140;font-size:18px">had left</span><span style="padding:5px 12px;border-radius:9px;background:rgba(0,0,0,.2);font-size:18px">was raining</span></div>
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end"><span style="padding:5px 12px;border-radius:9px;background:#4A5D78;color:#F6EEDD;font-size:18px">Had I known,</span></div>
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end"><span style="padding:5px 12px;border-radius:9px;background:#4F6E55;color:#F6EEDD;font-size:18px">is being built</span></div>
-          <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:flex-end"><span style="padding:5px 12px;border-radius:9px;background:#8A7631;color:#F6EEDD;font-size:18px">whereby</span></div>
-        </div>
+        __ART__
         <div class="ov-card">
           <div class="ov-ring-row">
             <div class="ov-ring" id="overall-ring"><span id="overall-pct">0%</span></div>
             <div>
               <div class="ov-ring-t" id="overall-title">Nothing attempted yet</div>
-              <div class="ov-ring-s" id="overall-sub">Your progress across all 24 items.</div>
+              <div class="ov-ring-s" id="overall-sub">Your progress across all __N__ items.</div>
             </div>
           </div>
           <div class="ov-stats">
-            <div><div class="ov-stat-n">4</div><div class="ov-stat-l">Sections</div></div>
-            <div><div class="ov-stat-n">20</div><div class="ov-stat-l">Lessons</div></div>
-            <div><div class="ov-stat-n">4</div><div class="ov-stat-l">Tests</div></div>
+            <div><div class="ov-stat-n">__NSEC__</div><div class="ov-stat-l">Sections</div></div>
+            <div><div class="ov-stat-n">__NLES__</div><div class="ov-stat-l">Lessons</div></div>
+            <div><div class="ov-stat-n">__NTEST__</div><div class="ov-stat-l">Tests</div></div>
           </div>
           <a class="ov-next" id="next-up" href="#">
             <span><span class="ov-next-k" id="next-kicker">Up next</span><span class="ov-next-t" id="next-title"></span></span>
@@ -156,224 +161,10 @@
     </div>
   </div>
   <div class="ov-secs" id="lesson-index"></div>
-</div>
-</div>
+</div>'''
 
-<script src="shared/course-engine.js"></script>
-<script>
-
-const OV = {
- "entries": [
-  {
-   "id": "b2c1-lesson-01-narrative-tenses",
-   "title": "Lesson 1 — Narrative Tenses in Extended Storytelling",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-02-used-to-vs-would",
-   "title": "Lesson 2 — Used To vs. Would for Past Habits",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-03-future-in-the-past",
-   "title": "Lesson 3 — Future in the Past + Future Perfect Continuous",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-04-academic-hedging",
-   "title": "Lesson 4 — Academic Hedging: Seem To, Appear To, Tend To, Be Likely To",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-05-neednt-have",
-   "title": "Lesson 5 — Needn't Have vs. Didn't Need To",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-06-deduction-continuous",
-   "title": "Lesson 6 — Deduction With Continuous Aspect",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-test-01",
-   "title": "Test 1: Aspect & Modality, Refined",
-   "isTest": true,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-07-inversion-conditionals",
-   "title": "Lesson 7 — Inversion in Conditionals",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-08-conditional-alternatives",
-   "title": "Lesson 8 — Conditional Alternatives to If",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-09-hypothetical-without-if",
-   "title": "Lesson 9 — Hypothetical Meaning Without If",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-10-advanced-wish",
-   "title": "Lesson 10 — Advanced Wish / If Only",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-test-02",
-   "title": "Test 2: Sophisticated Conditionals",
-   "isTest": true,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-11-passive-combined-aspects",
-   "title": "Lesson 11 — Passive With Combined Aspects",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-12-impersonal-get-passive",
-   "title": "Lesson 12 — Impersonal Passive & Get-Passive Together",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-13-nominalisation",
-   "title": "Lesson 13 — Nominalisation",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-14-advanced-articles-quantifiers",
-   "title": "Lesson 14 — Advanced Articles & Quantifiers",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-test-03",
-   "title": "Test 3: Advanced Passive & Noun Phrases",
-   "isTest": true,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-15-participle-clauses",
-   "title": "Lesson 15 — Participle Clauses",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-16-advanced-relative-clauses",
-   "title": "Lesson 16 — Advanced Relative Clauses",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-17-ellipsis-substitution",
-   "title": "Lesson 17 — Ellipsis & Substitution",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-18-negative-inversion",
-   "title": "Lesson 18 — Negative Inversion for Emphasis",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-19-fronting-information-structure",
-   "title": "Lesson 19 — Fronting & Information Structure",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-lesson-20-discourse-capstone",
-   "title": "Lesson 20 — Discourse Capstone",
-   "isTest": false,
-   "chips": []
-  },
-  {
-   "id": "b2c1-test-04",
-   "title": "Test 4: Discourse & Complex Sentences",
-   "isTest": true,
-   "chips": []
-  }
- ],
- "groups": [
-  {
-   "title": "Aspect & Modality, Refined",
-   "color": "#5C2140",
-   "deep": "#3B1429",
-   "desc": "Narrative tenses, past habits, future in the past, academic hedging and deduction — the aspect and modality choices that carry meaning the simple tenses can't.",
-   "expect": "Each lesson opens with a short reading or dialogue, then asks you to compare near-identical sentences and say what changes when the aspect changes. You'll build sentences from word banks, fill gaps, spot errors, and finish with a speaking task. The test at the end mixes all six lessons.",
-   "size": 7
-  },
-  {
-   "title": "Sophisticated Conditionals",
-   "color": "#2F4058",
-   "deep": "#1D2A3B",
-   "desc": "Inversion, alternatives to <i>if</i>, hypothetical meaning without <i>if</i>, and advanced <i>wish</i> / <i>if only</i> — conditional meaning without the obvious grammar.",
-   "expect": "You'll rewrite ordinary conditionals into their formal and written equivalents, and decide which version fits a given register. Expect matching and categorising tasks on the alternatives to <i>if</i>, plus gap-fills where only the inverted form is accepted.",
-   "size": 5
-  },
-  {
-   "title": "Advanced Passive & Noun Phrases",
-   "color": "#34503A",
-   "deep": "#203324",
-   "desc": "Passives with combined aspects, impersonal and get-passives, nominalisation, and the articles and quantifiers that hold dense noun phrases together.",
-   "expect": "The work here is mostly transformation: turning verbs into noun phrases and active sentences into the passive that a report or article would actually use. You'll also judge article and quantifier choices in longer academic sentences.",
-   "size": 5
-  },
-  {
-   "title": "Discourse & Complex Sentences",
-   "color": "#6B5A1E",
-   "deep": "#463A12",
-   "desc": "Participle and relative clauses, ellipsis, negative inversion and fronting — grammar that organises emphasis across whole paragraphs, plus the capstone.",
-   "expect": "You'll combine short sentences into single complex ones, cut repetition with ellipsis and substitution, and move information around to change what a sentence emphasises. The capstone asks you to edit a whole text using everything from the course.",
-   "size": 7
-  }
- ],
- "lessonTotals": {
-  "b2c1-lesson-01-narrative-tenses": 40,
-  "b2c1-lesson-02-used-to-vs-would": 40,
-  "b2c1-lesson-03-future-in-the-past": 40,
-  "b2c1-lesson-04-academic-hedging": 40,
-  "b2c1-lesson-05-neednt-have": 39,
-  "b2c1-lesson-06-deduction-continuous": 40,
-  "b2c1-lesson-07-inversion-conditionals": 39,
-  "b2c1-lesson-08-conditional-alternatives": 40,
-  "b2c1-lesson-09-hypothetical-without-if": 39,
-  "b2c1-lesson-10-advanced-wish": 40,
-  "b2c1-lesson-11-passive-combined-aspects": 39,
-  "b2c1-lesson-12-impersonal-get-passive": 40,
-  "b2c1-lesson-13-nominalisation": 40,
-  "b2c1-lesson-14-advanced-articles-quantifiers": 39,
-  "b2c1-lesson-15-participle-clauses": 39,
-  "b2c1-lesson-16-advanced-relative-clauses": 40,
-  "b2c1-lesson-17-ellipsis-substitution": 40,
-  "b2c1-lesson-18-negative-inversion": 39,
-  "b2c1-lesson-19-fronting-information-structure": 40,
-  "b2c1-lesson-20-discourse-capstone": 40,
-  "b2c1-test-01": 24,
-  "b2c1-test-02": 32,
-  "b2c1-test-03": 36,
-  "b2c1-test-04": 53
- },
- "nameKey": "englishplus_b2c1_student_name",
- "closedKey": "englishplus_b2c1_index_closed",
- "filePrefixRe": "(lesson-\\\\d+|test-\\\\d+)",
- "idPrefix": "b2c1-"
-};
+SCRIPT = r'''
+const OV = __CFG__;
 // Free preview (englishvoiced.com/courses/): build_preview.py sets
 // data-preview-open / -contact / -course on <body>. Only the first N
 // lessons ship; the rest are listed, faded and locked.
@@ -578,7 +369,34 @@ syncIndexFromSupabase();
 
 window.addEventListener('pageshow', (e) => { if (e.persisted){ renderLessonIndex(); syncIndexFromSupabase(); } });
 window.addEventListener('storage', () => renderLessonIndex());
+'''
 
-</script>
-</body>
-</html>
+
+def render(cfg):
+    labels = cfg["labels"]
+    labels_html = (f'<span class="ov-label s">{labels[0]}</span>'
+                   f'<span class="ov-label o">{labels[1]}</span>'
+                   f'<span class="ov-label">{labels[2]}</span>')
+    entries = cfg["entries"]
+    n_tests = sum(1 for e in entries if e["isTest"])
+    body = (BODY.replace("__TOP__", cfg["top_line"])
+                .replace("__LABELS__", labels_html)
+                .replace("__HEADING__", cfg["heading"])
+                .replace("__INTRO__", cfg["intro"])
+                .replace("__ART__", cfg.get("hero_art") or "")
+                .replace("__N__", str(len(entries)))
+                .replace("__NSEC__", str(len(cfg["groups"])))
+                .replace("__NLES__", str(len(entries) - n_tests))
+                .replace("__NTEST__", str(n_tests)))
+    js_cfg = {
+        "entries": [{"id": e["id"], "title": e["title"], "isTest": bool(e["isTest"]), "chips": e.get("chips", [])} for e in entries],
+        "groups": cfg["groups"],
+        "lessonTotals": cfg["lesson_totals"],
+        "nameKey": cfg["name_key"],
+        "closedKey": cfg["closed_key"],
+        "filePrefixRe": cfg["file_prefix_re"],
+        "idPrefix": cfg.get("id_prefix", ""),
+    }
+    assert sum(g["size"] for g in cfg["groups"]) == len(entries), "group sizes must add up to the entries"
+    script = SCRIPT.replace("__CFG__", json.dumps(js_cfg, ensure_ascii=False, indent=1))
+    return EXTRA_HEAD, body, script
