@@ -208,7 +208,7 @@ def build_index(lesson_totals):
         "lesson_totals": lesson_totals,
         "name_key": "englishplus_b2c1_student_name",
         "closed_key": "englishplus_b2c1_index_closed",
-        "file_prefix_re": r"(lesson-\\d+|test-\\d+)",
+        "file_prefix_re": r"(lesson-\d+|test-\d+)",
         "id_prefix": "b2c1-",
     })
 
